@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import {
-  HunterProfile,
   IHunterProfile,
   IHunterProfileForm,
 } from '@app/core/types/HunterProfile';
@@ -11,8 +10,7 @@ import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
-import { debounceTime, take } from 'rxjs';
-import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog.component';
+import { Subject, debounceTime, take, takeUntil } from 'rxjs';
 import { EquipmentAddDialogComponent } from '../equipment-add-dialog/equipment-add-dialog.component';
 import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-dialog.component';
 
@@ -21,10 +19,8 @@ import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-
   templateUrl: './campaign-editor.component.html',
   styleUrls: ['./campaign-editor.component.scss'],
 })
-export class CampaignEditorComponent implements OnInit {
-  public hunterProfiles$ = this._store$.select(
-    HunterProfilesSelectors.selectAll
-  );
+export class CampaignEditorComponent implements OnInit, OnDestroy {
+  private _destroy$ = new Subject<boolean>();
 
   public activeHunterProfile$ = this._store$.select(
     HunterProfilesSelectors.selectActiveHunter
@@ -39,6 +35,10 @@ export class CampaignEditorComponent implements OnInit {
     potions: this._fb.control<number>(0),
     campaignDay: this._fb.control<number>(0),
     notes: this._fb.control<string>(''),
+    equipedChestId: this._fb.control<string | null>(null),
+    equipedFeetId: this._fb.control<string | null>(null),
+    equipedHelmId: this._fb.control<string | null>(null),
+    equipedWeaponId: this._fb.control<string | null>(null),
   });
 
   constructor(
@@ -47,28 +47,38 @@ export class CampaignEditorComponent implements OnInit {
     private _store$: Store
   ) {}
 
-  ngOnInit(): void {
-    this.activeHunterProfile$.subscribe((profile) => {
-      if (profile != undefined) {
-        this.hunterForm.enable({ emitEvent: false });
-        this.hunterForm.patchValue(profile, { emitEvent: false });
-      } else {
-        this.hunterForm.disable({ emitEvent: false });
-      }
-    });
+  ngOnDestroy(): void {
+    this._destroy$.next(true);
+    this._destroy$.unsubscribe();
+  }
 
-    this.hunterForm.valueChanges.pipe(debounceTime(500)).subscribe((_) => {
-      const profile = <IHunterProfile>this.hunterForm.getRawValue();
-      if (
-        profile != null &&
-        profile.hunterId != null &&
-        profile.hunterId != ''
-      ) {
-        this._store$.dispatch(
-          HunterProfileStoreActions.updateHunterProfile({ data: profile })
-        );
-      }
-    });
+  ngOnInit(): void {
+    this.activeHunterProfile$
+      .pipe(takeUntil(this._destroy$))
+      .subscribe((profile) => {
+        if (profile != undefined) {
+          this.hunterForm.enable({ emitEvent: false });
+          this.hunterForm.patchValue(profile, { emitEvent: false });
+        } else {
+          this.hunterForm.disable({ emitEvent: false });
+        }
+      });
+
+    this.hunterForm.valueChanges
+      .pipe(takeUntil(this._destroy$))
+      .pipe(debounceTime(500))
+      .subscribe((_) => {
+        const profile = <IHunterProfile>this.hunterForm.getRawValue();
+        if (
+          profile != null &&
+          profile.hunterId != null &&
+          profile.hunterId != ''
+        ) {
+          this._store$.dispatch(
+            HunterProfileStoreActions.updateHunterProfile({ data: profile })
+          );
+        }
+      });
   }
 
   public openMaterialAddDialog(): void {
@@ -119,34 +129,5 @@ export class CampaignEditorComponent implements OnInit {
           }
         }
       });
-  }
-
-  public selectHunterProfile(hunterId: string): void {
-    this._store$.dispatch(
-      HunterProfileStoreActions.selectHunterProfile({ hunterId })
-    );
-  }
-
-  public addHunterProfile(): void {
-    this._dialog
-      .open(AddHunterDialogComponent)
-      .afterClosed()
-      .pipe(take(1))
-      .subscribe((res) => {
-        if (res) {
-          this._store$.dispatch(
-            HunterProfileStoreActions.addHunterProfile({
-              data: new HunterProfile(res.hunterName, res.playerName),
-            })
-          );
-        }
-      });
-  }
-
-  public removeHunterProfile(hunterId: string): void {
-    this._store$.dispatch(
-      HunterProfileStoreActions.deleteHunterProfile({ hunterId })
-    );
-    this.hunterForm.reset(undefined, { emitEvent: false });
   }
 }

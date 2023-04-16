@@ -17,3 +17,8 @@ export const selectById = (materialId: string) =>
   createSelector(selectAll, (materials) =>
     materials.find((x) => x.id == materialId)
   );
+
+export const selectByIds = (materialIds: string[]) =>
+  createSelector(selectAll, (materials) =>
+    materials.filter((x) => materialIds.includes(x.id))
+  );

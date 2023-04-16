@@ -1,4 +1,4 @@
-<mat-table [dataSource]="this.Materials">
+<mat-table [dataSource]="this.Materials$">
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Material </mat-header-cell>
     <mat-cell *matCellDef="let item">
@@ -6,23 +6,23 @@
         mat-icon-button
         color="warn"
         matTooltip="Remove Item"
-        (click)="this.RemoveMaterial(item)"
+        (click)="this.RemoveMaterial(item.id)"
         [disabled]="this.disabled"
       >
         <mat-icon>remove</mat-icon>
       </button>
-      {{ (this.getMaterial(item.materialId) | async)?.name }}
+      {{ item.name }}
     </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="count">
     <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button mat-icon-button (click)="this.DecrementMaterial(item)" [disabled]="this.disabled">
+      <button mat-icon-button (click)="this.DecrementMaterial(item.id)" [disabled]="this.disabled">
         <mat-icon>remove</mat-icon>
       </button>
       {{ item.count }}
-      <button mat-icon-button (click)="this.IncrementMaterial(item)" [disabled]="this.disabled">
+      <button mat-icon-button (click)="this.IncrementMaterial(item.id)" [disabled]="this.disabled">
         <mat-icon>add</mat-icon>
       </button>
     </mat-cell>

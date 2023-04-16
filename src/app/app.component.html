@@ -1,3 +1,24 @@
-    <div style="padding: 2em">
-        <router-outlet></router-outlet>
+<button mat-icon-button (click)="sidenav.open()">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav (click)="sidenav.close()">
+    <mat-nav-list>
+      <a mat-list-item routerLink="">
+        <mat-icon matListItemIcon>people</mat-icon> Profiles
+      </a>
+      <a mat-list-item routerLink="edit">
+        <mat-icon matListItemIcon>edit</mat-icon> Edit
+      </a>
+      <a mat-list-item routerLink="outfit">
+        <mat-icon matListItemIcon>checklist</mat-icon> Equipment
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="padding: 2em; min-height: 500px;">
+      <router-outlet></router-outlet>
     </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

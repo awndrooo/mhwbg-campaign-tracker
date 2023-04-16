@@ -4,11 +4,27 @@ import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
 import { Action, Store } from '@ngrx/store';
 import { HunterProfilesSelectors } from '@root-store/selectors';
 import { of } from 'rxjs';
-import { catchError, concatMap, filter, map, take } from 'rxjs/operators';
+import {
+  catchError,
+  concatMap,
+  filter,
+  map,
+  switchMap,
+  take,
+} from 'rxjs/operators';
 import * as HunterProfileActions from '../actions/hunter-profile.actions';
+
+const SESSION_ACTIVE_HUNTER_ID_KEY = 'ActiveHunterId';
 
 @Injectable()
 export class HunterProfileEffects implements OnInitEffects {
+  private get _sessionActiveHunterId(): string | null {
+    return sessionStorage.getItem(SESSION_ACTIVE_HUNTER_ID_KEY);
+  }
+  private set _sessionActiveHunterId(value) {
+    sessionStorage.setItem(SESSION_ACTIVE_HUNTER_ID_KEY, value || '');
+  }
+
   constructor(
     private _actions$: Actions,
     private _dbService: DbService,
@@ -25,9 +41,19 @@ export class HunterProfileEffects implements OnInitEffects {
       concatMap(() =>
         this._dbService.GetHunterProfiles().pipe(
           take(1),
-          map((data) =>
-            HunterProfileActions.loadHunterProfilesSuccess({ data })
-          ),
+          switchMap((data) => {
+            const actions: Action[] = [
+              HunterProfileActions.loadHunterProfilesSuccess({ data }),
+            ];
+            if (this._sessionActiveHunterId != null) {
+              actions.push(
+                HunterProfileActions.selectHunterProfile({
+                  hunterId: this._sessionActiveHunterId || '',
+                })
+              );
+            }
+            return of(...actions);
+          }),
           catchError((error) =>
             of(HunterProfileActions.loadHunterProfilesFailure({ error }))
           )
@@ -84,10 +110,11 @@ export class HunterProfileEffects implements OnInitEffects {
           .select(HunterProfilesSelectors.selectById(action.hunterId))
           .pipe(
             take(1),
-            map((res) => {
-              if (res != null && res != undefined) {
+            map((hunterProfile) => {
+              if (hunterProfile != null && hunterProfile != undefined) {
+                this._sessionActiveHunterId = hunterProfile.hunterId;
                 return HunterProfileActions.selectHunterProfileSuccess({
-                  hunterProfile: res,
+                  hunterProfile,
                 });
               } else {
                 return HunterProfileActions.selectHunterProfileFailure({

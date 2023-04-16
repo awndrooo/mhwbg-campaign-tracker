@@ -10,7 +10,7 @@ import {
 import { MaterialsService } from '@app/core/services/materials.service';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import { Material } from '@app/core/types/Material';
-import { Observable, Subject } from 'rxjs';
+import { Observable, ReplaySubject, Subject, map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-material-list',
@@ -30,7 +30,31 @@ import { Observable, Subject } from 'rxjs';
   ],
 })
 export class MaterialListComponent implements ControlValueAccessor, Validator {
-  @Input() public Materials: HunterMaterials[] = [];
+  private _materials$ = new ReplaySubject<HunterMaterials[]>();
+  public Materials$: Observable<MaterialCount[]> = this._materials$.pipe(
+    switchMap((hunterMats) =>
+      this._materialService
+        .FindMaterialsById(hunterMats.map((x) => x.materialId))
+        .pipe(
+          map((mats) =>
+            mats.map((mat) => ({
+              ...mat,
+              count: hunterMats.find((x) => x.materialId == mat.id)?.count,
+            }))
+          )
+        )
+    )
+  );
+
+  private _materials: HunterMaterials[] = [];
+  public get Materials(): HunterMaterials[] {
+    return this._materials;
+  }
+  @Input()
+  public set Materials(value: HunterMaterials[]) {
+    this._materials = value;
+    this._materials$.next(value);
+  }
   @Output('MaterialsChange') public MaterialsChange$ = new Subject<
     HunterMaterials[]
   >();
@@ -43,15 +67,15 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     return this._materialService.FindMaterialById(materialId);
   }
 
-  public IncrementMaterial(item: HunterMaterials) {
+  public IncrementMaterial(materialId: string) {
     if (!this.disabled) {
-      this._changeMaterialCount(item.materialId, 1);
+      this._changeMaterialCount(materialId, 1);
     }
   }
 
-  public DecrementMaterial(item: HunterMaterials) {
+  public DecrementMaterial(materialId: string) {
     if (!this.disabled) {
-      this._changeMaterialCount(item.materialId, -1);
+      this._changeMaterialCount(materialId, -1);
     }
   }
 
@@ -114,3 +138,5 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
 
   // #endregion
 }
+
+type MaterialCount = Material & { count: number | undefined };

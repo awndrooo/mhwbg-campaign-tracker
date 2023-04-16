@@ -1,30 +1,3 @@
-<app-nav-bar></app-nav-bar>
-
-<mat-form-field>
-  <mat-label>Select Hunter Profile</mat-label>
-  <mat-select
-    #hunterProfileSelection
-    (selectionChange)="this.selectHunterProfile($event.value)"
-  >
-    <mat-option
-      *ngFor="let profile of this.hunterProfiles$ | async"
-      [value]="profile.hunterId"
-      >{{ profile.hunterName }} ({{ profile.playerName }})</mat-option
-    >
-  </mat-select>
-</mat-form-field>
-<button mat-raised-button color="primary" (click)="this.addHunterProfile()">
-  <mat-icon>add</mat-icon> New Profile
-</button>
-<button
-  mat-flat-button
-  color="warn"
-  (click)="this.removeHunterProfile(hunterProfileSelection.value)"
->
-  <mat-icon>remove</mat-icon> Remove Profile
-</button>
-<br />
-
 <div [formGroup]="this.hunterForm">
   <mat-form-field>
     <mat-label>Hunter Name</mat-label>
@@ -75,7 +48,7 @@
 
   <mat-icon svgIcon="mh-helm"></mat-icon>
   <mat-icon svgIcon="mh-arms"></mat-icon>
-  <mat-icon svgIcon="mh-torso"></mat-icon>
+  <mat-icon svgIcon="mh-waist"></mat-icon>
   <mat-icon svgIcon="mh-chest"></mat-icon>
   <mat-icon svgIcon="mh-legs"></mat-icon>
   <app-equipment-list formControlName="equipmentCrafted"></app-equipment-list>

@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -23,6 +24,7 @@ const AngularMaterialImports: Type<unknown>[] = [
   MatTableModule,
   MatFormFieldModule,
   MatInputModule,
+  MatSidenavModule,
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { MaterialsSelectors } from '@root-store/selectors';
-import { Observable, distinctUntilChanged } from 'rxjs';
+import { NEVER, Observable, distinctUntilChanged } from 'rxjs';
 import { Material } from '../types/Material';
 
 @Injectable({
@@ -20,5 +20,13 @@ export class MaterialsService {
     materialId: string
   ): Observable<Material | undefined> {
     return this._store$.select(MaterialsSelectors.selectById(materialId));
+  }
+
+  public FindMaterialsById(materialIds: string[] | undefined) {
+    if (materialIds == undefined) {
+      console.log('never');
+      return NEVER;
+    }
+    return this._store$.select(MaterialsSelectors.selectByIds(materialIds));
   }
 }

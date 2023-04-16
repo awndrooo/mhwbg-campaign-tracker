@@ -15,7 +15,7 @@ export class MHIconsModule {
     const icons = [
       { iconLabel: 'mh-helm', url: '../../assets/mh-icons/Helm_Rank_01.svg' },
       { iconLabel: 'mh-arms', url: '../../assets/mh-icons/Arms_Rank_01.svg' },
-      { iconLabel: 'mh-torso', url: '../../assets/mh-icons/Torso_Rank_01.svg' },
+      { iconLabel: 'mh-waist', url: '../../assets/mh-icons/Waist_Rank_01.svg' },
       { iconLabel: 'mh-chest', url: '../../assets/mh-icons/Chest_Rank_01.svg' },
       { iconLabel: 'mh-legs', url: '../../assets/mh-icons/Legs_Rank_01.svg' },
       { iconLabel: 'mh-charm', url: '../../assets/mh-icons/Charm_Rank_01.svg' },

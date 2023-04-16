@@ -1,0 +1,13 @@
+.outfitter-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .row {
+    flex: 1 1 auto;
+    margin-right: 1em;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}

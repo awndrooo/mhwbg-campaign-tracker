@@ -10,7 +10,7 @@ import { EQUIPMENT_MAPS } from '@app/core/types/EquipmentMap';
 import { EquipmentTypeEnum } from '@app/core/types/EquipmentType';
 import { filterNullish } from '@app/core/utility/FilterNullish';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
-import { Subject, switchMap } from 'rxjs';
+import { ReplaySubject, Subject, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-equipment-list',
@@ -39,7 +39,7 @@ export class EquipmentListComponent implements ControlValueAccessor {
     string[] | undefined
   >();
 
-  private _equipment$ = new Subject<string[] | undefined>();
+  private _equipment$ = new ReplaySubject<string[] | undefined>();
   public Equipment$ = this._equipment$.pipe(
     filterNullish(),
     switchMap((x) => this._equipmentService.FindEquipmentByIds(x))

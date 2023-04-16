@@ -1,5 +1,5 @@
-import { ArmorTypeShorthand } from './ArmorType';
-import { WeaponTypeShorthand } from './WeaponType';
+import { ArmorType } from './ArmorType';
+import { WeaponType } from './WeaponType';
 
 export type EquipmentType = `${EquipmentTypeEnum}`;
 
@@ -8,4 +8,4 @@ export enum EquipmentTypeEnum {
   Weapon = 'Weapon',
 }
 
-export type EquipmentShorthand = ArmorTypeShorthand | WeaponTypeShorthand;
+export type EquipmentSubtype = ArmorType | WeaponType;

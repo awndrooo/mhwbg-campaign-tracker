@@ -17,6 +17,23 @@ export type WeaponTypeShorthand =
   | 'SS';
 
 export enum WeaponTypeEnum {
+  Hammer = 'HA',
+  HuntingHorn = 'HH',
+  LongSword = 'LS',
+  HeavyBowGun = 'HBG',
+  LightBowGun = 'LBG',
+  Bow = 'BW',
+  GreatSword = 'GS',
+  SwordAndShield = 'SS',
+  DualBlades = 'DB',
+  InsectGlaive = 'IG',
+  Lance = 'LA',
+  GunLance = 'GL',
+  SwitchAxe = 'SA',
+  ChargeBlade = 'CB',
+}
+
+export enum WeaponTypeDescriptionEnum {
   Hammer = 'Hammer',
   HuntingHorn = 'Hunting Horn',
   LongSword = 'Long Sword',

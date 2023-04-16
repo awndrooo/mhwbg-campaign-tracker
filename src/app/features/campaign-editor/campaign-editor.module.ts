@@ -8,24 +8,34 @@ import { EquipmentModule } from '../equipment/equipment.module';
 import { MaterialsModule } from '../materials/materials.module';
 import { AddHunterDialogComponent } from './components/add-hunter-dialog/add-hunter-dialog.component';
 import { CampaignEditorComponent } from './components/campaign-editor/campaign-editor.component';
-import { MaterialAddDialogComponent } from './components/material-add-dialog/material-add-dialog.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { EquipmentAddDialogComponent } from './components/equipment-add-dialog/equipment-add-dialog.component';
+import { MaterialAddDialogComponent } from './components/material-add-dialog/material-add-dialog.component';
+import { OutfitterComponent } from './components/outfitter/outfitter.component';
+import { ProfileSelectorComponent } from './components/profile-selector/profile-selector.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: ProfileSelectorComponent,
+  },
+  {
+    path: 'edit',
     component: CampaignEditorComponent,
+  },
+  {
+    path: 'outfit',
+    component: OutfitterComponent,
   },
 ];
 
 @NgModule({
   declarations: [
-    NavBarComponent,
     CampaignEditorComponent,
     MaterialAddDialogComponent,
     AddHunterDialogComponent,
     EquipmentAddDialogComponent,
+    OutfitterComponent,
+    ProfileSelectorComponent,
   ],
   imports: [
     CommonModule,

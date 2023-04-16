@@ -1,0 +1,55 @@
+<div class="outfitter-container" [formGroup]="this.equipedForm">
+    <div class="row">
+        <div class="slot">
+            <mat-form-field>
+              <mat-label>
+                Helm
+                <app-equipment-icon [equipment]="ArmorTypeEnum.Helm"></app-equipment-icon>
+              </mat-label>
+              <mat-select formControlName="equipedHelmId">
+                <mat-option *ngFor="let item of this.helms$ | async" [value]="item.id">
+                  {{ item.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="slot">
+            <mat-form-field>
+              <mat-label>
+                Chest
+                <app-equipment-icon [equipment]="ArmorTypeEnum.Chest"></app-equipment-icon>
+              </mat-label>
+              <mat-select formControlName="equipedChestId">
+                <mat-option *ngFor="let item of this.chest$ | async" [value]="item.id">
+                  {{ item.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="slot">
+            <mat-form-field>
+              <mat-label>
+                Legs
+                <app-equipment-icon [equipment]="ArmorTypeEnum.Legs"></app-equipment-icon>
+              </mat-label>
+              <mat-select formControlName="equipedFeetId">
+                <mat-option *ngFor="let item of this.legs$ | async" [value]="item.id">
+                  {{ item.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="slot">
+            <mat-form-field>
+              <mat-label> Weapon </mat-label>
+              <mat-select formControlName="equipedWeaponId">
+                <mat-option *ngFor="let item of this.weapons$ | async" [value]="item.id">
+                  {{ item.name }} <app-equipment-icon [equipment]="item.weaponType"></app-equipment-icon>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
