@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { MHIconsModule } from '@shared/mhicons.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -20,6 +21,7 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     SharedModule,
     CampaignEditorModule,
+    MHIconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
