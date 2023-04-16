@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from '@app/core/core.module';
+import { SharedModule } from '@shared/shared.module';
 import { EquipmentModule } from '../equipment/equipment.module';
 import { MaterialsModule } from '../materials/materials.module';
 import { AddHunterDialogComponent } from './components/add-hunter-dialog/add-hunter-dialog.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CoreModule,
     MaterialsModule,
+    SharedModule,
     EquipmentModule,
     ReactiveFormsModule,
   ],

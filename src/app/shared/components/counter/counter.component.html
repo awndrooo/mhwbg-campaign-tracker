@@ -1,0 +1,5 @@
+<div class="counter-wrapper">
+    <button mat-icon-button (click)="this.decrementValue()" [disabled]="this.disabled"><mat-icon>remove</mat-icon></button>
+    <input matInput [value]="this.value" [placeholder]="this.placeholder" [required]="this.required" [disabled]="this.disabled">
+    <button mat-icon-button (click)="this.incrementValue()" [disabled]="this.disabled"><mat-icon>add</mat-icon></button>
+</div>

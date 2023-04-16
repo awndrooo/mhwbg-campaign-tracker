@@ -20,14 +20,30 @@
     <input matInput formControlName="playerName">
   </mat-form-field> <br>
 
+  <mat-form-field>
+    <mat-label>Potion Count</mat-label>
+    <app-counter formControlName="potions"></app-counter>
+  </mat-form-field> <br>
+
+  <mat-form-field>
+    <mat-label>Campaign Day</mat-label>
+    <app-counter formControlName="campaignDay"></app-counter>
+  </mat-form-field> <br>
+
   <button
     mat-icon-button
     color="primary"
     matTooltip="Add Material To Hunter Inventory"
     (click)="this.openMaterialAddDialog()"
+    [disabled]="this.hunterForm.disabled"
   >
     <mat-icon>add</mat-icon>
   </button>
   <app-material-list formControlName="materials"></app-material-list>
   <app-equipment-list></app-equipment-list>
+
+  <mat-form-field>
+    <mat-label>Notes</mat-label>
+    <textarea matInput formControlName="notes"></textarea>
+  </mat-form-field>
 </div>

@@ -48,15 +48,24 @@ export class CampaignEditorComponent implements OnInit {
   ngOnInit(): void {
     this.activeHunterProfile$.subscribe((profile) => {
       if (profile != undefined) {
+        this.hunterForm.enable({ emitEvent: false });
         this.hunterForm.patchValue(profile, { emitEvent: false });
+      } else {
+        this.hunterForm.disable({ emitEvent: false });
       }
     });
 
     this.hunterForm.valueChanges.pipe(debounceTime(500)).subscribe((_) => {
       const profile = <IHunterProfile>this.hunterForm.getRawValue();
-      this._store$.dispatch(
-        HunterProfileStoreActions.updateHunterProfile({ data: profile })
-      );
+      if (
+        profile != null &&
+        profile.hunterId != null &&
+        profile.hunterId != ''
+      ) {
+        this._store$.dispatch(
+          HunterProfileStoreActions.updateHunterProfile({ data: profile })
+        );
+      }
     });
   }
 
@@ -115,5 +124,6 @@ export class CampaignEditorComponent implements OnInit {
     this._store$.dispatch(
       HunterProfileStoreActions.deleteHunterProfile({ hunterId })
     );
+    this.hunterForm.reset(undefined, { emitEvent: false });
   }
 }
