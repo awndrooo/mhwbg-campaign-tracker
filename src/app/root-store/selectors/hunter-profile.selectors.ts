@@ -15,7 +15,18 @@ export const selectIsLoaded = createSelector(
   (state) => state.isLoaded
 );
 
-export const selectById = (hunterId: string) =>
+export const selectById = (hunterId: string | null) =>
   createSelector(selectAll, (profiles) =>
     profiles.find((x) => x.hunterId == hunterId)
   );
+
+export const selectActiveHunterId = createSelector(
+  selectHunterProfileState,
+  (state) => state.activeHunterId
+);
+
+export const selectActiveHunter = createSelector(
+  selectAll,
+  selectActiveHunterId,
+  (profiles, hunterId) => profiles.find((x) => x.hunterId == hunterId)
+);

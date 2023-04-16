@@ -29,6 +29,13 @@ export const reducer = createReducer(
       activeHunterId:
         state.activeHunterId == action.hunterId ? null : state.activeHunterId,
     })
+  ),
+  on(HunterProfileActions.selectHunterProfileSuccess, (state, action) => ({
+    ...state,
+    activeHunterId: action.hunterProfile.hunterId,
+  })),
+  on(HunterProfileActions.updateHunterProfileSuccess, (state, action) =>
+    HunterProfileState.featureAdapter.upsertOne(action.data, state)
   )
 );
 

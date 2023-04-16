@@ -2,7 +2,13 @@
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Material </mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button mat-icon-button color="warn" matTooltip="Remove Item" (click)="this.RemoveMaterial.next({ materialId: item.materialId })">
+      <button
+        mat-icon-button
+        color="warn"
+        matTooltip="Remove Item"
+        (click)="this.RemoveMaterial(item)"
+        [disabled]="this.disabled"
+      >
         <mat-icon>remove</mat-icon>
       </button>
       {{ (this.getMaterial(item.materialId) | async)?.name }}
@@ -12,17 +18,11 @@
   <ng-container matColumnDef="count">
     <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button
-        mat-icon-button
-        (click)="this.DecrementMaterial.next({ materialId: item.materialId })"
-      >
+      <button mat-icon-button (click)="this.DecrementMaterial(item)" [disabled]="this.disabled">
         <mat-icon>remove</mat-icon>
       </button>
       {{ item.count }}
-      <button
-        mat-icon-button
-        (click)="this.IncrementMaterial.next({ materialId: item.materialId })"
-      >
+      <button mat-icon-button (click)="this.IncrementMaterial(item)" [disabled]="this.disabled">
         <mat-icon>add</mat-icon>
       </button>
     </mat-cell>

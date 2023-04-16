@@ -1,4 +1,4 @@
-import { IHunterProfile } from '@app/core/types/HunterProfile';
+import { HunterProfile, IHunterProfile } from '@app/core/types/HunterProfile';
 import { createAction, props } from '@ngrx/store';
 
 export const loadHunterProfiles = createAction(
@@ -42,5 +42,35 @@ export const deleteHunterProfileSuccess = createAction(
 
 export const deleteHunterProfileFailure = createAction(
   '[HunterProfile] Delete HunterProfile Failure',
+  props<{ error: any }>()
+);
+
+export const selectHunterProfile = createAction(
+  '[HunterProfile] Select HunterProfile',
+  props<{ hunterId: string }>()
+);
+
+export const selectHunterProfileSuccess = createAction(
+  '[HunterProfile] Select HunterProfile Success',
+  props<{ hunterProfile: HunterProfile }>()
+);
+
+export const selectHunterProfileFailure = createAction(
+  '[HunterProfile] Select HunterProfile Failure',
+  props<{ hunterId: string }>()
+);
+
+export const updateHunterProfile = createAction(
+  '[HunterProfile] Update HunterProfile',
+  props<{ data: IHunterProfile }>()
+);
+
+export const updateHunterProfileSuccess = createAction(
+  '[HunterProfile] Update HunterProfile Success',
+  props<{ data: IHunterProfile }>()
+);
+
+export const updateHunterProfileFailure = createAction(
+  '[HunterProfile] Update HunterProfile Failure',
   props<{ error: any }>()
 );

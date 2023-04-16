@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { DbService } from '@app/core/services/db.service';
 import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
-import { Action } from '@ngrx/store';
+import { Action, Store } from '@ngrx/store';
+import { HunterProfilesSelectors } from '@root-store/selectors';
 import { of } from 'rxjs';
-import { catchError, concatMap, map, take } from 'rxjs/operators';
+import { catchError, concatMap, filter, map, take } from 'rxjs/operators';
 import * as HunterProfileActions from '../actions/hunter-profile.actions';
 
 @Injectable()
 export class HunterProfileEffects implements OnInitEffects {
-  constructor(private _actions$: Actions, private _dbService: DbService) {}
+  constructor(
+    private _actions$: Actions,
+    private _dbService: DbService,
+    private _store$: Store
+  ) {}
 
   ngrxOnInitEffects(): Action {
     return HunterProfileActions.loadHunterProfiles();
@@ -62,6 +67,52 @@ export class HunterProfileEffects implements OnInitEffects {
           ),
           catchError((error) =>
             of(HunterProfileActions.addHunterProfileFailure({ error }))
+          )
+        )
+      )
+    )
+  );
+
+  selectHunterProfile$ = createEffect(() =>
+    this._actions$.pipe(
+      ofType(HunterProfileActions.selectHunterProfile),
+      filter(
+        (action) => action.hunterId != null && action.hunterId != undefined
+      ),
+      concatMap((action) =>
+        this._store$
+          .select(HunterProfilesSelectors.selectById(action.hunterId))
+          .pipe(
+            take(1),
+            map((res) => {
+              if (res != null && res != undefined) {
+                return HunterProfileActions.selectHunterProfileSuccess({
+                  hunterProfile: res,
+                });
+              } else {
+                return HunterProfileActions.selectHunterProfileFailure({
+                  hunterId: action.hunterId,
+                });
+              }
+            })
+          )
+      )
+    )
+  );
+
+  updateHunterProfile$ = createEffect(() =>
+    this._actions$.pipe(
+      ofType(HunterProfileActions.updateHunterProfile),
+      concatMap((action) =>
+        this._dbService.UpdateHunterProfile(action.data).pipe(
+          take(1),
+          map((res) =>
+            HunterProfileActions.updateHunterProfileSuccess({
+              data: action.data,
+            })
+          ),
+          catchError((error) =>
+            of(HunterProfileActions.updateHunterProfileFailure({ error }))
           )
         )
       )

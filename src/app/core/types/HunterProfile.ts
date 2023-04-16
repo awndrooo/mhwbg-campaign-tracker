@@ -1,8 +1,11 @@
+import { FormControl } from '@angular/forms';
+import { HunterMaterials } from './HunterMaterials';
+
 export interface IHunterProfile {
   hunterId: string;
   hunterName: string;
   playerName: string;
-  materials: string[];
+  materials: HunterMaterials[];
   equipmentCrafted: string[];
   equipedWeaponId?: string;
   equipedHelmId?: string;
@@ -17,7 +20,7 @@ export class HunterProfile implements IHunterProfile {
   public hunterId: string;
   public hunterName: string;
   public playerName: string;
-  public materials: string[];
+  public materials: HunterMaterials[];
   public equipmentCrafted: string[];
   public equipedWeaponId?: string | undefined;
   public equipedHelmId?: string | undefined;
@@ -38,3 +41,9 @@ export class HunterProfile implements IHunterProfile {
     this.notes = '';
   }
 }
+
+type WrappedInterface<T> = {
+  [P in keyof T]: FormControl<T[P] | null>;
+};
+
+export type IHunterProfileForm = WrappedInterface<IHunterProfile>;

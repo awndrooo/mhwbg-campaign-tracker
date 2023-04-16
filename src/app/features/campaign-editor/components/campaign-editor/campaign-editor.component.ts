@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { DbService } from '@app/core/services/db.service';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
-import { HunterProfile } from '@app/core/types/HunterProfile';
+import {
+  HunterProfile,
+  IHunterProfile,
+  IHunterProfileForm,
+} from '@app/core/types/HunterProfile';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
-import { take } from 'rxjs';
+import { debounceTime, take } from 'rxjs';
 import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog.component';
 import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-dialog.component';
 
@@ -15,17 +19,46 @@ import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-
   templateUrl: './campaign-editor.component.html',
   styleUrls: ['./campaign-editor.component.scss'],
 })
-export class CampaignEditorComponent {
+export class CampaignEditorComponent implements OnInit {
   public hunterProfiles$ = this._store$.select(
     HunterProfilesSelectors.selectAll
   );
-  public hunterMaterials: HunterMaterials[] = [];
+
+  public activeHunterProfile$ = this._store$.select(
+    HunterProfilesSelectors.selectActiveHunter
+  );
+
+  public hunterForm = this._fb.group<IHunterProfileForm>({
+    materials: this._fb.control<HunterMaterials[]>([]),
+    hunterId: this._fb.control<string>(''),
+    hunterName: this._fb.control<string>(''),
+    playerName: this._fb.control<string>(''),
+    equipmentCrafted: this._fb.control<string[]>(<string[]>[]),
+    potions: this._fb.control<number>(0),
+    campaignDay: this._fb.control<number>(0),
+    notes: this._fb.control<string>(''),
+  });
 
   constructor(
     private _dialog: MatDialog,
-    private _dbService: DbService,
+    private _fb: FormBuilder,
     private _store$: Store
   ) {}
+
+  ngOnInit(): void {
+    this.activeHunterProfile$.subscribe((profile) => {
+      if (profile != undefined) {
+        this.hunterForm.patchValue(profile, { emitEvent: false });
+      }
+    });
+
+    this.hunterForm.valueChanges.pipe(debounceTime(500)).subscribe((_) => {
+      const profile = <IHunterProfile>this.hunterForm.getRawValue();
+      this._store$.dispatch(
+        HunterProfileStoreActions.updateHunterProfile({ data: profile })
+      );
+    });
+  }
 
   public openMaterialAddDialog(): void {
     this._dialog
@@ -39,39 +72,27 @@ export class CampaignEditorComponent {
       .pipe(take(1))
       .subscribe((res) => {
         res?.forEach((mat) => {
-          const ind = this.hunterMaterials.findIndex(
-            (x) => x.materialId == mat.materialId
-          );
-          if (ind > -1) {
-            this.hunterMaterials[ind].count =
-              this.hunterMaterials[ind].count + mat.count;
-            this.hunterMaterials = [...this.hunterMaterials];
-          } else {
-            this.hunterMaterials = [...this.hunterMaterials, mat];
+          let materials = this.hunterForm.value.materials;
+          // let hunterMaterials = <HunterMaterials[]>control?.value;
+          if (materials != null) {
+            const ind = materials.findIndex(
+              (x) => x.materialId == mat.materialId
+            );
+            if (ind > -1) {
+              materials[ind].count = materials[ind].count + mat.count;
+            } else {
+              materials = [...materials, mat];
+            }
+            this.hunterForm.patchValue({ materials });
           }
         });
       });
   }
 
-  public changeMaterialCount(materialId: string, delta: number): void {
-    const ind = this.hunterMaterials.findIndex(
-      (x) => x.materialId == materialId
+  public selectHunterProfile(hunterId: string): void {
+    this._store$.dispatch(
+      HunterProfileStoreActions.selectHunterProfile({ hunterId })
     );
-    if (ind > -1) {
-      this.hunterMaterials[ind].count = Math.max(
-        this.hunterMaterials[ind].count + delta,
-        0
-      );
-      this.hunterMaterials = [...this.hunterMaterials];
-    }
-  }
-
-  public removeMaterial(materialId: string): void {
-    const ind = this.hunterMaterials.findIndex(
-      (x) => x.materialId == materialId
-    );
-    this.hunterMaterials.splice(ind, 1);
-    this.hunterMaterials = [...this.hunterMaterials];
   }
 
   public addHunterProfile(): void {
