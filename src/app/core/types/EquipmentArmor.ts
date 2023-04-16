@@ -1,5 +1,5 @@
-import { EquipmentBase } from './EquipmentBase';
+import { IEquipmentBase } from './EquipmentBase';
 
-export type EquipmentArmor = EquipmentBase & {
-  armorValue: number;
-};
+export interface IEquipmentArmor extends IEquipmentBase {
+  equipmentType: 'Armor';
+}

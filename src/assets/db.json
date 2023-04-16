@@ -71,5 +71,261 @@
       "description": ""
     }
   ],
-  "equipment": []
+  "equipment": [
+    {
+      "id": "cbfc653e-e20b-46a4-9cb1-1919cf1849c6",
+      "cardNumber": 56,
+      "name": "Metal Bagpipe",
+      "description": "Use all attack cards with [[HH|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Hunting Horn",
+      "damageDeck": {
+        "1": 10,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "10b4b604-9a87-4cbb-a370-da74eaab06c9",
+      "cardNumber": 56,
+      "name": "Iron Hammer",
+      "description": "Use all attack cards with [[HM|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Hammer",
+      "damageDeck": {
+        "1": 10,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "90821092-c7d4-4758-ab3f-c7eb91384099",
+      "cardNumber": 56,
+      "name": "Iron Gunlance",
+      "description": "Use all attack cards with [[GL|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Gun Lance",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 8,
+        "2": 0,
+        "3": 0,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "49f6c3b1-f4f9-4856-8a60-e799386c1266",
+      "cardNumber": 154,
+      "name": "Iron Katana",
+      "description": "Use all attack cards with [[LS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Long Sword",
+      "damageDeck": {
+        "1": 9,
+        "2": 3,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d95b2077-58bc-4940-9c2a-2a55427b74e3",
+      "cardNumber": 113,
+      "name": "Chain Blitz",
+      "description": "Use all attack cards with [[LBG|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Light Bow Gun",
+      "note": "[[LBG Ammo|yellow]]",
+      "damageDeck": {
+        "1": 10,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "10ed1056-5ac4-41f3-a366-33dfe79e1f85",
+      "cardNumber": 88,
+      "name": "Iron Lance",
+      "description": "Use all attack cards with [[LA|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Lance",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 8,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "b6f9aafb-b405-4f8e-97e3-7aa7235c68ae",
+      "cardNumber": 1,
+      "name": "Buster Sword",
+      "description": "Use all attack cards with [[GS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Great Sword",
+      "damageDeck": {
+        "1": 7,
+        "2": 4,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "bc62e2fe-fbde-44fa-b315-68cdc2964d23",
+      "cardNumber": 25,
+      "name": "Hunter's Knife",
+      "description": "Use all attack cards with [[SS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Sword and Shield",
+      "damageDeck": {
+        "1": 8,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "237d85ff-80fc-446c-b463-c447b5da123e",
+      "cardNumber": 73,
+      "name": "Iron Bow",
+      "description": "Use all attack cards with [[BW|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 8,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "4de65284-f762-405f-a955-4df645b1ea89",
+      "cardNumber": 49,
+      "name": "Matched Slicers",
+      "description": "Use all attack cards with [[DB|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Dual Blades",
+      "damageDeck": {
+        "1": 10,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "8928518b-b5d9-483b-9900-f2691623628a",
+      "cardNumber": 89,
+      "name": "Proto Iron Axe",
+      "description": "Use all attack cards with [[SA|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Switch Axe",
+      "damageDeck": {
+        "1": 11,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "f93b1230-877c-4073-a894-db2ee9aa0851",
+      "cardNumber": 61,
+      "name": "Iron Blade",
+      "description": "Use all attack cards with [[IG|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Insect Glaive",
+      "damageDeck": {
+        "1": 10,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d1a5d590-a731-4d3a-9492-b88b4b49e5b3",
+      "cardNumber": 26,
+      "name": "Iron Assault",
+      "description": "Use all attack cards with [[HBG|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Heavy Bow Gun",
+      "note": "[[Ammo|yellow]]",
+      "damageDeck": {
+        "1": 9,
+        "2": 3,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "9d5b6dbc-0631-47e5-8da9-84b7ecc7b542",
+      "cardNumber": 1,
+      "name": "Proto Commission Axe",
+      "description": "Use all attack cards with [[CS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Charge Sword",
+      "damageDeck": {
+        "1": 8,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d726a7ed-ee6b-439d-b553-eeb6c36c7d15",
+      "cardNumber": 62,
+      "name": "Chainmail Trousers",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 1
+    },
+    {
+      "id": "b52d789d-c5ad-4fbf-9196-bace2744de88",
+      "cardNumber": 63,
+      "name": "Chainmail Vest",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 0
+    },
+    {
+      "id": "649015bb-1366-45fe-865a-5cae7c0a2aa1",
+      "cardNumber": 64,
+      "name": "Chainmail Headgear",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 0
+    }
+  ]
 }

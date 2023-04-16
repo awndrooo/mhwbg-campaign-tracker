@@ -1,0 +1,9 @@
+<h1 matDialogTitle>Add Equipment</h1>
+<mat-dialog-content>
+    <app-equipment-search (OnEquipmentAdd)="this.addEquipmentToQueue($event)"></app-equipment-search>
+    <app-equipment-list [(Equipment)]="this.equipmentQueue" [ShowControls]="true"></app-equipment-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="this.equipmentQueue">Add</button>
+    <button mat-button color="warn" [mat-dialog-close]>Cancel</button>
+</mat-dialog-actions>

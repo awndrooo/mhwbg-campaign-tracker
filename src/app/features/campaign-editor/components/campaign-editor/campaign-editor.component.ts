@@ -7,11 +7,13 @@ import {
   IHunterProfile,
   IHunterProfileForm,
 } from '@app/core/types/HunterProfile';
+import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
 import { debounceTime, take } from 'rxjs';
 import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog.component';
+import { EquipmentAddDialogComponent } from '../equipment-add-dialog/equipment-add-dialog.component';
 import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-dialog.component';
 
 @Component({
@@ -82,7 +84,6 @@ export class CampaignEditorComponent implements OnInit {
       .subscribe((res) => {
         res?.forEach((mat) => {
           let materials = this.hunterForm.value.materials;
-          // let hunterMaterials = <HunterMaterials[]>control?.value;
           if (materials != null) {
             const ind = materials.findIndex(
               (x) => x.materialId == mat.materialId
@@ -95,6 +96,28 @@ export class CampaignEditorComponent implements OnInit {
             this.hunterForm.patchValue({ materials });
           }
         });
+      });
+  }
+
+  public openEquipmentAddDialog(): void {
+    this._dialog
+      .open<EquipmentAddDialogComponent, undefined, string[]>(
+        EquipmentAddDialogComponent,
+        {
+          minWidth: '90vw',
+        }
+      )
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe((res) => {
+        if (!isNullOrUndefined(res)) {
+          const equipment = this.hunterForm.value.equipmentCrafted;
+          if (!isNullOrUndefined(equipment)) {
+            this.hunterForm.patchValue({
+              equipmentCrafted: [...(equipment || []), ...(res || [])],
+            });
+          }
+        }
       });
   }
 

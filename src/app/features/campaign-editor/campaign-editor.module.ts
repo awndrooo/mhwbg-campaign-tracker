@@ -10,6 +10,7 @@ import { AddHunterDialogComponent } from './components/add-hunter-dialog/add-hun
 import { CampaignEditorComponent } from './components/campaign-editor/campaign-editor.component';
 import { MaterialAddDialogComponent } from './components/material-add-dialog/material-add-dialog.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { EquipmentAddDialogComponent } from './components/equipment-add-dialog/equipment-add-dialog.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
     CampaignEditorComponent,
     MaterialAddDialogComponent,
     AddHunterDialogComponent,
+    EquipmentAddDialogComponent,
   ],
   imports: [
     CommonModule,

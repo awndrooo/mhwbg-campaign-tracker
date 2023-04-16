@@ -31,18 +31,11 @@ import { Observable, Subject } from 'rxjs';
 })
 export class MaterialListComponent implements ControlValueAccessor, Validator {
   @Input() public Materials: HunterMaterials[] = [];
+  @Output('MaterialsChange') public MaterialsChange$ = new Subject<
+    HunterMaterials[]
+  >();
 
   @Input() public ShowControls: boolean = false;
-
-  @Output('IncrementMaterial') public IncrementMaterial$ = new Subject<{
-    materialId: string;
-  }>();
-  @Output('DecrementMaterial') public DecrementMaterial$ = new Subject<{
-    materialId: string;
-  }>();
-  @Output('RemoveMaterial') public RemoveMaterial$ = new Subject<{
-    materialId: string;
-  }>();
 
   constructor(private _materialService: MaterialsService) {}
 
@@ -52,14 +45,12 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
 
   public IncrementMaterial(item: HunterMaterials) {
     if (!this.disabled) {
-      this.IncrementMaterial$.next({ materialId: item.materialId });
       this._changeMaterialCount(item.materialId, 1);
     }
   }
 
   public DecrementMaterial(item: HunterMaterials) {
     if (!this.disabled) {
-      this.DecrementMaterial$.next({ materialId: item.materialId });
       this._changeMaterialCount(item.materialId, -1);
     }
   }
@@ -73,17 +64,19 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
         count: Math.max(this.Materials[ind].count + delta, 0),
       };
       this.Materials = newMaterials;
+      this.MaterialsChange$.next(this.Materials);
       this.onChange(this.Materials);
     }
   }
 
   public RemoveMaterial(item: HunterMaterials) {
     if (!this.disabled) {
-      this.RemoveMaterial$.next({ materialId: item.materialId });
       const ind = this.Materials.findIndex(
         (x) => x.materialId == item.materialId
       );
       this.Materials.splice(ind, 1);
+      this.Materials = [...this.Materials]; // Force change detection for regular bindings
+      this.MaterialsChange$.next(this.Materials);
       this.onChange(this.Materials);
     }
   }
@@ -97,6 +90,7 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
 
   writeValue(materials: HunterMaterials[]): void {
     this.Materials = materials;
+    this.MaterialsChange$.next(this.Materials);
   }
   registerOnChange(fn: (materials: HunterMaterials[]) => undefined): void {
     this.onChange = fn;

@@ -1,1 +1,42 @@
-<p>equipment-list works!</p>
+<mat-table [dataSource]="this.Equipment$">
+  <ng-container matColumnDef="Type">
+    <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item.equipmentType }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button
+        mat-icon-button
+        (click)="this.RemoveEquipment(item)"
+        color="warn"
+        *ngIf="this.ShowControls"
+      >
+        <mat-icon>remove</mat-icon>
+      </button>
+      {{ item.name }}
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Notes">
+    <mat-header-cell *matHeaderCellDef>Notes</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item.note }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="CardNumber">
+    <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item.cardNumber }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item.description }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row
+    *matHeaderRowDef="['Type', 'Name', 'Notes', 'CardNumber', 'Description']"
+  ></mat-header-row>
+  <mat-row
+    *matRowDef="
+      let row;
+      columns: ['Type', 'Name', 'Notes', 'CardNumber', 'Description']
+    "
+  ></mat-row>
+</mat-table>

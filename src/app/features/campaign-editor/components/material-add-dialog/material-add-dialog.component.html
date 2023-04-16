@@ -6,11 +6,8 @@
   <mat-divider></mat-divider>
   <h4>Materials to Add</h4>
   <app-material-list
-    [Materials]="this.materialQueue"
+    [(Materials)]="this.materialQueue"
     [ShowControls]="true"
-    (IncrementMaterial)="this.changeMaterialCount($event.materialId, 1)"
-    (DecrementMaterial)="this.changeMaterialCount($event.materialId, -1)"
-    (RemoveMaterial)="this.removeMaterial($event.materialId)"
   ></app-material-list>
 </mat-dialog-content>
 <mat-dialog-actions>
