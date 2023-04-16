@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DbService } from '@app/core/services/db.service';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
+import { HunterProfile } from '@app/core/types/HunterProfile';
+import { Store } from '@ngrx/store';
+import { HunterProfileStoreActions } from '@root-store/actions';
+import { HunterProfilesSelectors } from '@root-store/selectors';
 import { take } from 'rxjs';
+import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog.component';
 import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-dialog.component';
 
 @Component({
@@ -10,9 +16,16 @@ import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-
   styleUrls: ['./campaign-editor.component.scss'],
 })
 export class CampaignEditorComponent {
+  public hunterProfiles$ = this._store$.select(
+    HunterProfilesSelectors.selectAll
+  );
   public hunterMaterials: HunterMaterials[] = [];
 
-  constructor(private _dialog: MatDialog) {}
+  constructor(
+    private _dialog: MatDialog,
+    private _dbService: DbService,
+    private _store$: Store
+  ) {}
 
   public openMaterialAddDialog(): void {
     this._dialog
@@ -59,5 +72,27 @@ export class CampaignEditorComponent {
     );
     this.hunterMaterials.splice(ind, 1);
     this.hunterMaterials = [...this.hunterMaterials];
+  }
+
+  public addHunterProfile(): void {
+    this._dialog
+      .open(AddHunterDialogComponent)
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe((res) => {
+        if (res) {
+          this._store$.dispatch(
+            HunterProfileStoreActions.addHunterProfile({
+              data: new HunterProfile(res.hunterName, res.playerName),
+            })
+          );
+        }
+      });
+  }
+
+  public removeHunterProfile(hunterId: string): void {
+    this._store$.dispatch(
+      HunterProfileStoreActions.deleteHunterProfile({ hunterId })
+    );
   }
 }

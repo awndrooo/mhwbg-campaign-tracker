@@ -1,0 +1,15 @@
+<h1 matDialogTitle>Add New Hunter</h1>
+<mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Hunter Name</mat-label>
+        <input matInput #hunterName>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Player Name</mat-label>
+        <input matInput #playerName>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="{ hunterName: hunterName.value, playerName: playerName.value }">Add</button>
+    <button mat-button color="warn" [mat-dialog-close]>Cancel</button>
+</mat-dialog-actions>

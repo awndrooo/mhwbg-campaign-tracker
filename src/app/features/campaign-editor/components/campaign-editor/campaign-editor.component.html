@@ -1,4 +1,14 @@
 <app-nav-bar></app-nav-bar>
+
+<mat-form-field>
+  <mat-label>Select Hunter Profile</mat-label>
+  <mat-select #hunterProfileSelection>
+    <mat-option *ngFor="let profile of this.hunterProfiles$ | async" [value]="profile.hunterId">{{ profile.hunterName }} ({{ profile.playerName }})</mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="this.addHunterProfile()"><mat-icon>add</mat-icon> New Profile</button>
+<button mat-flat-button color="warn" (click)="this.removeHunterProfile(hunterProfileSelection.value)"><mat-icon>remove</mat-icon> Remove Profile</button> <br>
+
 <button
   mat-icon-button
   color="primary"

@@ -5,6 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { EquipmentModule } from './equipment.module';
 import { MaterialsModule } from './materials.module';
 import { metaReducers, reducers } from './reducers';
+import { HunterProfilesModule } from './hunter-profiles.module';
 
 @NgModule({
   declarations: [],
@@ -14,6 +15,7 @@ import { metaReducers, reducers } from './reducers';
     EffectsModule.forRoot(),
     EquipmentModule,
     MaterialsModule,
+    HunterProfilesModule,
   ],
 })
 export class RootStoreModule {}
