@@ -1,0 +1,15 @@
+export type WeaponType =
+  | 'Hammer'
+  | 'Hunting Horn'
+  | 'Long Sword'
+  | 'Heavy Bow Gun'
+  | 'Light Bow Gun'
+  | 'Bow'
+  | 'Great Sword'
+  | 'Sword and Shield'
+  | 'Dual Blades'
+  | 'Insect Glaive'
+  | 'Lance'
+  | 'Gun Lance'
+  | 'Switch Axe'
+  | 'Charge Blade';

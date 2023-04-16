@@ -1,0 +1,25 @@
+<h1 matDialogTitle>Add Materials to Hunter Inventory</h1>
+<mat-dialog-content>
+  <app-material-search
+    (OnMaterialAdd)="this.addMaterialToQueue($event)"
+  ></app-material-search>
+  <mat-divider></mat-divider>
+  <h4>Materials to Add</h4>
+  <app-material-list
+    [Materials]="this.materialQueue"
+    [ShowControls]="true"
+    (IncrementMaterial)="this.changeMaterialCount($event.materialId, 1)"
+    (DecrementMaterial)="this.changeMaterialCount($event.materialId, -1)"
+    (RemoveMaterial)="this.removeMaterial($event.materialId)"
+  ></app-material-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="this.materialQueue"
+  >
+    Add
+  </button>
+  <button mat-flat-button color="warn" [mat-dialog-close]>Cancel</button>
+</mat-dialog-actions>

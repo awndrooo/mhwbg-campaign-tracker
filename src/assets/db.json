@@ -1,0 +1,75 @@
+{
+  "materials": [
+    {
+      "id": "b8e034b0-7685-4e4d-b974-0969b77dd7d4",
+      "name": "Carbalite Ore",
+      "description": ""
+    },
+    {
+      "id": "e47b6d9b-4999-4a91-8902-914e6df11469",
+      "name": "Malachite Ore",
+      "description": ""
+    },
+    {
+      "id": "2befffa1-fe7c-4172-a893-9c597b85679c",
+      "name": "Dragonite Ore",
+      "description": ""
+    },
+    {
+      "id": "83423af6-4a72-4d30-8767-fa1833488edf",
+      "name": "Fucium Ore",
+      "description": ""
+    },
+    {
+      "id": "33a4e0c8-5066-478d-96f5-87f3f82c219d",
+      "name": "Quality Bone",
+      "description": ""
+    },
+    {
+      "id": "1cbc462e-87b4-4a21-afe1-f2546e1b57ae",
+      "name": "Monster Bone Small",
+      "description": ""
+    },
+    {
+      "id": "7781c100-6e4d-47cc-a7b2-d1bf5da6d0e8",
+      "name": "Monster Bone Medium",
+      "description": ""
+    },
+    {
+      "id": "05217d57-a905-4249-bb8a-e3142a678d3b",
+      "name": "Monster Bone Large",
+      "description": ""
+    },
+    {
+      "id": "7b43065a-997a-4024-9e9b-335d53ba133d",
+      "name": "Monster Keenbone",
+      "description": ""
+    },
+    {
+      "id": "c65988cd-04d3-4cd6-b53f-69956e12c5a8",
+      "name": "Monster Hardbone",
+      "description": ""
+    },
+    {
+      "id": "4b1e5bd8-6385-4737-9743-359f00ef1de4",
+      "name": "Ancient Bone",
+      "description": ""
+    },
+    {
+      "id": "2ef7c3b5-38f3-41c4-b012-3a6b8c056182",
+      "name": "Boulder Bone",
+      "description": ""
+    },
+    {
+      "id": "824ad196-048c-453d-b31b-97566d79d249",
+      "name": "Dragonvein Crystal",
+      "description": ""
+    },
+    {
+      "id": "73a28eb5-16df-485b-97cf-d1e8c766a5c4",
+      "name": "Wingdrake Hide",
+      "description": ""
+    }
+  ],
+  "equipment": []
+}

@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<button
+  mat-icon-button
+  color="primary"
+  matTooltip="Add Material To Hunter Inventory"
+  (click)="this.openMaterialAddDialog()"
+>
+  <mat-icon>add</mat-icon>
+</button>
+<app-material-list
+  [Materials]="this.hunterMaterials"
+  (IncrementMaterial)="this.changeMaterialCount($event.materialId, 1)"
+  (DecrementMaterial)="this.changeMaterialCount($event.materialId, -1)"
+  (RemoveMaterial)="this.removeMaterial($event.materialId)"
+></app-material-list>
+<app-equipment-list></app-equipment-list>
