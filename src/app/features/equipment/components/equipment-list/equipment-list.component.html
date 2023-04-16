@@ -1,14 +1,14 @@
 <mat-table [dataSource]="this.Equipment$">
   <ng-container matColumnDef="Type">
     <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{ item.equipmentType }}</mat-cell>
+    <mat-cell *matCellDef="let item"><mat-icon [svgIcon]="this.getEquipmentIcon(item)" [matTooltip]="this.getEquipmentDescription(item)"></mat-icon></mat-cell>
   </ng-container>
   <ng-container matColumnDef="Name">
     <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
     <mat-cell *matCellDef="let item">
       <button
         mat-icon-button
-        (click)="this.RemoveEquipment(item)"
+        (click)="this.removeEquipment(item)"
         color="warn"
         *ngIf="this.ShowControls"
       >

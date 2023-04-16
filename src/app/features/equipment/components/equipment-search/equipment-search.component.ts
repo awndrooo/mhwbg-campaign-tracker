@@ -33,7 +33,7 @@ export class EquipmentSearchComponent {
             x.name.toUpperCase().includes(searchValue.toUpperCase()) ||
             x.description.toUpperCase().includes(searchValue.toUpperCase()) ||
             (x.equipmentType === 'Weapon' &&
-              x.type.toUpperCase().includes(searchValue.toUpperCase()))
+              x.weaponType.toUpperCase().includes(searchValue.toUpperCase()))
         )
         .slice(0, 9)
     )

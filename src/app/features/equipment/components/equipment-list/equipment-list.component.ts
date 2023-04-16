@@ -6,6 +6,8 @@ import {
   ValidationErrors,
 } from '@angular/forms';
 import { EquipmentService } from '@app/core/services/equipment.service';
+import { EQUIPMENT_MAPS } from '@app/core/types/EquipmentMap';
+import { EquipmentTypeEnum } from '@app/core/types/EquipmentType';
 import { filterNullish } from '@app/core/utility/FilterNullish';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import { Subject, switchMap } from 'rxjs';
@@ -45,7 +47,7 @@ export class EquipmentListComponent implements ControlValueAccessor {
 
   constructor(private _equipmentService: EquipmentService) {}
 
-  public RemoveEquipment(item: IEquipmentStoreItem) {
+  public removeEquipment(item: IEquipmentStoreItem) {
     if (!this.disabled && this.Equipment !== undefined) {
       const ind = this.Equipment.findIndex((x) => x == item.id);
       if (ind !== undefined && ind > -1) {
@@ -54,6 +56,27 @@ export class EquipmentListComponent implements ControlValueAccessor {
         this._equipment$.next(this.Equipment);
         this.onChange(this.Equipment);
       }
+    }
+  }
+
+  public getEquipmentIcon(item: IEquipmentStoreItem): string {
+    const map =
+      item.equipmentType == EquipmentTypeEnum.Armor
+        ? EQUIPMENT_MAPS[item.armorType]
+        : EQUIPMENT_MAPS[item.weaponType];
+    return map.svgIcon;
+  }
+
+  public getEquipmentDescription(item: IEquipmentStoreItem): string {
+    const map =
+      item.equipmentType == EquipmentTypeEnum.Armor
+        ? EQUIPMENT_MAPS[item.armorType]
+        : EQUIPMENT_MAPS[item.weaponType];
+    switch (map.equipmentType) {
+      case EquipmentTypeEnum.Armor:
+        return map.armorTypeDescription;
+      case EquipmentTypeEnum.Weapon:
+        return map.weaponTypeDescription;
     }
   }
 

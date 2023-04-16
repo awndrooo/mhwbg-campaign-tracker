@@ -1,9 +1,9 @@
 import { IEquipmentBase } from './EquipmentBase';
-import { WeaponType } from './WeaponType';
+import { WeaponTypeShorthand } from './WeaponType';
 
 export interface IEquipmentWeapon extends IEquipmentBase {
   equipmentType: 'Weapon';
-  type: WeaponType;
+  weaponType: WeaponTypeShorthand;
   damageDeck: {
     1: number;
     2: number;

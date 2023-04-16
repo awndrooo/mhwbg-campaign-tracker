@@ -79,7 +79,7 @@
       "description": "Use all attack cards with [[HH|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Hunting Horn",
+      "weaponType": "HH",
       "damageDeck": {
         "1": 10,
         "2": 2,
@@ -95,7 +95,7 @@
       "description": "Use all attack cards with [[HM|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Hammer",
+      "weaponType": "HA",
       "damageDeck": {
         "1": 10,
         "2": 1,
@@ -111,7 +111,7 @@
       "description": "Use all attack cards with [[GL|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Gun Lance",
+      "weaponType": "GL",
       "armorValue": 1,
       "damageDeck": {
         "1": 8,
@@ -128,7 +128,7 @@
       "description": "Use all attack cards with [[LS|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Long Sword",
+      "weaponType": "LS",
       "damageDeck": {
         "1": 9,
         "2": 3,
@@ -144,7 +144,7 @@
       "description": "Use all attack cards with [[LBG|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Light Bow Gun",
+      "weaponType": "LBG",
       "note": "[[LBG Ammo|yellow]]",
       "damageDeck": {
         "1": 10,
@@ -161,7 +161,7 @@
       "description": "Use all attack cards with [[LA|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Lance",
+      "weaponType": "LA",
       "armorValue": 1,
       "damageDeck": {
         "1": 8,
@@ -178,7 +178,7 @@
       "description": "Use all attack cards with [[GS|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Great Sword",
+      "weaponType": "GS",
       "damageDeck": {
         "1": 7,
         "2": 4,
@@ -194,7 +194,7 @@
       "description": "Use all attack cards with [[SS|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Sword and Shield",
+      "weaponType": "SS",
       "damageDeck": {
         "1": 8,
         "2": 4,
@@ -210,7 +210,7 @@
       "description": "Use all attack cards with [[BW|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 8,
         "2": 4,
@@ -226,7 +226,7 @@
       "description": "Use all attack cards with [[DB|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Dual Blades",
+      "weaponType": "DB",
       "damageDeck": {
         "1": 10,
         "2": 2,
@@ -242,7 +242,7 @@
       "description": "Use all attack cards with [[SA|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Switch Axe",
+      "weaponType": "SA",
       "damageDeck": {
         "1": 11,
         "2": 0,
@@ -258,7 +258,7 @@
       "description": "Use all attack cards with [[IG|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Insect Glaive",
+      "weaponType": "IG",
       "damageDeck": {
         "1": 10,
         "2": 2,
@@ -274,7 +274,7 @@
       "description": "Use all attack cards with [[HBG|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Heavy Bow Gun",
+      "weaponType": "HBG",
       "note": "[[Ammo|yellow]]",
       "damageDeck": {
         "1": 9,
@@ -291,7 +291,7 @@
       "description": "Use all attack cards with [[CS|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Charge Sword",
+      "weaponType": "CS",
       "damageDeck": {
         "1": 8,
         "2": 4,
@@ -307,7 +307,8 @@
       "description": "",
       "equipmentType": "Armor",
       "rarity": "white",
-      "armorValue": 1
+      "armorValue": 1,
+      "armorType": "legs"
     },
     {
       "id": "b52d789d-c5ad-4fbf-9196-bace2744de88",
@@ -316,7 +317,8 @@
       "description": "",
       "equipmentType": "Armor",
       "rarity": "white",
-      "armorValue": 0
+      "armorValue": 0,
+      "armorType": "chest"
     },
     {
       "id": "649015bb-1366-45fe-865a-5cae7c0a2aa1",
@@ -325,7 +327,8 @@
       "description": "",
       "equipmentType": "Armor",
       "rarity": "white",
-      "armorValue": 0
+      "armorValue": 0,
+      "armorType": "helm"
     }
   ]
 }
