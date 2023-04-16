@@ -1,2 +1,33 @@
 @use './angular-material-theme.scss';
 @use 'normalize.css/normalize.css';
+
+.rarity-white {
+  svg {
+    #base {
+      fill: #ffffff !important;
+    }
+    #background {
+      stroke: #c5c5c5 !important;
+    }
+  }
+}
+.rarity-yellow {
+  svg {
+    #base {
+      fill: #e4c829 !important;
+    }
+    #background {
+      stroke: #867514 !important;
+    }
+  }
+}
+.rarity-purple {
+  svg {
+    #base {
+      fill: #612b6e !important;
+    }
+    #background {
+      stroke: #3d1c46 !important;
+    }
+  }
+}

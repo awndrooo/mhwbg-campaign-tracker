@@ -38,7 +38,7 @@
    inkscape:deskcolor="#505050"
    showgrid="false"
    inkscape:zoom="16.046875"
-   inkscape:cx="32"
+   inkscape:cx="32.062317"
    inkscape:cy="31.968841"
    inkscape:window-width="3440"
    inkscape:window-height="1377"
@@ -47,7 +47,7 @@
    inkscape:window-maximized="1"
    inkscape:current-layer="svg9143" />
     <path
-   id="path9129"
+   id="background"
    style="fill-opacity:0.76;stroke:#000000;stroke-opacity:1;stroke-width:4;stroke-dasharray:none;fill:none"
    d="M 32 7 L 29 10 L 25.994141 13.009766 L 18 13.009766 C 16.896001 13.009766 16 13.905767 16 15.009766 L 16 17.007812 L 13 20.005859 L 10 23.005859 L 13 26.005859 L 16 29.005859 L 16 31 C 16 32.103999 16.896001 33 18 33 L 29.5 33 L 29.5 37 L 29.5 40 L 29.5 42 L 29.5 45 L 29.5 47 L 29.5 50 L 29.5 53 L 29.5 59 L 34.5 59 L 34.5 53 L 34.5 50 L 34.5 47 L 34.5 45 L 34.5 42 L 34.5 40 L 34.5 37 L 34.5 33 L 46 33 C 47.103999 33 48 32.103999 48 31 L 48 29.005859 L 51 26.005859 L 54 23.005859 L 51 20.005859 L 48 17.005859 L 48 15.009766 C 48 13.905767 47.103999 13.009766 46 13.009766 L 38.005859 13.009766 L 35 10 L 32 7 z " />
 <g
@@ -62,9 +62,10 @@
    id="g9631"
    transform="matrix(1,0,0,1,1,0)">
                     <path
-   d="M401,975.01L396,980.005L396,986.005L401,991.005L412.5,991.005L412.5,1013L417.5,1013L417.5,991.005L429,991.005L434,986.005L434,980.005L429,975.005L423,975.005L418,970L412,970L407,975.005L401,975.01Z"
-   style="fill-opacity:1;fill:#1f1f1f"
-   id="path9629" />
+   d="m 401,975.01 -5,4.995 v 6 l 5,5 h 11.5 V 1013 h 5 V 991.005 H 429 l 5,-5 v -6 l -5,-5 h -6 L 418,970 h -6 l -5,5.005 z"
+   style="display:inline;fill:#1f1f1f;fill-opacity:1"
+   id="base"
+   inkscape:label="base" />
                 </g>
                 <g
    id="g9635"

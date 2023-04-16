@@ -34,7 +34,7 @@
    inkscape:deskcolor="#505050"
    showgrid="false"
    inkscape:zoom="16.046875"
-   inkscape:cx="15.984421"
+   inkscape:cx="16.046738"
    inkscape:cy="31.968841"
    inkscape:window-width="3440"
    inkscape:window-height="1377"
@@ -56,9 +56,10 @@
    id="g863"
    transform="matrix(1,0,0,1,-640,224)">
                 <path
-   id="path853"
+   id="base"
    d="m 666,1017 h -13 l -4,-4 v -3 h 18 l 20,-20 3,3 z m -16,-37 c 0,0 3,-3.5 3,-6 0,-2.828 6,-3 6,-3 0,0 6,0.172 6,3 0,2 3,6 3,6 z"
-   style="display:inline;fill:#242424;fill-opacity:1" />
+   style="display:inline;fill:#242424;fill-opacity:1"
+   inkscape:label="base" />
                 <path
    id="path855"
    d="M651,980L667,980L667,988L660,996L658,996L651,988L651,980Z"

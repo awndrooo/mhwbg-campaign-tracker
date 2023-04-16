@@ -32,7 +32,7 @@
    inkscape:deskcolor="#505050"
    showgrid="false"
    inkscape:zoom="16.046875"
-   inkscape:cx="32"
+   inkscape:cx="32.062317"
    inkscape:cy="31.968841"
    inkscape:window-width="3440"
    inkscape:window-height="1377"
@@ -51,9 +51,10 @@
    id="g29462"
    serif:id="Sword_&amp;_Shield_Rank_01">
             <path
-   id="path29454"
+   id="base"
    d="M19,1003L23,1003L23,1007L19,1007L19,1016L14,1016L14,999L19,999L19,1003ZM54.5,988.5L38.5,988.5L38.5,1004.5L54.5,1004.5L54.5,988.5Z"
-   style="fill-opacity:1;fill:#1f1f1f" />
+   style="fill-opacity:1;fill:#1f1f1f"
+   inkscape:label="base" />
             <path
    id="path29456"
    d="M51.5,992.5C51.5,991.948 51.052,991.5 50.5,991.5L42.5,991.5C41.948,991.5 41.5,991.948 41.5,992.5L41.5,1000.5C41.5,1001.05 41.948,1001.5 42.5,1001.5L50.5,1001.5C51.052,1001.5 51.5,1001.05 51.5,1000.5L51.5,992.5Z"

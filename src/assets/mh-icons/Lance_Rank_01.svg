@@ -32,7 +32,7 @@
    inkscape:deskcolor="#505050"
    showgrid="false"
    inkscape:zoom="16.046875"
-   inkscape:cx="32"
+   inkscape:cx="32.062317"
    inkscape:cy="31.968841"
    inkscape:window-width="3440"
    inkscape:window-height="1377"
@@ -53,9 +53,10 @@
             <g
    id="g19096">
                 <path
-   id="path19090"
-   d="M300,974L300,1012L297,1012L293,1008L293,976L297,974L300,974ZM276,1008L272,1008L272,1010L276,1010L276,1008ZM281.066,999C281.622,999.992 282.23,1001.02 282.825,1002L265.175,1002C265.769,1001.02 266.378,999.993 266.934,999L281.066,999ZM311,979L303,979L303,987L311,987L311,979Z"
-   style="fill-opacity:1;fill:#1f1f1f" />
+   id="base"
+   d="m 300,974 v 38 h -3 l -4,-4 v -32 l 4,-2 z m -24,34 h -4 v 2 h 4 z m 5.066,-9 c 0.556,0.992 1.164,2.02 1.759,3 h -17.65 c 0.594,-0.98 1.203,-2.007 1.759,-3 z M 311,979 h -8 v 8 h 8 z"
+   style="display:inline;fill:#1f1f1f;fill-opacity:1"
+   inkscape:label="base" />
                 <path
    id="path19092"
    d="M299,974L299,1012L297,1012L294,1009L294,975.5L297,974L299,974Z"
