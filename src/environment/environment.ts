@@ -4,4 +4,8 @@ export const environment = {
   IDBName: 'MHWBGDB',
   IDBVersion: 1,
   assets: '../../assets',
+  endpoints: {
+    materials: 'materials',
+    equipment: 'equipment',
+  },
 };

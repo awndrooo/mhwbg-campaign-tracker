@@ -15,12 +15,17 @@ export class MaterialsEffects implements OnInitEffects {
     return this.actions$.pipe(
       ofType(MaterialsActions.loadMaterials),
       concatMap(() =>
-        this._http.get<Material[]>(`${environment.ApiHost}/materials`).pipe(
-          map((data) => MaterialsActions.loadMaterialsSuccess({ data })),
-          catchError((error) =>
-            of(MaterialsActions.loadMaterialsFailure({ error }))
+        this._http
+          .get<Material[]>(
+            `${environment.ApiHost}/${environment.endpoints.materials}`,
+            { responseType: 'json' }
           )
-        )
+          .pipe(
+            map((data) => MaterialsActions.loadMaterialsSuccess({ data })),
+            catchError((error) =>
+              of(MaterialsActions.loadMaterialsFailure({ error }))
+            )
+          )
       )
     );
   });

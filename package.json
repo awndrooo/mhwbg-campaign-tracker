@@ -1,14 +1,16 @@
 {
   "name": "mhwbg-campaign-tracker",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=127.0.0.1",
-    "build": "ng build",
+    "build": "ng build --base-href=https://awndrooo.github.io/mhwbg-campaign-tracker-app/ --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "setnode": "nvm use 18.15.0",
-    "json-server": "json-server --watch src/assets/db.json"
+    "json-server": "json-server --watch src/assets/db.json",
+    "postbuild": "node post-build.js"
   },
   "private": true,
   "dependencies": {

@@ -1,7 +1,11 @@
 export const environment = {
   production: true,
-  ApiHost: 'http://awndroo.github.io/mhwbg-campaign-tracker/',
+  ApiHost: '/mhwbg-campaign-tracker-app/assets',
   IDBName: 'MHWBGDB',
   IDBVersion: 1,
-  assets: '/assets',
+  assets: '/mhwbg-campaign-tracker-app/assets',
+  endpoints: {
+    materials: 'materials.json',
+    equipment: 'equipment.json',
+  },
 };
