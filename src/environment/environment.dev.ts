@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
-  ApiHost: 'http://localhost:3000',
+  ApiHost: '/assets',
   IDBName: 'MHWBGDB',
   IDBVersion: 1,
-  assets: '../../assets',
+  assets: '/assets',
 };

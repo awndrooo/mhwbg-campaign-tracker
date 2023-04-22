@@ -1,11 +1,7 @@
 export const environment = {
   production: true,
-  ApiHost: '/mhwbg-campaign-tracker-app/assets',
+  ApiHost: '/mhwbg-campaign-tracker/assets',
   IDBName: 'MHWBGDB',
   IDBVersion: 1,
-  assets: '/mhwbg-campaign-tracker-app/assets',
-  endpoints: {
-    materials: 'materials.json',
-    equipment: 'equipment.json',
-  },
+  assets: '/mhwbg-campaign-tracker/assets',
 };

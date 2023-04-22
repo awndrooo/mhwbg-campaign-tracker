@@ -12,12 +12,12 @@ var db = JSON.parse(file);
 const { materials, equipment } = db;
 
 await fs.writeFile(
-  './dist/mhwbgcampaign-tracker/assets/materials.json',
+  './dist/mhwbgcampaign-tracker/assets/materials',
   JSON.stringify(materials),
   'utf-8'
 );
 await fs.writeFile(
-  './dist/mhwbgcampaign-tracker/assets/equipment.json',
+  './dist/mhwbgcampaign-tracker/assets/equipment',
   JSON.stringify(equipment),
   'utf-8'
 );

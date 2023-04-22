@@ -5,8 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=127.0.0.1",
-    "build": "ng build --base-href=https://awndrooo.github.io/mhwbg-campaign-tracker-app/ --configuration=production",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng build --base-href=https://awndrooo.github.io/mhwbg-campaign-tracker/ --configuration=production",
+    "build-dev": "ng build --base-href=./ --configuration=development & npm run postbuild",
+    "watch": "ng build --watch --base-href=./ --configuration=development",
     "test": "ng test",
     "setnode": "nvm use 18.15.0",
     "json-server": "json-server --watch src/assets/db.json",

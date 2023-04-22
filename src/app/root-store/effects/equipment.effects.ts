@@ -21,10 +21,9 @@ export class EquipmentEffects implements OnInitEffects {
       ofType(EquipmentActions.loadEquipments),
       concatMap(() =>
         this._http
-          .get<IEquipmentStoreItem[]>(
-            `${environment.ApiHost}/${environment.endpoints.equipment}`,
-            { responseType: 'json' }
-          )
+          .get<IEquipmentStoreItem[]>(`${environment.ApiHost}/equipment`, {
+            responseType: 'json',
+          })
           .pipe(
             map((data) => EquipmentActions.loadEquipmentsSuccess({ data })),
             catchError((error) =>

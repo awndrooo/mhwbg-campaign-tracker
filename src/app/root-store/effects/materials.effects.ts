@@ -16,10 +16,9 @@ export class MaterialsEffects implements OnInitEffects {
       ofType(MaterialsActions.loadMaterials),
       concatMap(() =>
         this._http
-          .get<Material[]>(
-            `${environment.ApiHost}/${environment.endpoints.materials}`,
-            { responseType: 'json' }
-          )
+          .get<Material[]>(`${environment.ApiHost}/materials`, {
+            responseType: 'json',
+          })
           .pipe(
             map((data) => MaterialsActions.loadMaterialsSuccess({ data })),
             catchError((error) =>
