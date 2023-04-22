@@ -1,9 +1,7 @@
-name: MH:W BG Campaign Tracker Build
+name: Build
 
 on:
   push:
-    branches: ['main']
-  pull_request:
     branches: ['main']
 
 jobs:
@@ -27,3 +25,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: dist/mhwbgcampaign-tracker
+          name: build
