@@ -23,6 +23,10 @@ jobs:
 
     # Specify runner + deployment step
     steps:
+      - name: Download Artifact
+        uses: action/download-artifact@v3
+        with: 
+          artifact-name: build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
