@@ -22,3 +22,4 @@ These goals push the line of pipe-dream features and may or may not happen depen
     - Maybe profile picture? Data is stored in IndexedDB so not sure about viability without major compression
 - Equipment crafting that utilizes hunters material inventory (versus trying to use forge reference to figure out what you can craft with your current mats)
 - Keep track of specific tasks/hunts completed on campaign days
+- Desktop native client with local save persistance (probably ElectronJS)
