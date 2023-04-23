@@ -1,4 +1,5 @@
-import { reducer, initialState } from './hunter-profile.reducer';
+import { initialState } from '@root-store/state/hunter-profiles.state';
+import { reducer } from './hunter-profile.reducer';
 
 describe('HunterProfile Reducer', () => {
   describe('an unknown action', () => {

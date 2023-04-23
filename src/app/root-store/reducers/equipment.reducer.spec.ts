@@ -1,4 +1,5 @@
-import { reducer, initialState } from './equipment.reducer';
+import { initialState } from '@root-store/state/equipment.state';
+import { reducer } from './equipment.reducer';
 
 describe('Equipment Reducer', () => {
   describe('an unknown action', () => {
