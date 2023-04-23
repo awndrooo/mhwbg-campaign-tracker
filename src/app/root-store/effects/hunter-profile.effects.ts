@@ -11,6 +11,7 @@ import {
   map,
   switchMap,
   take,
+  tap,
 } from 'rxjs/operators';
 import * as HunterProfileActions from '../actions/hunter-profile.actions';
 
@@ -70,6 +71,7 @@ export class HunterProfileEffects implements OnInitEffects {
           take(1),
           map((res) => ({ ...action.data, hunterId: res })),
           map((data) => HunterProfileActions.addHunterProfileSuccess({ data })),
+          tap((action) => (this._sessionActiveHunterId = action.data.hunterId)),
           catchError((error) =>
             of(HunterProfileActions.addHunterProfileFailure({ error }))
           )
