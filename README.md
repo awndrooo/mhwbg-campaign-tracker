@@ -10,7 +10,7 @@ Live Application [https://awndrooo.github.io/mhwbg-campaign-tracker/](https://aw
 These goals are currently on the TODO list and should happen.
 - Full monster carve materials and equipment from all expansions (not complicated just time consuming to add)
 - Proper display of item icons with rarity coloring
-- Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.
+- ~~Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.~~ Done: 2023-04-22
 - Toggle off darkmode (Not sure anyone actually wants this but seems good to have)
 
 ## Goals (not promised)

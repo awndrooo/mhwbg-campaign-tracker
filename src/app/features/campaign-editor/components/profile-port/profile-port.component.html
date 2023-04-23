@@ -1,0 +1,65 @@
+<h1>Import/Export Profiles</h1>
+<p>
+  This project is currently in early development and sometimes (read: often)
+  things break. While I'm going to do my best to keep from bricking anyones
+  profile this will give you a means to save your profile before something goes
+  wrong. Should this project gain any interest it will also enable users to
+  share their profile for me to debug.
+</p>
+
+<mat-card>
+  <mat-card-header><mat-card-title>Export</mat-card-title></mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field style="width: 100%">
+      <textarea
+        #profileTextArea
+        matInput
+        readonly
+        [value]="this.activeHunterProfileJson$ | async"
+      ></textarea>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="this.saveActiveHunterProfile()"
+    >
+      Save To File
+    </button>
+    <button
+      mat-icon-button
+      matTooltip="Copy to Clipboard"
+      (click)="this.copyToClipboard(profileTextArea.value)"
+    >
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-divider style="margin: 1em"></mat-divider>
+
+<mat-card>
+  <mat-card-header><mat-card-title>Import</mat-card-title></mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field style="width: 100%">
+      <mat-label>Paste Profile to Import</mat-label>
+      <textarea matInput #profileImportInput></textarea>
+    </mat-form-field>
+    <input type="file" #fileUpload /> <br /><br />
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="this.uploadProfileString(profileImportInput.value)">Import from Text</button> &nbsp;
+    <button
+      mat-raised-button
+      color="accent"
+      (click)="this.uploadProfileFile(fileUpload)"
+    >
+      Import from File
+    </button>
+  </mat-card-actions>
+</mat-card>

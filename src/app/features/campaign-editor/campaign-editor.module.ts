@@ -11,6 +11,7 @@ import { CampaignEditorComponent } from './components/campaign-editor/campaign-e
 import { EquipmentAddDialogComponent } from './components/equipment-add-dialog/equipment-add-dialog.component';
 import { MaterialAddDialogComponent } from './components/material-add-dialog/material-add-dialog.component';
 import { OutfitterComponent } from './components/outfitter/outfitter.component';
+import { ProfilePortComponent } from './components/profile-port/profile-port.component';
 import { ProfileSelectorComponent } from './components/profile-selector/profile-selector.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
     path: 'outfit',
     component: OutfitterComponent,
   },
+  {
+    path: 'port',
+    component: ProfilePortComponent,
+  },
 ];
 
 @NgModule({
@@ -36,6 +41,7 @@ const routes: Routes = [
     EquipmentAddDialogComponent,
     OutfitterComponent,
     ProfileSelectorComponent,
+    ProfilePortComponent,
   ],
   imports: [
     CommonModule,
