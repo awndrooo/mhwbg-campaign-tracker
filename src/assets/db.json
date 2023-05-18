@@ -1,4 +1,32 @@
 {
+  "monster": [
+    {
+      "id": "584b360e-279c-4499-b946-da3a58a8bcc4",
+      "name": "Great Jagras",
+      "boxset": "AncientForest"
+    },
+    {
+      "id": "93f420f8-9d01-43b3-a656-5a3a5a27a7a8",
+      "name": "Tobi-Kadachi",
+      "boxset": "AncientForest"
+    },
+    {
+      "id": "3a6b95ef-d357-4d26-9066-237adc2fac7b",
+      "name": "Anjanath",
+      "boxset": "AncientForest"
+    },
+    {
+      "id": "63e3c5a9-eea4-4a5f-83cc-a7fe4e0cfb8f",
+      "name": "Rathalos",
+      "boxset": "AncientForest"
+    },
+    {
+      "id": "2f25bd25-0961-4086-a59c-0c8fababa416",
+      "name": "Azure Rathalos",
+      "boxset": "AncientForest"
+    }
+  ],
+  "monsterpart": [],
   "materials": [
     {
       "id": "b8e034b0-7685-4e4d-b974-0969b77dd7d4",
@@ -68,6 +96,191 @@
     {
       "id": "73a28eb5-16df-485b-97cf-d1e8c766a5c4",
       "name": "Wingdrake Hide",
+      "description": ""
+    },
+    {
+      "id": "dd8f3361-f8a8-4be8-b5ab-64cc7e93bd20",
+      "name": "Great Jagras Claw",
+      "description": ""
+    },
+    {
+      "id": "33de1a7d-faf5-461e-8167-730e55f6753b",
+      "name": "Great Jagras Hide",
+      "description": ""
+    },
+    {
+      "id": "2e79eff2-27b0-4ffd-bd3b-a447cdd57c62",
+      "name": "Great Jagras Scale",
+      "description": ""
+    },
+    {
+      "id": "91e7031e-89e5-4e63-924c-f4fb72401d8c",
+      "name": "Great Jagras Mane",
+      "description": ""
+    },
+    {
+      "id": "5f9075f3-951d-475e-8c0b-41295723b979",
+      "name": "Sharp Claw",
+      "description": ""
+    },
+    {
+      "id": "60ad9ef7-8e6b-4266-96b3-7f2c5bb69674",
+      "name": "Piercing Claw",
+      "description": ""
+    },
+    {
+      "id": "4b454c4e-3ba6-4bae-a6c9-62636b45d46e",
+      "name": "Tobi-Kadachi Pelt",
+      "description": ""
+    },
+    {
+      "id": "24adacf1-b9bf-43eb-bd9b-1446987e6b56",
+      "name": "Tobi-Kadachi Scale",
+      "description": ""
+    },
+    {
+      "id": "71513562-7336-4a76-8a70-65ec82f0b9c9",
+      "name": "Tobi-Kadachi Electrode",
+      "description": ""
+    },
+    {
+      "id": "ab7166a2-f13c-4f33-b62c-9cff204a4e4b",
+      "name": "Tobi-Kadachi Membrane",
+      "description": ""
+    },
+    {
+      "id": "00ddb307-2bef-4cec-910b-9abf3c874e7a",
+      "name": "Tobi-Kadachi Claw",
+      "description": ""
+    },
+    {
+      "id": "1229e266-4def-4014-bf4a-0e7854a5eaad",
+      "name": "Electro Sac",
+      "description": ""
+    },
+    {
+      "id": "1aca9345-cb86-4a62-91a6-4e3adbb54a91",
+      "name": "Thunder Sac",
+      "description": ""
+    },
+    {
+      "id": "f5f004d1-f093-4426-91fd-87897d3dae3d",
+      "name": "Anjanath Scale",
+      "description": ""
+    },
+    {
+      "id": "7f338bc7-4460-4335-8bc5-f825c4c40c6f",
+      "name": "Anjanath Pelt",
+      "description": ""
+    },
+    {
+      "id": "4504d290-2712-45b0-8a83-a3b086f7cd19",
+      "name": "Anjanath Nosebone",
+      "description": ""
+    },
+    {
+      "id": "fb7cccc3-a2c2-4919-bbdf-0a1bee341924",
+      "name": "Anjanath Tail",
+      "description": ""
+    },
+    {
+      "id": "9603428e-74ba-480a-9840-35b4f048939d",
+      "name": "Anjanath Fang",
+      "description": ""
+    },
+    {
+      "id": "742c9ee9-36d1-417d-9e77-a32259e3f27c",
+      "name": "Flame Sac",
+      "description": ""
+    },
+    {
+      "id": "b9f305ed-f2e9-4612-a287-22f81a0c0cdf",
+      "name": "Inferno Sac",
+      "description": ""
+    },
+    {
+      "id": "f0815368-8515-42cd-9b6b-1a804f6d7cb2",
+      "name": "Rathalos Wingtalon",
+      "description": ""
+    },
+    {
+      "id": "cd7312e6-31c1-4af9-92ee-745ac34b4b9f",
+      "name": "Rathalos Scale",
+      "description": ""
+    },
+    {
+      "id": "3daa28fe-0413-45f0-93cf-972762f8a28c",
+      "name": "Rathalos Webbing",
+      "description": ""
+    },
+    {
+      "id": "c25892fd-bc42-4d7c-ad92-038dd4efa281",
+      "name": "Rathalos Tail",
+      "description": ""
+    },
+    {
+      "id": "c1712916-8e03-435b-a4bf-83d311d29742",
+      "name": "Rathalos Marrow",
+      "description": ""
+    },
+    {
+      "id": "5aa72d9c-021f-4f81-a07b-c35d05f64b4b",
+      "name": "Rathalos Plate",
+      "description": ""
+    },
+    {
+      "id": "c0652f9c-3876-4eb4-9586-b6b6d98db846",
+      "name": "Rathalos Wing",
+      "description": ""
+    },
+    {
+      "id": "394b1a44-6fea-4868-b033-88ebc464f156",
+      "name": "Rathalos Carapace",
+      "description": ""
+    },
+    {
+      "id": "44b8f572-46ec-4242-86fc-428fba1c1e55",
+      "name": "Rathalos Shell",
+      "description": ""
+    },
+    {
+      "id": "06dc5593-0371-43d2-9220-a2ee7eb0bf06",
+      "name": "Rathalos Medulla",
+      "description": ""
+    },
+    {
+      "id": "e9348d4e-120a-4317-baa9-22d9ad2ccd96",
+      "name": "Azure Rathalos Wingtalon",
+      "description": ""
+    },
+    {
+      "id": "2462d544-1e35-4d2f-92d8-aa11dba098c3",
+      "name": "Azure Rathalos Scale",
+      "description": ""
+    },
+    {
+      "id": "e165d1e2-baa4-442d-a8d6-2ca7d06cbd17",
+      "name": "Azure Rathalos Wing",
+      "description": ""
+    },
+    {
+      "id": "63a7e145-4bd8-4260-841f-a2525dd84adb",
+      "name": "Azure Rathalos Plate",
+      "description": ""
+    },
+    {
+      "id": "04c97dd1-e56a-4c9f-a3a0-426a1a2c444f",
+      "name": "Azure Rathalos Marrow",
+      "description": ""
+    },
+    {
+      "id": "3d6983ac-4fe8-4c21-a516-72caef7ee17e",
+      "name": "Azure Rathalos Tail",
+      "description": ""
+    },
+    {
+      "id": "6e581da0-b5fc-4fb0-92ff-3215ee827a10",
+      "name": "Azure Rathalos Carapace",
       "description": ""
     }
   ],
