@@ -24,6 +24,31 @@
       "id": "2f25bd25-0961-4086-a59c-0c8fababa416",
       "name": "Azure Rathalos",
       "boxset": "AncientForest"
+    },
+    {
+      "id": "51ab9f4a-41c7-46b9-a5d9-7c2493b29fe3",
+      "name": "Barroth",
+      "boxset": "WildspireWaste"
+    },
+    {
+      "id": "596a699f-2d85-42b0-9f17-8ffc3ff2b1e7",
+      "name": "Pukei-Pukei",
+      "boxset": "WildspireWaste"
+    },
+    {
+      "id": "d1a9b751-1cc8-4540-933f-a8113d6fa3cf",
+      "name": "Jyuratodus",
+      "boxset": "WildspireWaste"
+    },
+    {
+      "id": "0de18c57-35ff-437b-8cf3-43ed52e289b3",
+      "name": "Diablos",
+      "boxset": "WildspireWaste"
+    },
+    {
+      "id": "b0779c05-d381-4f6a-80cd-6dd79d3c110d",
+      "name": "Black Diablos",
+      "boxset": "WildspireWaste"
     }
   ],
   "monsterpart": [],
@@ -281,6 +306,161 @@
     {
       "id": "6e581da0-b5fc-4fb0-92ff-3215ee827a10",
       "name": "Azure Rathalos Carapace",
+      "description": ""
+    },
+    {
+      "id": "34893539-2149-47b0-8590-6ff800e95552",
+      "name": "Barroth Claw",
+      "description": ""
+    },
+    {
+      "id": "8574ed52-82c2-4c89-af6e-97aea6c6cd60",
+      "name": "Barroth Ridge",
+      "description": ""
+    },
+    {
+      "id": "3460f9bd-5dda-4dd2-bb1a-2d6b548bd3f2",
+      "name": "Barroth Shell",
+      "description": ""
+    },
+    {
+      "id": "27bb99f5-037e-40b2-87ee-68f0921516ad",
+      "name": "Barroth Carapace",
+      "description": ""
+    },
+    {
+      "id": "a898cb58-caf0-4c35-8405-706fb07f5b68",
+      "name": "Pukei-Pukei Wing",
+      "description": ""
+    },
+    {
+      "id": "57b45a3d-c502-4c73-bf78-3856af47f316",
+      "name": "Pukei-Pukei Scale",
+      "description": ""
+    },
+    {
+      "id": "4b4adbcf-9649-4006-8c32-85d7bf4a560c",
+      "name": "Pukei-Pukei Quill",
+      "description": ""
+    },
+    {
+      "id": "2638af30-f7f5-4e60-b479-d3d02a8c30fb",
+      "name": "Pukei-Pukei Carapace",
+      "description": ""
+    },
+    {
+      "id": "a2a8ce68-5858-4d7e-aea6-92ed31f70b88",
+      "name": "Pukei-Pukei Tail",
+      "description": ""
+    },
+    {
+      "id": "e75489b6-2a38-4061-bfd5-1a98527eabd1",
+      "name": "Poison Sac",
+      "description": ""
+    },
+    {
+      "id": "54c6ac70-6f91-4c12-904a-10516ddee067",
+      "name": "Toxin Sac",
+      "description": ""
+    },
+    {
+      "id": "f6046e5c-f48e-48d9-a776-840171af2fbb",
+      "name": "Jyuratodus Fin",
+      "description": ""
+    },
+    {
+      "id": "d27990ba-0d36-4912-8fd0-e232c5096fba",
+      "name": "Jyuratodus Scale",
+      "description": ""
+    },
+    {
+      "id": "dbd26619-bf02-4e76-91d5-34bf17723a4d",
+      "name": "Jyuratodus Shell",
+      "description": ""
+    },
+    {
+      "id": "132b94be-bdc4-4212-9911-ff25924432c9",
+      "name": "Jyuratodus Carapace",
+      "description": ""
+    },
+    {
+      "id": "d838078d-42ae-4c7f-aa90-a929ae35c625",
+      "name": "Jyuratodus Fang",
+      "description": ""
+    },
+    {
+      "id": "a310a8ac-c234-4ab3-b564-b52bad4972b6",
+      "name": "Jyuratodus Fin",
+      "description": ""
+    },
+    {
+      "id": "3a944d26-9f8d-4c22-b863-08b314350172",
+      "name": "Aqua Sac",
+      "description": ""
+    },
+    {
+      "id": "035395b9-dedf-4c2f-9c0c-2b345574c4cc",
+      "name": "Gajau Scale",
+      "description": ""
+    },
+    {
+      "id": "22f7a78b-f08e-42c2-8778-1c2160256e8e",
+      "name": "Diablos Shell",
+      "description": ""
+    },
+    {
+      "id": "e2352ff0-f7c9-4323-a8b1-0e12649666ae",
+      "name": "Diablos Carapace",
+      "description": ""
+    },
+    {
+      "id": "f21b4399-2e5e-45f5-8af3-7f30892c6063",
+      "name": "Diablos Fang",
+      "description": ""
+    },
+    {
+      "id": "dd7540c9-3c9b-496b-ad68-96303078e6c0",
+      "name": "Diablos Ridge",
+      "description": ""
+    },
+    {
+      "id": "9c59f73a-c82e-4202-9aac-479ace0c30ca",
+      "name": "Twisted Horn",
+      "description": ""
+    },
+    {
+      "id": "8385f636-a764-4a4c-9bec-01e34e0dbba9",
+      "name": "Majestic Horn",
+      "description": ""
+    },
+    {
+      "id": "c23d7886-c9be-4179-934d-a2e17d6a9617",
+      "name": "Blos Medulla",
+      "description": ""
+    },
+    {
+      "id": "16bdf6b0-eac2-47af-88fd-0d55d130c75b",
+      "name": "Black Diablos Carapace",
+      "description": ""
+    },
+    {
+      "id": "829596ba-5e0f-41d5-8336-0c1d189a32c4",
+      "name": "Black Diablos Ridge",
+      "description": ""
+    },
+    {
+      "id": "d70816b1-317e-4554-b5be-dd6cb5a6a3da",
+      "name": "Novacrystal",
+      "description": ""
+    },
+    {
+      "id": "fb0d4929-cae0-4b4f-8c6f-a500c67e36e2",
+      "name": "Black Spiral Horn",
+      "description": ""
+    },
+    {
+      "id": "03449758-3e9c-40d3-aa25-c0d92ac0b438",
+      "name": "Wyvern Gem",
       "description": ""
     }
   ],
