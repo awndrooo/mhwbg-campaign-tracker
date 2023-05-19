@@ -722,6 +722,214 @@
       "rarity": "white",
       "armorValue": 0,
       "armorType": "helm"
+    },
+    {
+      "id": "47f271ce-a176-4d46-8ada-60a432cd9abf",
+      "cardNumber": 460,
+      "name": "Steel Bow",
+      "description": "Remove: 2 Feint. Add: 2 Skilled Feint.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 6,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "af340782-1ebe-4d0a-815e-51fdc6b47068",
+      "cardNumber": 531,
+      "name": "Blooming Arch",
+      "description": "Remove: 4 Power Coating, 2 Shot. Replace: 2 Poison Coating, 2 Paralysis Coating, 2 Poisoned Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "c58d7fa1-5910-4889-88bf-6f6642420980",
+      "cardNumber": 532,
+      "name": "Diablos Bow",
+      "description": "Remove: 2 Power Coating, 2 Shot. Replace: 2 Paralysis Coating, 2 Rending Arrows.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d2ab3b2c-e931-4f4f-88d1-124bed8e5a43",
+      "cardNumber": 533,
+      "name": "Datura String",
+      "description": "Remove: 4 Power Coating, 6 Shot. Replace: 2 Poison Coating, 2 Paralysis Coating, 2 Poisoned Shot, 4 Flared Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "36886967-51ea-4e9a-afaa-c9482da741cd",
+      "cardNumber": 534,
+      "name": "Diablos Coilbender",
+      "description": "Remove: 2 Power Coating, 2 Shot, 2 Charge Sidestep. Replace: 2 Paralysis Coating, 2 Rending Arrows, 2 Rapid Dash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 2,
+        "2": 7,
+        "3": 5,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "93f4a2ca-e500-4ce2-88f7-5af6f4fe4c5d",
+      "cardNumber": 459,
+      "name": "Hunter's Bow",
+      "description": "Remove: 4 Power Coating. Add: 2 Poison Coating, 2 Paralysis Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "88609696-0bc2-45ff-a535-e97d0df8722c",
+      "cardNumber": 461,
+      "name": "Hunter's Scoutbow",
+      "description": "Remove: 4 Power Coating, 2 Shot. Add: 2 Poison Coating, 2 Paralysis Coating, 2 Enhanced Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 4,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "27ed187b-21b8-43bf-b6d9-3f5a612ce259",
+      "cardNumber": 462,
+      "name": "Alloy Bow",
+      "description": "Remove: 2 Feint, 3 Charged Shot. Add: 2 Skilled Feint, 3 Enhanced Charged Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 4,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "a511fd94-5e25-462e-95fb-ecdf23f03a0b",
+      "cardNumber": 463,
+      "name": "Hunter's Proudbow",
+      "description": "Remove: 4 Power Coating, 2 Shot, 2 Arc Shot. Add: 2 Poison Coating, 2 Paralysis Coating, 2 Enhanced Shot, 2 Strong Arc Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "60c2536c-e5f4-44ea-ad45-9ea9dbfcd3a5",
+      "cardNumber": 464,
+      "name": "Pulsar Bow",
+      "description": "Remove: 4 Power Coating. Add: 3 High Power Coating, 1 Paralysis Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "28428067-951d-43a1-b85f-14203c2d228d",
+      "cardNumber": 465,
+      "name": "Blazing Bow",
+      "description": "Remove: 4 Power Coating. Add: 2 Blast Coating, 2 Poison Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7d96dbb8-f738-46f1-b478-9d5d355be9b6",
+      "cardNumber": 466,
+      "name": "Flying Kadachi Strikebow",
+      "description": "Remove: 4 Power Coating, 1 Dragon Piercer, Any 1 Card. Add: 3 High Power Coating, 1 Paralysis Coating, 2 Striking Dragon Piercer.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "bab72658-e0c9-4904-8803-826309abfad2",
+      "cardNumber": 467,
+      "name": "Anja Arch",
+      "description": "Remove: 4 Power Coating, 3 Charged Shot. Add: 2 Blast Coating, 2 Poison Coating, 3 Blasing Charged Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "type": "Bow",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 8,
+        "4": 0,
+        "element": 0
+      }
     }
   ]
 }
