@@ -681,10 +681,10 @@
       "id": "9d5b6dbc-0631-47e5-8da9-84b7ecc7b542",
       "cardNumber": 1,
       "name": "Proto Commission Axe",
-      "description": "Use all attack cards with [[CS|white]] to create your hunter attack deck.",
+      "description": "Use all attack cards with [[CB|white]] to create your hunter attack deck.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "weaponType": "CS",
+      "weaponType": "CB",
       "damageDeck": {
         "1": 8,
         "2": 4,
@@ -2078,6 +2078,224 @@
         "2": 3,
         "3": 7,
         "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "1b09afaa-9618-457f-b895-dabf2e9135c9",
+      "cardNumber": 393,
+      "name": "Bone Strongarm",
+      "description": "Use all attack cards with [[CB|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "CB",
+      "damageDeck": {
+        "1": 5,
+        "2": 5,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "a464338f-5847-45b9-8b3c-16ce07b2dd5e",
+      "cardNumber": 394,
+      "name": "Elite Commission Axe",
+      "description": "Remove: 3 Return Stroke. Replace: 3 Powered Stroke",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "CB",
+      "damageDeck": {
+        "1": 8,
+        "2": 3,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "92cdc127-fb14-4f48-a19c-be2e694ab18c",
+      "cardNumber": 395,
+      "name": "Hard Bone Strongarm",
+      "description": "Remove: 2 Charged Rising Slash. Replace: 2 Quick Rising Slash",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "CB",
+      "damageDeck": {
+        "1": 4,
+        "2": 5,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "989cd8d0-7643-4a93-8d7d-15de4dd9454d",
+      "cardNumber": 396,
+      "name": "Mudslide Blade",
+      "description": "Remove: 2 Elemental Round Slash. Replace: 2 Slippery Round Slash",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 5,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "95cc8648-70e6-49ee-9d94-3f9adc8656c3",
+      "cardNumber": 397,
+      "name": "Diablos Wall",
+      "description": "Remove: 2 Weak Slash. Replace: 2 Deft Slash",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 1,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "ee73fa80-762a-425a-b069-aed346b46d7a",
+      "cardNumber": 398,
+      "name": "Chrome Guardian",
+      "description": "Remove: 2 Return Stroke, 3 Shield Block. Replace: 2 Powered Stroke, 3 Solid Block",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 5,
+        "2": 4,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "ba079d9d-f338-4b7a-abed-9f224ac9f020",
+      "cardNumber": 399,
+      "name": "Mighty Strongarm",
+      "description": "Remove: 2 Charged Rising Slash, 2 Forward Slash. Replace: 2 Quick Rising Slash, 2 Lunging Slash",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "34352ed5-f514-497b-bac7-3e3f38f17e84",
+      "cardNumber": 400,
+      "name": "Jyura Depth",
+      "description": "Remove: 2 Elemental Round Slash, 2 Amped Elemental Discharge. Replace: 2 Slippery Round Slash, 2 Water Element Discharge.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 6,
+        "3": 5,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "d74d71a7-3753-4b7b-a610-e5c12bb9e7d1",
+      "cardNumber": 401,
+      "name": "Diablos Tyrannis",
+      "description": "Remove: 2 Weak Slash, 2 Element Discharge. Replace: 2 Deft Slash, 2 Crippling Discharge.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 2,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "4908fafc-e8a0-4025-88cc-23730d855a26",
+      "cardNumber": 509,
+      "name": "Jagras Strongarm",
+      "description": "Remove: 2 Charged Rising Slash. Replace: 2 Gluttonous Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 3,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "05d90bde-500e-4940-94cc-9c2d8acc6bac",
+      "cardNumber": 510,
+      "name": "Pulsar Strongarm",
+      "description": "Remove: 3 Shield Block. Replace: 3 Lightning Reflex Block.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 2,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "6654b4f6-6e82-4108-93bd-be10e1acd282",
+      "cardNumber": 511,
+      "name": "Jagras Escudo",
+      "description": "Remove: 2 Charged Rising Slash, Forward Slash. Replace: 2 Gluttonous Slash, 2 Ravenous Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 4,
+        "3": 5,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "ab6e074e-e0d1-4103-8443-c91c9bf606b1",
+      "cardNumber": 512,
+      "name": "Kadachi Kaina",
+      "description": "Remove: 3 Guard, 3 Return Stroke. Replace: 3 Lightning Reflex Guard, 3 Thunder Stroke.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 6,
+        "3": 3,
+        "4": 2,
         "element": 0
       }
     }
