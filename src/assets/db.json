@@ -1872,6 +1872,214 @@
         "electric": 0,
         "ice": 0
       }
+    },
+    {
+      "id": "3f62eff4-e280-40c3-aa5f-bfb652ac6661",
+      "cardNumber": 454,
+      "name": "Bone Rod",
+      "description": "Use all attack cards with [[IG|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 7,
+        "2": 3,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "635a3d55-7733-424b-aa02-3542f687c857",
+      "cardNumber": 455,
+      "name": "Steel Blade",
+      "description": "Remove: 3 Wide Sweep. Replace: 3 Arced Sweep",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 8,
+        "2": 3,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "82824932-0b6f-44a1-8750-4fe0ef7442f1",
+      "cardNumber": 456,
+      "name": "Hard Bone Rod",
+      "description": "Remove: 2 Jumping Slash. Replace: 2 Bounding Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 5,
+        "2": 4,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "48584207-fc3f-4733-a5af-0dfd8ba4c766",
+      "cardNumber": 457,
+      "name": "Blooming Glaive",
+      "description": "Remove: 2 Rising Slash Combo. Replace: 2 Poison Slash Combo.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "f7e3acee-e18c-4b9a-a9d1-15b12d49744d",
+      "cardNumber": 458,
+      "name": "Diablos Rod",
+      "description": "Remove: 3 Wide Sweep. Replace: 3 Brutal Sweep.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "186ebf97-aa73-4d18-8ec3-ca970f2f0b73",
+      "cardNumber": 459,
+      "name": "Chrome Blade",
+      "description": "Remove: 3 Wide Sweep, 2 Thrust. Replace: 2 Arced Sweep, 2 Vicious Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "ae2e411b-fcaa-4cf1-bdc4-22527b3999b3",
+      "cardNumber": 460,
+      "name": "Aerial Rod",
+      "description": "Remove: 2 Jumping Slash, 2 Reaping Slash. Replace: 2 Bounding Slash, 2 Deadly Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "c4ac660e-c2ac-4b2b-b33f-b3166602afb3",
+      "cardNumber": 461,
+      "name": "Datura Blade",
+      "description": "Remove: 2 Rising Slash Combo, 2 Descending Slash. Replace: 2 Poisoned Slash Combo, 2 Poisoned Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 7,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "4a7461db-66ba-457f-a487-7a9a71878e38",
+      "cardNumber": 462,
+      "name": "Tyrannis Glaive",
+      "description": "Remove: 3 Wide Sweep, 2 Tornado Slash. Replace: 3 Brutal Sweep, 2 Annihilating Tornado Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 6,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "98e9aefe-0953-4d43-b60e-89d143e41dc1",
+      "cardNumber": 535,
+      "name": "Flammenkaefer",
+      "description": "Remove: 3 Vault. Replace: 3 Charging Vault.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 2,
+        "2": 7,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "46b0870a-8f7a-4c3b-8ab3-c775b06776e9",
+      "cardNumber": 536,
+      "name": "Flame Glaive",
+      "description": "Remove: 2 Jumping Slash. Replace: 2 Burning Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 5,
+        "2": 2,
+        "3": 5,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "cd04465d-2ed7-41ba-ad57-4185020ba3dc",
+      "cardNumber": 537,
+      "name": "Gnashing Flammenkaefer",
+      "description": "Remove: 3 Vault, 2 Jump Advancing Slash. Replace: 3 Charging Vault, 2 Blaze Advancing Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 5,
+        "2": 2,
+        "3": 7,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d979d961-d587-426e-a80c-2d61469708a6",
+      "cardNumber": 538,
+      "name": "Rathmaul",
+      "description": "Remove: 2 Jumping Slash, 2 Thrust. Replace: 2 Burning Slash, 2 Molten Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 4,
+        "2": 3,
+        "3": 7,
+        "4": 0,
+        "element": 0
+      }
     }
   ]
 }
