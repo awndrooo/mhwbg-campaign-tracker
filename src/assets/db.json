@@ -1175,6 +1175,216 @@
         "4": 0,
         "element": 0
       }
+    },
+    {
+      "id": "5f1354e0-c4b7-4b4d-8180-0db26ad5d4b0",
+      "cardNumber": 376,
+      "name": "Bone Blade",
+      "description": "Use all attack cards with [[GS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 5,
+        "2": 3,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7a02a45e-fb1a-4424-ac07-15dfbe88cb88",
+      "cardNumber": 377,
+      "name": "Buster Blade",
+      "description": "Remove: 2 Jumping Slash. Add: 2 Enhanced Jumping Slash",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 4,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "587f63e5-ed3a-4d15-a675-f82f25935962",
+      "cardNumber": 378,
+      "name": "Bone Slasher",
+      "description": "Remove: Any 1 Card. Add: 1 Greater Sword Block",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7554780f-4ca0-4205-b9ab-67a3ff305498",
+      "cardNumber": 379,
+      "name": "Chrome Razor",
+      "description": "Remove: 2 Jumping Slash, 2 Wide Slash. Add: 2 Enhanced Jumping Slash, 2 Heavy Slice.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3a18ae74-3cd4-4c77-8d45-a27922a274f4",
+      "cardNumber": 380,
+      "name": "Giant Jawblade",
+      "description": "Remove: Any 1 Card, 4 Overhead Slam. Add: 1 Greater Sword Block, 4 Enhanced Overhead Slam.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 2,
+        "2": 4,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "0ef4028f-91b1-4cce-9a00-87b3118ea312",
+      "cardNumber": 381,
+      "name": "Flame Blade",
+      "description": "Remove: 4 Overhead Slam. Add: 4 Blazing Slam.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 5,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "02e11a73-ba12-4a9f-bf6c-263c883f083d",
+      "cardNumber": 382,
+      "name": "Jagras Blade",
+      "description": "Remove: 3 Rising Slash. Add: 3 Strong Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 5,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "3db5299c-fd84-4f40-8551-2af953f8756b",
+      "cardNumber": 383,
+      "name": "Red Wing",
+      "description": "Remove: 4 Overhead Slam, 2 Wide Slash. Add: 4 Blazing Slam, 2 Crushing Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 6,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "27788c6d-c38e-4a05-a282-05b163e159d5",
+      "cardNumber": 384,
+      "name": "Jagras Hacker",
+      "description": "Remove: 3 Rising Slash, Any 2 Cards. Add: 3 Strong Rising Slash, 2 Strong Charge Up.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 9,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "cc7dd5fa-a667-4ccd-b272-01c99984e41f",
+      "cardNumber": 384,
+      "name": "Carapace Buster",
+      "description": "Remove: 2 Great Sword Block. Add: 2 Empowered Great Sword Block.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 5,
+        "2": 4,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7ac9c23e-9096-42d3-b530-6d85c5cebf65",
+      "cardNumber": 493,
+      "name": "Blooming Blade",
+      "description": "Remove: 2 True Charged Slash. Replace: 2 Toxic Charged Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 5,
+        "2": 6,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "fc07c4a5-05ee-4171-8db5-b327ddbd12e1",
+      "cardNumber": 494,
+      "name": "Barroth Shredder",
+      "description": "Remove: 2 Great Sword Block, Any 2 Cards. Replace: 2 Empowered Great Sword Block, 2 Paralysing Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 4,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "69862012-2b90-4a40-b6a6-dbe45b784d64",
+      "cardNumber": 495,
+      "name": "Datura Blaze",
+      "description": "Remove: 2 True Charged Slash, 2 Charge Up. Replace: 2 Toxic Charged Slash, 2 Poisoned Charge Up.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 8,
+        "4": 3,
+        "element": 0
+      }
     }
   ]
 }
