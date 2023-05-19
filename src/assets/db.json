@@ -930,6 +930,251 @@
         "4": 0,
         "element": 0
       }
+    },
+    {
+      "id": "dd48ac4a-8394-4272-b232-0a3cb55d1410",
+      "cardNumber": 26,
+      "name": "Leather Trousers",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 0
+    },
+    {
+      "id": "9d050805-f7af-4c15-b026-d9aa3013922d",
+      "cardNumber": 27,
+      "name": "Leather Mail",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 1
+    },
+    {
+      "id": "47316575-4c36-41fe-b077-7097cc4bb098",
+      "cardNumber": 28,
+      "name": "Leather Headgear",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "white",
+      "armorValue": 0
+    },
+    {
+      "id": "777a2391-cd55-4037-b3e7-28014a206812",
+      "cardNumber": 405,
+      "name": "Bone Kukri",
+      "description": "Use all attack cards with [[SS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "SS",
+      "damageDeck": {
+        "1": 5,
+        "2": 4,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3c0660a0-1ae3-4b39-be43-da850e05abce",
+      "cardNumber": 406,
+      "name": "Steel Knife",
+      "description": "Remove: 2 Advancing Slash. Add: 2 Enhanced Advancing Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "SS",
+      "damageDeck": {
+        "1": 6,
+        "2": 5,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "80ada80f-a6d2-457a-8cb7-0bfd91487189",
+      "cardNumber": 407,
+      "name": "Chief Kukri",
+      "description": "Remove: 2 Shield Bash. Add: 2 Strong Shield Bash.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "SS",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "76a475f0-fd66-4044-90f5-94d6f884cbcb",
+      "cardNumber": 408,
+      "name": "Chrome Slicer",
+      "description": "Remove: 2 Advancing Slash, Any 2 Cards. Add: 2 Enhanced Advancing Slash, 2 Helm Splitter.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 5,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "194f0ace-91d7-4857-92fa-591cefedcd50",
+      "cardNumber": 409,
+      "name": "Grand Barong",
+      "description": "Remove: 2 Shield Bash, 2 Chop. Add: 2 Strong Shield Bash, 2 Chop Reversal.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 4,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "d74293dc-83e6-441b-9eed-6ff283decf07",
+      "cardNumber": 410,
+      "name": "Flame Knife",
+      "description": "Remove: 2 Advancing Slash. Add: 2 Advancing Double Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "f05b8476-8e6a-47ca-896e-4a05fc49f027",
+      "cardNumber": 411,
+      "name": "Jagras Edge",
+      "description": "Remove: 2 Lateral Slash. Add: 2 Glutton Lateral Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "1bccafec-fc99-45e1-8ec6-8956b68563ab",
+      "cardNumber": 412,
+      "name": "Heat Edge",
+      "description": "Remove: 2 Advancing Slash, 2 Sword & Shield Combo. Add: 2 Advancing Double Slash, 2 Blazing Combo.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 5,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "1f2c89c9-dec0-4f09-8865-7bdc81076d71",
+      "cardNumber": 413,
+      "name": "Jagras Garotte",
+      "description": "Remove: 2 Lateral Slash, 1 Rising Slash, Any 1 Card. Add: 2 Glutton Lateral Slash, 2 Jump Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 3,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "f40c2cb4-9cbd-4863-b5e8-17057b1d5031",
+      "cardNumber": 504,
+      "name": "Carapace Edge",
+      "description": "Remove: 2 Advancing Slash. Replace: 2 Powerful Double Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "aeaed6f7-39f9-4956-99fd-09fa425203bd",
+      "cardNumber": 505,
+      "name": "Blooming Knife",
+      "description": "Remove: 1 Round Slash, 1 Rising Slash. Replace: 2 Poison Spin Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3cc17d47-5c58-492f-8fd5-6c027e9ef8c8",
+      "cardNumber": 506,
+      "name": "Barroth Club",
+      "description": "Remove: 2 Advancing Slash, 2 Chop. Replace: 2 Powerful Double Slash, 2 Steadfast Chop.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3ef32b8b-90d1-4f97-8cc1-329aa79c9da5",
+      "cardNumber": 507,
+      "name": "Datura Blossom",
+      "description": "Remove: 1 Rounding Slash, 1 Rising Slash, Any 3 Cards. Replace: 2 Poison Spin Slash, 3 Toxicity.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 1,
+        "2": 9,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
     }
   ]
 }
