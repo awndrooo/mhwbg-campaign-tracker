@@ -730,7 +730,7 @@
       "description": "Remove: 2 Feint. Add: 2 Skilled Feint.",
       "equipmentType": "Weapon",
       "rarity": "yellow",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 6,
         "2": 6,
@@ -746,7 +746,7 @@
       "description": "Remove: 4 Power Coating, 2 Shot. Replace: 2 Poison Coating, 2 Paralysis Coating, 2 Poisoned Shot.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 1,
         "2": 7,
@@ -762,7 +762,7 @@
       "description": "Remove: 2 Power Coating, 2 Shot. Replace: 2 Paralysis Coating, 2 Rending Arrows.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 4,
         "2": 4,
@@ -778,7 +778,7 @@
       "description": "Remove: 4 Power Coating, 6 Shot. Replace: 2 Poison Coating, 2 Paralysis Coating, 2 Poisoned Shot, 4 Flared Shot.",
       "equipmentType": "Weapon",
       "rarity": "purple",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 1,
         "2": 7,
@@ -794,7 +794,7 @@
       "description": "Remove: 2 Power Coating, 2 Shot, 2 Charge Sidestep. Replace: 2 Paralysis Coating, 2 Rending Arrows, 2 Rapid Dash.",
       "equipmentType": "Weapon",
       "rarity": "purple",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 2,
         "2": 7,
@@ -810,7 +810,7 @@
       "description": "Remove: 4 Power Coating. Add: 2 Poison Coating, 2 Paralysis Coating.",
       "equipmentType": "Weapon",
       "rarity": "white",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 6,
         "2": 4,
@@ -826,7 +826,7 @@
       "description": "Remove: 4 Power Coating, 2 Shot. Add: 2 Poison Coating, 2 Paralysis Coating, 2 Enhanced Shot.",
       "equipmentType": "Weapon",
       "rarity": "yellow",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 4,
         "2": 6,
@@ -842,7 +842,7 @@
       "description": "Remove: 2 Feint, 3 Charged Shot. Add: 2 Skilled Feint, 3 Enhanced Charged Shot.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 4,
         "2": 6,
@@ -858,7 +858,7 @@
       "description": "Remove: 4 Power Coating, 2 Shot, 2 Arc Shot. Add: 2 Poison Coating, 2 Paralysis Coating, 2 Enhanced Shot, 2 Strong Arc Shot.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 3,
         "2": 5,
@@ -874,7 +874,7 @@
       "description": "Remove: 4 Power Coating. Add: 3 High Power Coating, 1 Paralysis Coating.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 2,
         "2": 5,
@@ -890,7 +890,7 @@
       "description": "Remove: 4 Power Coating. Add: 2 Blast Coating, 2 Poison Coating.",
       "equipmentType": "Weapon",
       "rarity": "green",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 2,
         "2": 6,
@@ -906,7 +906,7 @@
       "description": "Remove: 4 Power Coating, 1 Dragon Piercer, Any 1 Card. Add: 3 High Power Coating, 1 Paralysis Coating, 2 Striking Dragon Piercer.",
       "equipmentType": "Weapon",
       "rarity": "purple",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 0,
         "2": 9,
@@ -922,7 +922,7 @@
       "description": "Remove: 4 Power Coating, 3 Charged Shot. Add: 2 Blast Coating, 2 Poison Coating, 3 Blasing Charged Shot.",
       "equipmentType": "Weapon",
       "rarity": "purple",
-      "type": "Bow",
+      "weaponType": "BW",
       "damageDeck": {
         "1": 0,
         "2": 6,
