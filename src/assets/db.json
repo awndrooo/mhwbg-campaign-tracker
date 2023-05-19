@@ -2727,6 +2727,231 @@
         "4": 2,
         "element": 0
       }
+    },
+    {
+      "id": "770f802f-04d7-4446-a014-7f7376b91860",
+      "cardNumber": 333,
+      "name": "Barroth Greaves",
+      "description": "Stun Resistance: This hunter can't suffer the [[ailment|stun]] status ailment.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "7dcf2017-ce5d-4edf-9bcb-8f63098a9c09",
+      "cardNumber": 334,
+      "name": "Barroth Mail",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "b08597d8-facf-49b8-abb9-4a1ac8351779",
+      "cardNumber": 335,
+      "name": "Barroth Helm",
+      "description": "Guard: When this hunter plays an attack card that grants additional armour, the card gains +1 [[guard]].",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "ee1ca840-8ae8-47b8-a914-702d98c1c6d4",
+      "cardNumber": 345,
+      "name": "Pukei Greaves",
+      "description": "Poison Resistance: This hunter can't suffer the [[ailment|poison]] status ailment.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "ca6bed34-af4e-435a-a3e2-36a7ca6adf64",
+      "cardNumber": 346,
+      "name": "Pukei Mail",
+      "description": "Botanist: During the gathering phase, when the hunters gain a potion they may all immediately recover to full health without spending a potion.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "d2f545d6-13fa-4461-8c06-5af5de972250",
+      "cardNumber": 347,
+      "name": "Pukei Hood",
+      "description": "Sporepuff Expert: When this hunter recovers health from anything that isn't a potion, recover 1 additional health.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "2d5d7b21-fde2-401a-862b-5bebf16211fc",
+      "cardNumber": 357,
+      "name": "Jyura Greaves",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 2,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "64bce188-a8e1-4a05-baf3-8e79a34fd6e4",
+      "cardNumber": 358,
+      "name": "Jyura Mail",
+      "description": "Water Attack: When this hunter plays a [[element|water]] elemental attack card, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "24ded0a8-256e-4073-bb0a-9e2d23e9dcc4",
+      "cardNumber": 359,
+      "name": "Jyura Helm",
+      "description": "Aquatic Expert: When this hunter moves onto pond nodes they don't discard damage cards.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "a9efb582-085f-42b5-977d-311831e42896",
+      "cardNumber": 369,
+      "name": "Diablos Greaves",
+      "description": "Set Bonus: Diablos Mastery: When this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "2df7291e-b935-4261-8cfb-19cda9c2224f",
+      "cardNumber": 370,
+      "name": "Diablos Mail",
+      "description": "Slugger: Once per quest, when this hunter uses a [[ailment|stun]] status ailment attack card, place +1 [[ailment|stun]] token.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "17216f08-63c0-4225-94e8-ff2c35bc0fbf",
+      "cardNumber": 371,
+      "name": "Diablos Helm",
+      "description": "Heroics: While this hunter has 2 health or less, when this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]]",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "32e3c938-f18c-4543-86db-facd69c05149",
+      "cardNumber": 381,
+      "name": "Diablos Nero Greaves",
+      "description": "Part Breaker: When this hunter plays an attack card with 1 or more [[break]], the card gains +1 [[break]]",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "d5ad974b-d098-44f6-8716-99b5ad5657e4",
+      "cardNumber": 382,
+      "name": "Diablos Nero Mail",
+      "description": "Resentment: If this hunter recovered health during your previous turn, the first attack card you play this turn gains +2 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "35a82166-104e-4f72-adaa-5455de528fbd",
+      "cardNumber": 383,
+      "name": "Diablos Nero Helm",
+      "description": "Set Bonus: Black Diablos Mastery: When this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
     }
   ]
 }
