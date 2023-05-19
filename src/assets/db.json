@@ -2298,6 +2298,214 @@
         "4": 2,
         "element": 0
       }
+    },
+    {
+      "id": "a3cd84cc-7762-492c-8785-8144ad5c71c4",
+      "cardNumber": 481,
+      "name": "Bone Axe",
+      "description": "Use all attack cards with [[SA|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 8,
+        "2": 0,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "8588970e-75d9-430f-b592-f0af84b3fbb5",
+      "cardNumber": 482,
+      "name": "Improved Steel Axe",
+      "description": "Remove: 2 Overhead Slash. Replace: 2 Enhanced Overhead Slash",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 10,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "96b71d04-fde2-4baf-8ff3-1f9661dbd84a",
+      "cardNumber": 483,
+      "name": "Bone Smasher",
+      "description": "Remove: 2 Forward Slash. Replace: 2 Leaping Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 7,
+        "2": 0,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "59cd6e0e-0147-46c2-9c70-7bb2f1f275c2",
+      "cardNumber": 484,
+      "name": "Perfected Alloy Axe",
+      "description": "Remove: 2 Overhead Slash, 4 Wild Swing. Replace: 2 Enhanced Overhead Slash, 4 Savage Swing.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 8,
+        "2": 0,
+        "3": 1,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "f2b28982-2381-4999-b128-9998fc890f66",
+      "cardNumber": 485,
+      "name": "Power Smasher",
+      "description": "Remove: 2 Forward Slash, 2 Heavenward Flurry. Replace: 2 Leaping Slash, 2 Heavenward Combo.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 5,
+        "2": 0,
+        "3": 3,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "e1bd13fb-8705-498b-af0f-0504d1e7e0d8",
+      "cardNumber": 486,
+      "name": "Carapace Axe",
+      "description": "Remove: 2 Side Slash. Replace: 2 Pulverising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 2,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "b660d386-a4c1-4ac5-8dfa-e0e3939fc903",
+      "cardNumber": 487,
+      "name": "Diablos Axe",
+      "description": "Remove: 2 Rising Slash. Replace: 2 Crippling Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 7,
+        "2": 0,
+        "3": 2,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "ed12198a-7ed2-4d02-b5d2-18f65b11f61e",
+      "cardNumber": 488,
+      "name": "Barroth Grinder",
+      "description": "Remove: 2 Side Slash, 3 Double Slash. Replace: 2 Pulverising Slash, 3 Brutal Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 4,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "f4363882-6f79-472d-82d5-803cae8524d6",
+      "cardNumber": 489,
+      "name": "Axe Semper Tyrannis",
+      "description": "Remove: 2 Rising Slash, 1 Element Discharge, Any 1 Sword Card. Replace: 2 Crippling Slash, 2 Power Discharge.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 8,
+        "2": 0,
+        "3": 0,
+        "4": 6,
+        "element": 0
+      }
+    },
+    {
+      "id": "9ec93fbb-a079-4ae7-a41c-c626aa92a357",
+      "cardNumber": 548,
+      "name": "Flammenbeil",
+      "description": "Remove: 2 Forward Slash. Replace: 2 Charging Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 5,
+        "2": 0,
+        "3": 3,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "cd26c494-a8d2-414e-8566-2d13e62a2913",
+      "cardNumber": 549,
+      "name": "Rathalos Axe",
+      "description": "Remove: 4 Wild Swing. Replace: 4 Burning Swing.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 4,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "d2613b5f-d5bd-47ac-9f51-1b03065850ff",
+      "cardNumber": 550,
+      "name": "Gnashing Flammenbeil",
+      "description": "Remove: 2 Forward Slash, 2 Overhead Slash. Replace: 2 Charging Slash, 2 Blazing Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 3,
+        "4": 3,
+        "element": 0
+      }
+    },
+    {
+      "id": "4bb76304-9ec5-4110-b1b2-e6839ad43fa3",
+      "cardNumber": 551,
+      "name": "Rathbringer Axe",
+      "description": "Remove: 4 Wild Swing, 2 Heavenward Flurry. Replace: 4 Burning Swing, 2 Hellward Flurry.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 7,
+        "2": 0,
+        "3": 3,
+        "4": 4,
+        "element": 0
+      }
     }
   ]
 }
