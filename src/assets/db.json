@@ -1593,6 +1593,285 @@
         "4": 0,
         "element": 0
       }
+    },
+    {
+      "id": "7da988bc-e77f-4dd7-8224-266caec7fd54",
+      "cardNumber": 292,
+      "name": "Alloy Greaves",
+      "description": "Poison Resistance: This hunter can't suffer the [[ailment|poison]] status ailment.",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 0
+    },
+    {
+      "id": "46a6600c-cc26-4fae-a3e0-0eedccaac176",
+      "cardNumber": 293,
+      "name": "Alloy Mail",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 1
+    },
+    {
+      "id": "c9dd0b11-dafa-42a1-b400-82d5670f8364",
+      "cardNumber": 294,
+      "name": "Alloy Helm",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 1
+    },
+    {
+      "id": "e058ac85-28b4-482c-9180-55f2910866ee",
+      "cardNumber": 304,
+      "name": "Bone Greaves",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 1
+    },
+    {
+      "id": "10b9a18e-a58d-4982-b09d-7a871ef2e218",
+      "cardNumber": 305,
+      "name": "Bone Mail",
+      "description": "Slugger: Once per quest, when this hunter uses a [[ailment|stun]] status ailment attack card, place +1 [[ailment|stun]] token.",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 0
+    },
+    {
+      "id": "039d5b55-adcc-40dd-ba10-d3f8d8cf3ca4",
+      "cardNumber": 306,
+      "name": "Bone Helm",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "yellow",
+      "armorValue": 1
+    },
+    {
+      "id": "3d5681d5-88ef-42e5-879a-b9122344a041",
+      "cardNumber": 316,
+      "name": "Jagras Greaves",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "6b2705cc-bc91-4a05-ad3b-4edaa39d55b0",
+      "cardNumber": 317,
+      "name": "Jagras Mail",
+      "description": "Palico Rally: This hunter may use their Palico ability twice per quest.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "108ecf2a-19e3-4803-8dbc-1458ad6a0a97",
+      "cardNumber": 318,
+      "name": "Jagras Helm",
+      "description": "Speed Eating: Once per quest, this hunter may use combat actions and preparation actions during the same turn.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "b7119628-5220-4db0-8086-99afb34dc8f2",
+      "cardNumber": 328,
+      "name": "Kadachi Greaves",
+      "description": "Thunder Attack: When this hunter plays a [[element|electric]] elemental attack card, draw +1 [[attack]]",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 0,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 1,
+        "ice": 0
+      }
+    },
+    {
+      "id": "584b388c-e26b-42d2-9dae-e8f8d9494b2a",
+      "cardNumber": 329,
+      "name": "Kadachi Mail",
+      "description": "Evade Extender: When this hunter successfully dodges a monster attack, they may move 1 additional node.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 1,
+        "ice": 0
+      }
+    },
+    {
+      "id": "f483827d-e36c-4d2f-a009-5926d029a447",
+      "cardNumber": 330,
+      "name": "Kadachi Helm",
+      "description": "Constitution: Once per quest when this hunter successfully dodges a monster attack, discard your attack cards instead of placing them on your stamina board.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 0,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 2,
+        "ice": 0
+      }
+    },
+    {
+      "id": "31572794-72b1-4a61-97ad-8383b4287e2f",
+      "cardNumber": 340,
+      "name": "Anja Greaves",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 2,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "d58ccb9a-8803-4eaa-aae7-856186533a32",
+      "cardNumber": 341,
+      "name": "Anja Mail",
+      "description": "Marathon Runner: When this hunter walks, they move up to 2 nodes instead of 1.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "ec20c499-fea5-482d-af0d-7aeb0fad1844",
+      "cardNumber": 342,
+      "name": "Anja Helm",
+      "description": "Fire Attack: When this hunter plays a [[element|fire]] elemental attack, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "7a41547d-8cf5-4f06-8791-6f631d079224",
+      "cardNumber": 354,
+      "name": "Rathalos Greaves",
+      "description": "Sleep Resistance: This hunter can't suffer the [[ailment|sleep]] status ailment.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "ec97545d-d113-403f-9131-60c8e5564ae2",
+      "cardNumber": 355,
+      "name": "Rathalos Mail",
+      "description": "Weakness Exploit: Once per quest, this player may swap their hunter token with another player. The facing of the hunter token each player now has should match the facing of their previous token.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "aa213542-b8e7-4736-8576-19c5478c2eed",
+      "cardNumber": 356,
+      "name": "Rathalos Helm",
+      "description": "Set Bonus: Rathalos Mastery: When this hunter plays a [[element|fire]] elemental attack card, instead of placing an elemental token draw 1 elemental damage card. This doesn't effect monsters with immunity [[element|fire]].",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 2,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "c2155f77-53c6-44ff-a8d3-cdbed546385f",
+      "cardNumber": 364,
+      "name": "Rath Soul Greaves",
+      "description": "Focus: When this hunter uses an attack card with [[combo]], reduce the [[combo]] value by 1 to a minimum of 1.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "aa72c486-1c41-4905-b1bd-a05ff3753db7",
+      "cardNumber": 365,
+      "name": "Rath Soul Mail",
+      "description": "Set Bonus: Azure Rathalos Mastery: When this hunter would draw an elemental damage card, draw 3 cards before choosing 1 to resolve.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 1,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
+    },
+    {
+      "id": "ae6bbd3c-e5de-4ba4-aea3-a9a493c2466d",
+      "cardNumber": 366,
+      "name": "Rath Soul Helm",
+      "description": "Intimidator: This hunter can't suffer damage during the gathering phase.",
+      "equipmentType": "Armor",
+      "rarity": "purple",
+      "armorValue": 2,
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      }
     }
   ]
 }
