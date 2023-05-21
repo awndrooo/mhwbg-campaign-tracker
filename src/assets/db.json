@@ -3603,6 +3603,214 @@
         "4": 0,
         "element": 0
       }
+    },
+    {
+      "id": "58bd5473-069d-4e5d-8dda-da795716583c",
+      "cardNumber": 388,
+      "name": "Bone Shotel",
+      "description": "Use all attack cards with [[LS|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7a4465e0-880a-48ca-9ed3-6d1f2dfed4d0",
+      "cardNumber": 389,
+      "name": "Iron Grace",
+      "description": "Remove: 2 Spirit Thrust. Add: 2 Enhanced Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 7,
+        "2": 5,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "9e66da4c-abcc-45d0-b4ab-f9d10e0c7473",
+      "cardNumber": 390,
+      "name": "Hard Bone Shotel",
+      "description": "Remove: 2 Foresight Slash. Add: 2 Enhanced Foresight Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 4,
+        "2": 5,
+        "3": 1,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "b571be3a-ac7a-4e8d-b67f-e393396b8dcc",
+      "cardNumber": 391,
+      "name": "Iron Gospel",
+      "description": "Remove: 2 Spirit Thrust, 2 Overhead Slash. Add: 2 Enhanced Spirit Thurst, 2 Enhanced Overhead Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 5,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "bd4563da-4ee4-4191-915d-e336fd2e1e72",
+      "cardNumber": 392,
+      "name": "Bone Reaper",
+      "description": "Remove: 2 Foresight Slash, 3 Thrust. Add: 2 Enhanced Foresight Slash, 3 Enhanced Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d71df794-f504-4438-a4bd-4e147564d4fa",
+      "cardNumber": 393,
+      "name": "Pulsar Shotel",
+      "description": "Remove: 2 Fade Slash. Add: 2 Thunder Fade Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "b74a372a-7a0e-48d9-8613-f268e686db9c",
+      "cardNumber": 394,
+      "name": "Blazing Shotel",
+      "description": "Remove: 2 Ready Stance. Add: 2 Poised Stance.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 1,
+        "2": 9,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "7cd23358-5cac-4a21-a424-06a2d6336824",
+      "cardNumber": 395,
+      "name": "Wyvern Blade \"Fall\"",
+      "description": "Remove: 2 Rising Slash. Add: 2 Blazing Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 2,
+        "2": 8,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "aa887cae-dc77-4f07-8b8e-42215aa67520",
+      "cardNumber": 396,
+      "name": "Jyura Shotel",
+      "description": "Remove: 2 Helm Breaker. Add: 2 Mud Helm Breaker.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 2,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "8f9dcc45-da26-4537-a809-857076b53a0a",
+      "cardNumber": 397,
+      "name": "Kadachi Fang",
+      "description": "Remove: 2 Fade Slash, 2 Rising Slash. Add: 2 Thunder Fade Slash, 2 Shocking Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 1,
+        "2": 8,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "b9843216-5336-48f8-b687-388f9a6d439f",
+      "cardNumber": 398,
+      "name": "Anja Scimitar",
+      "description": "Remove: 2 Ready Stance, 2 Helm Breaker. Add: 2 Poised Stance, 2 Flaming Helm Breaker.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 1,
+        "2": 9,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "9ff559ef-77c0-4a61-8dec-c9224da93c4e",
+      "cardNumber": 399,
+      "name": "Wyvern Blade \"Blood\"",
+      "description": "Remove: 2 Rising Slash, 2 Spirit Helm Breaker. Add: 2 Blazing Rising Slash, 2 Blazing Spirit Helm Breaker.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 2,
+        "2": 8,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "bd0e79c8-aa73-4189-8fa9-0cd1ba59c579",
+      "cardNumber": 400,
+      "name": "Dipterus",
+      "description": "Remove: 2 Helm Breaker, 2 Spirit Thurst. Add: 2 Mud Helm Breaker, 2 Water Spirit Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 2,
+        "2": 7,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
     }
   ]
 }
