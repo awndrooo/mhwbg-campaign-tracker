@@ -11,6 +11,8 @@ These goals are currently on the TODO list and should happen.
 - Full monster carve materials and equipment from all expansions (not complicated just time consuming to add)
   - *2023-05-19: Added GS, DB, Bow, and SnS weapons found in Ancient Forest Box. Added Ancient Forest armor sets.*
   - *2023-05-19: Added CB, HBG, SA, and IG weapons found in Wildspire Waste Box. Added Wildspire Waste armor sets.*
+  - *2023-05-21: Added HH, HA, GL, LS and LA weapons found in Hunter's Arsenal.*
+  - TODO: Stand-alone monsters. Kulu, Kushala, Nergigante, and Teostra.
 - Proper display of item icons with rarity coloring
 - ~~Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.~~ Done: 2023-04-22
 - Toggle off darkmode (Not sure anyone actually wants this but seems good to have)
