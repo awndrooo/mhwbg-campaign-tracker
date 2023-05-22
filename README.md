@@ -1,4 +1,4 @@
-# MH:W Board Game Campaign Tracker
+# Monster Hunter: World Board Game Campaign Tracker
 
 This is a small project I've been casually working on during the weekends. The
 goal is to create a means to fully track the progress of your hunter throughout
