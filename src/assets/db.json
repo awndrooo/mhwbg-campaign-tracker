@@ -538,7 +538,7 @@
       "equipmentType": "Weapon",
       "rarity": "white",
       "weaponType": "LBG",
-      "note": "[[LBG Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 10,
         "2": 2,
@@ -3808,6 +3808,448 @@
         "1": 2,
         "2": 7,
         "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "acfbec2f-5d3b-483c-b121-1170827a8094",
+      "cardNumber": 342,
+      "name": "Hunter's Rifle",
+      "description": "Use all attack cards with [[LBG|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "32d8efb8-59e5-4335-8ccf-53c93739272f",
+      "cardNumber": 343,
+      "name": "High Chain Blitz",
+      "description": "Remove: 5 Normal Ammo 1. Add: 5 Rapid Normal Ammo 1",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 6,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "39d8b70a-7141-41dc-8426-47151d967cf2",
+      "cardNumber": 344,
+      "name": "Power Rifle",
+      "description": "Remove: 2 Poison Ammo 1. Add: 2 Recover Ammo 1.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "664d2207-68a9-4389-b05e-cb459f74119a",
+      "cardNumber": 345,
+      "name": "Cross Blitz",
+      "description": "Remove: 5 Normal Ammo 1, 2 Normal Ammo 2. Add: 5 Rapid Normal Ammo 1, 2 Normal Ammo 3.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "d317a768-9dbb-4dff-abf4-e3a2435cb6a3",
+      "cardNumber": 346,
+      "name": "Sniper Shot",
+      "description": "Remove: 2 Poison Ammo 1, 2 Spread Ammo 1. Add: 2 Recover Ammo 1, 2 Spread Ammo 2.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "96edf883-0c5c-41fc-b87f-be07ea284791",
+      "cardNumber": 347,
+      "name": "Jagras Blitz",
+      "description": "Remove: 5 Normal Ammo 1. Add: 5 Water Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 7,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "8add2254-3473-47e7-aa37-e9a9f64cf79c",
+      "cardNumber": 348,
+      "name": "Flame Blitz",
+      "description": "Remove: 5 Normal Ammo 1. Add: 5 Flaming Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "1bc79bfc-4f8f-4ae0-a585-a9582f0b1a5d",
+      "cardNumber": 349,
+      "name": "Carapace Rifle",
+      "description": "Remove: 2 Poison Ammo 1. Add: 2 Armour Ammo 1.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 2,
+        "3": 5,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "f588f5a0-51cc-4871-9c3c-68128d468e8d",
+      "cardNumber": 350,
+      "name": "Madness Rifle",
+      "description": "Remove: 2 Normal Ammo 2. Add: 2 Rapid Water Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "988cef3a-6d22-4cdd-bdcd-09316180af0d",
+      "cardNumber": 351,
+      "name": "Jagras Fire",
+      "description": "Remove: 5 Normal Ammo 1, 2 Poison Ammo 1. Add: 4 Water Ammo, 2 Recover Ammo 2.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 8,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "03d404b5-75ae-4812-aefb-eeb20d273e46",
+      "cardNumber": 352,
+      "name": "Rathbuster",
+      "description": "Remove: 5 Normal Ammo 1, 2 Normal Ammo 2. Add: 5 Rapid Flaming Ammo, 2 Flaming Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 2,
+        "element": 0
+      }
+    },
+    {
+      "id": "2fb767a3-eeda-489b-984a-0bfb973895f5",
+      "cardNumber": 353,
+      "name": "Barroth Shot",
+      "description": "Remove: 2 Poison Ammo 2, 2 Pierce Ammo 1. Add: 2 Armour Ammo 1, 2 Paralysis Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 2,
+        "4": 1,
+        "element": 0
+      }
+    },
+    {
+      "id": "b055fd9a-91ed-4bc6-9e3b-f76cd9f61a0d",
+      "cardNumber": 354,
+      "name": "Jyura Bullet",
+      "description": "Remove: 2 Normal Ammo 2, 2 Poison Ammo 1. Add: 2 Rapid Water Ammo, 2 Sleep Ammo 1.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "dad89b4e-8f9f-43a3-a997-62d9d9f4247c",
+      "cardNumber": 300,
+      "name": "Bone Lance",
+      "description": "Use all attack cards with [[LA|white]] to create your hunter attack deck.",
+      "equipmentType": "Weapon",
+      "rarity": "white",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 6,
+        "2": 4,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "6b6806d5-c44d-4fb6-8f2a-edfc14dc5c12",
+      "cardNumber": 301,
+      "name": "Steel Lance",
+      "description": "Remove: 3 Mid Thrust. Add: 3 Long Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 6,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "f11962e3-5815-47e9-bc12-1bb5192f0447",
+      "cardNumber": 302,
+      "name": "Hard Bone Lance",
+      "description": "Remove: 3 High Thrust. Add: 3 High Lunge.",
+      "equipmentType": "Weapon",
+      "rarity": "yellow",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 4,
+        "2": 6,
+        "3": 0,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3c220a3d-c96b-422d-84ed-224bcfe6a3b5",
+      "cardNumber": 303,
+      "name": "Chrome Lance",
+      "description": "Remove: 3 Mid Thurst, 2 Guard Thrust. Add: 3 Long Thrust, 2 Long Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 4,
+        "2": 6,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "9cc46991-2311-47bb-8869-51d823204fff",
+      "cardNumber": 304,
+      "name": "Heavy Bone Lance",
+      "description": "Remove: 3 High Thrust, 2 Guard Dash. Add: 3 High Lunge, 2 Guard Sprint.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 2,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "4c9254f7-8357-493d-b71b-82379c664dc6",
+      "cardNumber": 305,
+      "name": "Thunder Lance",
+      "description": "Remove: 3 Mid Thrust. Add: 3 Static Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 3,
+        "2": 6,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "66feb05e-0860-4f64-b370-1e7c041342da",
+      "cardNumber": 306,
+      "name": "Flame Lance",
+      "description": "Remove: 2 Counter Thrust. Add: 2 Flaming Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "f5f969b8-10f3-47e8-9204-edb9efb0868f",
+      "cardNumber": 307,
+      "name": "Carapace Lance",
+      "description": "Remove: 2 Counter Thrust. Add: 2 Armoured Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "cfcc8e90-0afb-4fe5-a3fa-8f9a74d14f00",
+      "cardNumber": 308,
+      "name": "Aqua Horn",
+      "description": "Remove: 3 High Thrust. Add: 3 Aqua Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 4,
+        "3": 4,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "404b211c-4b00-495d-80f9-dcbef5b7b046",
+      "cardNumber": 309,
+      "name": "Lightning Spire",
+      "description": "Remove: 3 Mid Thrust, 2 Guard Thrust. Add: 3 Static Thrust, 2 Static Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 7,
+        "3": 5,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "e68c31a8-326d-4f49-88b1-6633ce302b48",
+      "cardNumber": 310,
+      "name": "Red Tail",
+      "description": "Remove: 2 Counter Thrust, 2 Guard Dash. Add: 2 Flaming Thrust, 2 Flaming Dash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 7,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "3a28cc22-21e0-474d-b698-b644d44b3e9f",
+      "cardNumber": 311,
+      "name": "Barroth Stinger",
+      "description": "Remove: 2 Counter Thrust, 2 Guard Thrust. Add: 2 Armoured Thrust, 2 Armoured Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 3,
+        "4": 0,
+        "element": 0
+      }
+    },
+    {
+      "id": "2b005759-7af3-48b8-a15c-a1ead9c0b163",
+      "cardNumber": 312,
+      "name": "Water Spike",
+      "description": "Remove: 3 High Thrust, 2 Guard Bash. Add: 3 Aqua Thrust, 2 Aqua Bash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 6,
         "4": 0,
         "element": 0
       }
