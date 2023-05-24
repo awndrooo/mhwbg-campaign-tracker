@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { provideMockStore } from '@ngrx/store/testing';
 import { MaterialListComponent } from './material-list.component';
 
 describe('MaterialListComponent', () => {
@@ -8,9 +11,10 @@ describe('MaterialListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MaterialListComponent ]
-    })
-    .compileComponents();
+      declarations: [MaterialListComponent],
+      providers: [provideMockStore()],
+      imports: [MatDialogModule, MatTableModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MaterialListComponent);
     component = fixture.componentInstance;

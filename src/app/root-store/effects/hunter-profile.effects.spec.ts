@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
+import { provideMockStore } from '@ngrx/store/testing';
 import { HunterProfileEffects } from './hunter-profile.effects';
 
 describe('HunterProfileEffects', () => {
@@ -12,8 +13,9 @@ describe('HunterProfileEffects', () => {
     TestBed.configureTestingModule({
       providers: [
         HunterProfileEffects,
-        provideMockActions(() => actions$)
-      ]
+        provideMockStore(),
+        provideMockActions(() => actions$),
+      ],
     });
 
     effects = TestBed.inject(HunterProfileEffects);

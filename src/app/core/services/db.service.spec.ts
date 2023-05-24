@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 
+import { provideMockStore } from '@ngrx/store/testing';
 import { DbService } from './db.service';
 
 describe('DbServiceService', () => {
   let service: DbService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [provideMockStore()],
+    });
     service = TestBed.inject(DbService);
   });
 

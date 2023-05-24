@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { EquipmentEffects } from './equipment.effects';
 
 describe('EquipmentEffects', () => {
@@ -10,10 +11,8 @@ describe('EquipmentEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        EquipmentEffects,
-        provideMockActions(() => actions$)
-      ]
+      providers: [EquipmentEffects, provideMockActions(() => actions$)],
+      imports: [HttpClientTestingModule],
     });
 
     effects = TestBed.inject(EquipmentEffects);
