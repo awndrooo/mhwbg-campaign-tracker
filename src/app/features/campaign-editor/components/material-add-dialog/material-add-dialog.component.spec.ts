@@ -2,7 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconTestingModule } from '@angular/material/icon/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from '@features/materials/materials.module';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -14,9 +15,9 @@ describe('MaterialAddDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MaterialAddDialogComponent],
+      declarations: [MaterialAddDialogComponent, MatIcon],
       imports: [
-        MatIconModule,
+        MatIconTestingModule,
         MatDialogModule,
         MaterialsModule,
         MatDividerModule,

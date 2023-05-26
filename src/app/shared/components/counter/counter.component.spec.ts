@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconTestingModule } from '@angular/material/icon/testing';
 import { CounterComponent } from './counter.component';
 
 describe('CounterComponent', () => {
@@ -9,8 +10,8 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CounterComponent],
-      imports: [MatIconModule],
+      declarations: [CounterComponent, MatIcon],
+      imports: [MatIconTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CounterComponent);

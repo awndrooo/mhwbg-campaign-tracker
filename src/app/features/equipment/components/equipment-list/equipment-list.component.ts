@@ -59,14 +59,6 @@ export class EquipmentListComponent implements ControlValueAccessor {
     }
   }
 
-  public getEquipmentIcon(item: IEquipmentStoreItem): string {
-    const map =
-      item.equipmentType == EquipmentTypeEnum.Armor
-        ? EQUIPMENT_MAPS[item.armorType]
-        : EQUIPMENT_MAPS[item.weaponType];
-    return map.svgIcon;
-  }
-
   public getEquipmentDescription(item: IEquipmentStoreItem): string {
     const map =
       item.equipmentType == EquipmentTypeEnum.Armor

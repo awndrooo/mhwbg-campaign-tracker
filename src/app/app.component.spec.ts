@@ -1,9 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconTestingModule } from '@angular/material/icon/testing';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MHIconsModule } from '@shared/mhicons.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -11,12 +13,13 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        MatIconModule,
+        MatIconTestingModule,
         MatSidenavModule,
         BrowserAnimationsModule,
         MatListModule,
+        MHIconsModule,
       ],
-      declarations: [AppComponent],
+      declarations: [AppComponent, MatIcon],
     }).compileComponents();
   });
 
@@ -30,11 +33,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('MHWBGCampaignTracker');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
   });
 });

@@ -3,7 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconTestingModule } from '@angular/material/icon/testing';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,14 +20,14 @@ describe('ProfilePortComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProfilePortComponent],
+      declarations: [ProfilePortComponent, MatIcon],
       providers: [provideMockStore(), provideMockActions(() => actions$)],
       imports: [
         MatSnackBarModule,
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
-        MatIconModule,
+        MatIconTestingModule,
         MatDividerModule,
         BrowserAnimationsModule,
       ],

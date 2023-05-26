@@ -2,7 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
+import { MatIconTestingModule } from '@angular/material/icon/testing';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,14 +16,14 @@ describe('ProfileSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProfileSelectorComponent],
+      declarations: [ProfileSelectorComponent, MatIcon],
       providers: [provideMockStore()],
       imports: [
         MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatIconModule,
+        MatIconTestingModule,
         BrowserAnimationsModule,
       ],
     }).compileComponents();

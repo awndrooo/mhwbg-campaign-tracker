@@ -1,7 +1,9 @@
 <mat-table [dataSource]="this.Equipment$">
   <ng-container matColumnDef="Type">
     <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
-    <mat-cell *matCellDef="let item"><mat-icon [svgIcon]="this.getEquipmentIcon(item)" [matTooltip]="this.getEquipmentDescription(item)"></mat-icon></mat-cell>
+    <mat-cell *matCellDef="let item">
+      <app-equipment-icon [equipment]="item" [matTooltip]="this.getEquipmentDescription(item)"></app-equipment-icon>
+    </mat-cell>
   </ng-container>
   <ng-container matColumnDef="Name">
     <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>

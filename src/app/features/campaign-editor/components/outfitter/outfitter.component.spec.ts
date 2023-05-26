@@ -1,12 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EquipmentModule } from '@features/equipment/equipment.module';
 import { provideMockStore } from '@ngrx/store/testing';
+import { MHIconsModule } from '@shared/mhicons.module';
 import { OutfitterComponent } from './outfitter.component';
 
 describe('OutfitterComponent', () => {
@@ -15,7 +18,7 @@ describe('OutfitterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OutfitterComponent],
+      declarations: [OutfitterComponent, MatIcon],
       providers: [provideMockStore()],
       imports: [
         MatFormFieldModule,
@@ -24,6 +27,8 @@ describe('OutfitterComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
+        MHIconsModule,
+        HttpClientTestingModule,
       ],
     }).compileComponents();
 
