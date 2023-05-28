@@ -462,6 +462,51 @@
       "id": "03449758-3e9c-40d3-aa25-c0d92ac0b438",
       "name": "Wyvern Gem",
       "description": ""
+    },
+    {
+      "id": "daa51cfd-18d5-4c86-a477-2bdb36515ae8",
+      "name": "Immortal Dragonscale",
+      "description": ""
+    },
+    {
+      "id": "953db060-0bda-4669-8e5d-c792fce8ee0c",
+      "name": "Nergigante Talon",
+      "description": ""
+    },
+    {
+      "id": "f357050f-81ac-4531-af78-80f4f17728b6",
+      "name": "Nergigante Carapace",
+      "description": ""
+    },
+    {
+      "id": "ebdf6be3-81ac-471f-be21-f7b7c0046419",
+      "name": "Nergigante Regrowth Plate",
+      "description": ""
+    },
+    {
+      "id": "68258897-64eb-4fac-b0e0-61b76e90e169",
+      "name": "Nergigante Horn",
+      "description": ""
+    },
+    {
+      "id": "581c4991-6525-43ea-bb34-27fbc3171996",
+      "name": "Nergigante Tail",
+      "description": ""
+    },
+    {
+      "id": "1ad9522c-271f-42d5-a888-db27e9a9bf7b",
+      "name": "Elder Dragon Bone",
+      "description": ""
+    },
+    {
+      "id": "b17e82be-9236-4761-a30e-53d5106fa5c7",
+      "name": "Elder Dragon Blood",
+      "description": ""
+    },
+    {
+      "id": "9f6a341b-1192-4839-9837-72dc72dd189f",
+      "name": "Nergigante Gem",
+      "description": ""
     }
   ],
   "equipment": [
@@ -4568,6 +4613,518 @@
         "ice": 0
       },
       "armorValue": 1
+    },
+    {
+      "id": "8a1aa343-694a-4f59-9a10-9a52ee1e21ac",
+      "cardNumber": 1,
+      "name": "Nergal Judicator",
+      "description": "Remove: 3 Rising Slash. Add: 3 Dreaded Cleave.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 5,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "id": "dd10a0f3-ca03-4ac1-a62a-c383d6493a9e",
+      "cardNumber": 2,
+      "name": "Purgation's Atrocity",
+      "description": "Remove: 3 Rising Slash, 2 True Charged Slash. Add: 3 Dreaded Cleave, 2 Dragon Charged Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 4,
+        "4": 3,
+        "5": 4
+      }
+    },
+    {
+      "id": "f399c74b-63b0-42df-aa98-e0e75cae98f0",
+      "cardNumber": 3,
+      "name": "Nergal Gouge",
+      "description": "Remove: 4 Blade Dance. Add: 4 Dragon Dance.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 6,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "2d6ed00c-0cb6-4c82-9ea6-005df1872f30",
+      "cardNumber": 4,
+      "name": "Decimation Claws",
+      "description": "Remove: 4 Blade Dance, 2 Rapid Spin. Add: 4 Dragon Dance, 2 Mid Air Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 7,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "e5656c88-7d02-42be-86d9-0c7a76e3214c",
+      "cardNumber": 5,
+      "name": "Nergal Whisper",
+      "description": "Remove: 4 Power Coating. Add: 4 Dragon Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 0,
+        "2": 3,
+        "3": 7,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "b3d7fd9f-0eef-48e9-8113-6b89b2615e83",
+      "cardNumber": 6,
+      "name": "Doom's Shaft",
+      "description": "Remove: 4 Power Coating, 3 Charged Shot. Add: 4 Dragon Coating, 3 Razor Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 6,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "2041b222-b7dc-4af7-a276-928dac2781b4",
+      "cardNumber": 7,
+      "name": "Nergal Jack",
+      "description": "Remove: 2 Guard Up. Add: 2 Scaled Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 4,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "7de2815e-967d-476f-b1af-29a3b2a83008",
+      "cardNumber": 8,
+      "name": "Eradication Vanguard",
+      "description": "Remove: 2 Guard Up, 2 Chop. Add: 2 Scaled Guard, 2 Draconic Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "SS",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 5,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "id": "f12ced2f-a1b5-43cf-bf5e-d48426a9054c",
+      "cardNumber": 9,
+      "name": "Nergal Gash",
+      "description": "Remove: 2 Side Slash. Add: 2 Claw Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "damageDeck": {
+        "1": 5,
+        "2": 0,
+        "3": 4,
+        "4": 2,
+        "5": 1
+      }
+    },
+    {
+      "id": "484ec803-9543-4857-805e-a960ac7dadc5",
+      "cardNumber": 10,
+      "name": "Dying Light",
+      "description": "Remove: 2 Side Slash, 2 Side Rising Slash. Add: 2 Claw Slash, 2 Dragon Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "CB",
+      "damageDeck": {
+        "1": 7,
+        "2": 0,
+        "3": 1,
+        "4": 3,
+        "5": 3
+      }
+    },
+    {
+      "id": "931bf39c-0931-475a-8ce6-db53f18cabb7",
+      "cardNumber": 11,
+      "name": "Nergal Reaper",
+      "description": "Remove: 1 White Kinsect: Havest Extract. Add: 1 Nergigante Kinsect: Havest Extract.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 2,
+        "2": 4,
+        "3": 5,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "ff968df3-4f7d-49a7-9404-08da5c919e2f",
+      "cardNumber": 12,
+      "name": "Catastrophe's Light",
+      "description": "Remove: 1 White Kinsect: Havest Extract, 3 Wide Sweep. Add: 1 Nergigante Kinsect: Havest Extract, 3 Crushing Sweep.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 5,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "ed4ba917-68f3-467b-9581-4ba746488bf0",
+      "cardNumber": 13,
+      "name": "Nergal Lacerator",
+      "description": "Remove: 2 Elemental Round Slash. Add: 2 Savage Round Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 2,
+        "4": 2,
+        "5": 1
+      }
+    },
+    {
+      "id": "0096376c-8ee6-46ca-b6aa-56715ff8e94b",
+      "cardNumber": 14,
+      "name": "Devastation's Thorns",
+      "description": "Remove: 2 Elemental Round Slash, 3 Shield Block. Add: 2 Savage Round Slash, 3 Dragon Block.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 2,
+        "4": 3,
+        "5": 2
+      }
+    },
+    {
+      "id": "70c91058-9738-4765-891b-86c25dfd7858",
+      "cardNumber": 15,
+      "name": "Nergal Roar",
+      "description": "Remove: Any 2 Cards. Add: 2 Shield Mod.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 2,
+        "4": 4,
+        "5": 0
+      }
+    },
+    {
+      "id": "b971b5c2-6e33-459d-8004-af06058e8a66",
+      "cardNumber": 16,
+      "name": "Destructions's Fusillade",
+      "description": "Remove: Any 3 Cards, 1 Wyvernsnipe. Add: 2 Shield Mod, 2 Nergal Wyvernheart.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 5,
+        "4": 2,
+        "5": 1
+      }
+    },
+    {
+      "id": "47629c61-0f2c-4333-940a-576030bbf8fd",
+      "cardNumber": 17,
+      "name": "Nergal Reaver",
+      "description": "Remove: 2 Foresight Slash. Add: 2 Dragon Foresight Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 3,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "1d267f3b-206a-4357-841c-27a17670f2a6",
+      "cardNumber": 18,
+      "name": "Extermination's Edge",
+      "description": "Remove: 2 Foresight Slash, 2 Spirit Helm Breaker. Add: 2 Dragon Foresight Slash, 2 Dragon Helm Breaker.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 4,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "97d19474-9078-4b6c-9075-eb833ecf06c7",
+      "cardNumber": 19,
+      "name": "Nergal Crusher",
+      "description": "Remove: 4 Big Bang. Add: 4 Dragon Big Bang.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 0,
+        "4": 3,
+        "5": 2
+      }
+    },
+    {
+      "id": "6d4edd05-644d-4914-b9ed-d7aece97d297",
+      "cardNumber": 20,
+      "name": "Obliteration's Footfall",
+      "description": "Remove: 4 Big Bang, 2 Charged Upswing. Add: 4 Dragon Big Bang, 2 Dragon Charged Upswing.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 0,
+        "4": 3,
+        "5": 3
+      }
+    },
+    {
+      "id": "47caa080-2da2-49c4-890a-3091ddb9369a",
+      "cardNumber": 21,
+      "name": "Nergal Ram",
+      "description": "Remove: 2 Burst. Add: 2 Dragon Burst.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GL",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 5,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "5949ebe9-fbe8-42d7-af37-52d583066acb",
+      "cardNumber": 22,
+      "name": "Eradication Flame",
+      "description": "Remove: 2 Burst, 2 Wyrmstake Cannon. Add: 2 Dragon Burst, 2 Dragon Wyrmstake Cannon.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "GL",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 3,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "1e97eea2-f07a-4f53-a3ff-104d4040d2cd",
+      "cardNumber": 23,
+      "name": "Nergal Splitter",
+      "description": "Remove: 5 Normal Ammo 1. Add: 5 Dragon Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 1,
+        "2": 7,
+        "3": 2,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "94ac7f57-dd80-4695-ada1-eaf154a8d848",
+      "cardNumber": 24,
+      "name": "Cataclysm's Trigger",
+      "description": "Remove: 5 Normal Ammo 1, 2 Poison Ammo 1. Add: 5 Dragon Ammo, 2 Armour Ammo 2.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LBG",
+      "note": "[[ammo|green]]",
+      "damageDeck": {
+        "1": 0,
+        "2": 2,
+        "3": 7,
+        "4": 5,
+        "5": 0
+      }
+    },
+    {
+      "id": "749c8990-0c2a-4650-bea7-e847d84d8201",
+      "cardNumber": 25,
+      "name": "Nergal Impaler",
+      "description": "Remove: 3 High Thrust. Add: 3 Dragon Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 4,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "cc821743-f6d6-4c81-af17-006a78ceebb7",
+      "cardNumber": 26,
+      "name": "Perdition's Hand",
+      "description": "Remove: 3 High Thrust, 2 Guard Bash. Add: 3 Dragon Thrust, 2 Dragon Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 4,
+        "4": 2,
+        "5": 2
+      }
+    },
+    {
+      "id": "d6fe2441-9b67-4869-ba6d-eeedd03328f4",
+      "cardNumber": 27,
+      "name": "Nergal Groove",
+      "description": "Remove: 2 Backwards Strike. Add: 2 Dragon Strike.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HH",
+      "note": "Nergigante Song List",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 2,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "2405e073-2356-46a2-9007-c4621fe67647",
+      "cardNumber": 28,
+      "name": "Desolation's Overture",
+      "description": "Remove: 2 Backwards Strike, 2 Encore. Add: 2 Dragon Strike, 2 Explosive Encore.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HH",
+      "note": "Nergigante Song List",
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 4,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "419c8c80-b2dd-4cb0-ae14-6965ad11c6a4",
+      "cardNumber": 29,
+      "name": "Nergigante Greaves",
+      "description": "Set Bonus: Nergigante Hunger: If your hunter inflicts 1 or more damage to the monster during your turn, recover 1 health.",
+      "equipmentType": "Armor",
+      "armorType": "legs",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 2,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "ee5f4b1e-d76d-4458-964e-34b1e47d0a59",
+      "cardNumber": 30,
+      "name": "Nergigante Mail",
+      "description": "Agitator: When you select a broken body part to attack, your attack cards which inflict damage gain +1 [[attack]].",
+      "equipmentType": "Armor",
+      "armorType": "chest",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 0,
+        "ice": 2
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "e8bdc4dc-a088-4219-b50c-39493c301761",
+      "cardNumber": 31,
+      "name": "Nergigante Helm",
+      "description": "Maximum Might: When you draw [[attack]], draw +2 [[attack]], then choose 2 [[attack]] to place back on top of your damage deck before inflicting damage to the monster.",
+      "equipmentType": "Armor",
+      "armorType": "chest",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 2,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 2
     }
   ]
 }
