@@ -2,12 +2,12 @@ import * as fs from 'node:fs/promises';
 
 // Render db out into separate files for each entity type for prod
 
-var file = await fs.readFile(
+let file = await fs.readFile(
   './dist/mhwbgcampaign-tracker/assets/db.json',
   'utf-8'
 );
 
-var db = JSON.parse(file);
+let db = JSON.parse(file);
 
 const { materials, equipment } = db;
 
