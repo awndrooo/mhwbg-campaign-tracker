@@ -1,18 +1,17 @@
-import { ArmorTypeDescriptionEnum } from './ArmorType';
+import { ArmorTypeDescriptionEnum, ArmorTypeEnum } from './ArmorType';
 import { EquipmentSubtype, EquipmentTypeEnum } from './EquipmentType';
-import { WeaponTypeDescriptionEnum } from './WeaponType';
+import { WeaponTypeDescriptionEnum, WeaponTypeEnum } from './WeaponType';
 
 type equipmentMapBase = {
   svgIcon: string;
+  description: string;
 };
 
 interface equipmentArmorMap extends equipmentMapBase {
   equipmentType: EquipmentTypeEnum.Armor;
-  armorTypeDescription: string;
 }
 interface equipmentWeaponMap extends equipmentMapBase {
   equipmentType: EquipmentTypeEnum.Weapon;
-  weaponTypeDescription: string;
 }
 
 export type EquipmentMap = {
@@ -22,102 +21,102 @@ export type EquipmentMap = {
 export const EQUIPMENT_MAPS: EquipmentMap = {
   helm: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Helm,
-    svgIcon: 'mh-helm',
+    description: ArmorTypeDescriptionEnum.Helm,
+    svgIcon: 'mh-' + ArmorTypeEnum.Helm,
   },
   arms: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Arms,
-    svgIcon: 'mh-arms',
+    description: ArmorTypeDescriptionEnum.Arms,
+    svgIcon: 'mh-' + ArmorTypeEnum.Arms,
   },
   waist: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Waist,
-    svgIcon: 'mh-waist',
+    description: ArmorTypeDescriptionEnum.Waist,
+    svgIcon: 'mh-' + ArmorTypeEnum.Waist,
   },
   chest: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Chest,
-    svgIcon: 'mh-chest',
+    description: ArmorTypeDescriptionEnum.Chest,
+    svgIcon: 'mh-' + ArmorTypeEnum.Chest,
   },
   legs: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Legs,
-    svgIcon: 'mh-legs',
+    description: ArmorTypeDescriptionEnum.Legs,
+    svgIcon: 'mh-' + ArmorTypeEnum.Legs,
   },
   charm: {
     equipmentType: EquipmentTypeEnum.Armor,
-    armorTypeDescription: ArmorTypeDescriptionEnum.Charm,
-    svgIcon: 'mh-charm',
+    description: ArmorTypeDescriptionEnum.Charm,
+    svgIcon: 'mh-' + ArmorTypeEnum.Charm,
   },
   BW: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.Bow,
-    svgIcon: 'mh-bow',
+    description: WeaponTypeDescriptionEnum.Bow,
+    svgIcon: 'mh-' + WeaponTypeEnum.Bow,
   },
   CB: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.ChargeBlade,
-    svgIcon: 'mh-CB',
+    description: WeaponTypeDescriptionEnum.ChargeBlade,
+    svgIcon: 'mh-' + WeaponTypeEnum.Bow,
   },
   DB: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.DualBlades,
-    svgIcon: 'mh-DB',
+    description: WeaponTypeDescriptionEnum.DualBlades,
+    svgIcon: 'mh-' + WeaponTypeEnum.DualBlades,
   },
   GS: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.GreatSword,
-    svgIcon: 'mh-GS',
+    description: WeaponTypeDescriptionEnum.GreatSword,
+    svgIcon: 'mh-' + WeaponTypeEnum.GreatSword,
   },
   GL: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.GunLance,
-    svgIcon: 'mh-GL',
+    description: WeaponTypeDescriptionEnum.GunLance,
+    svgIcon: 'mh-' + WeaponTypeEnum.GunLance,
   },
   HA: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.Hammer,
-    svgIcon: 'mh-HA',
+    description: WeaponTypeDescriptionEnum.Hammer,
+    svgIcon: 'mh-' + WeaponTypeEnum.Hammer,
   },
   HBG: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.HeavyBowGun,
-    svgIcon: 'mh-HBG',
+    description: WeaponTypeDescriptionEnum.HeavyBowGun,
+    svgIcon: 'mh-' + WeaponTypeEnum.HeavyBowGun,
   },
   HH: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.HuntingHorn,
-    svgIcon: 'mh-HH',
+    description: WeaponTypeDescriptionEnum.HuntingHorn,
+    svgIcon: 'mh-' + WeaponTypeEnum.HuntingHorn,
   },
   IG: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.InsectGlaive,
-    svgIcon: 'mh-IG',
+    description: WeaponTypeDescriptionEnum.InsectGlaive,
+    svgIcon: 'mh-' + WeaponTypeEnum.InsectGlaive,
   },
   LA: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.Lance,
-    svgIcon: 'mh-LA',
+    description: WeaponTypeDescriptionEnum.Lance,
+    svgIcon: 'mh-' + WeaponTypeEnum.Lance,
   },
   LBG: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.LightBowGun,
-    svgIcon: 'mh-LBG',
+    description: WeaponTypeDescriptionEnum.LightBowGun,
+    svgIcon: 'mh-' + WeaponTypeEnum.LightBowGun,
   },
   LS: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.LongSword,
-    svgIcon: 'mh-LS',
+    description: WeaponTypeDescriptionEnum.LongSword,
+    svgIcon: 'mh-' + WeaponTypeEnum.LongSword,
   },
   SA: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.SwitchAxe,
-    svgIcon: 'mh-SA',
+    description: WeaponTypeDescriptionEnum.SwitchAxe,
+    svgIcon: 'mh-' + WeaponTypeEnum.SwitchAxe,
   },
   SS: {
     equipmentType: EquipmentTypeEnum.Weapon,
-    weaponTypeDescription: WeaponTypeDescriptionEnum.SwordAndShield,
-    svgIcon: 'mh-SS',
+    description: WeaponTypeDescriptionEnum.SwordAndShield,
+    svgIcon: 'mh-' + WeaponTypeEnum.SwordAndShield,
   },
 };

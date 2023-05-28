@@ -64,12 +64,7 @@ export class EquipmentListComponent implements ControlValueAccessor {
       item.equipmentType == EquipmentTypeEnum.Armor
         ? EQUIPMENT_MAPS[item.armorType]
         : EQUIPMENT_MAPS[item.weaponType];
-    switch (map.equipmentType) {
-      case EquipmentTypeEnum.Armor:
-        return map.armorTypeDescription;
-      case EquipmentTypeEnum.Weapon:
-        return map.weaponTypeDescription;
-    }
+    return map.description;
   }
 
   // #region ControlValueAccessor

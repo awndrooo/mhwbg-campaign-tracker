@@ -910,6 +910,7 @@
       "name": "Leather Trousers",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "white",
       "armorValue": 0
     },
@@ -919,6 +920,7 @@
       "name": "Leather Mail",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "white",
       "armorValue": 1
     },
@@ -928,6 +930,7 @@
       "name": "Leather Headgear",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "white",
       "armorValue": 0
     },
@@ -1534,6 +1537,7 @@
       "name": "Alloy Greaves",
       "description": "Poison Resistance: This hunter can't suffer the [[ailment|poison]] status ailment.",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "yellow",
       "armorValue": 0
     },
@@ -1543,6 +1547,7 @@
       "name": "Alloy Mail",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "yellow",
       "armorValue": 1
     },
@@ -1552,6 +1557,7 @@
       "name": "Alloy Helm",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "yellow",
       "armorValue": 1
     },
@@ -1561,6 +1567,7 @@
       "name": "Bone Greaves",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "yellow",
       "armorValue": 1
     },
@@ -1570,6 +1577,7 @@
       "name": "Bone Mail",
       "description": "Slugger: Once per quest, when this hunter uses a [[ailment|stun]] status ailment attack card, place +1 [[ailment|stun]] token.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "yellow",
       "armorValue": 0
     },
@@ -1579,6 +1587,7 @@
       "name": "Bone Helm",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "yellow",
       "armorValue": 1
     },
@@ -1588,6 +1597,7 @@
       "name": "Jagras Greaves",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1603,6 +1613,7 @@
       "name": "Jagras Mail",
       "description": "Palico Rally: This hunter may use their Palico ability twice per quest.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1618,6 +1629,7 @@
       "name": "Jagras Helm",
       "description": "Speed Eating: Once per quest, this hunter may use combat actions and preparation actions during the same turn.",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1633,6 +1645,7 @@
       "name": "Kadachi Greaves",
       "description": "Thunder Attack: When this hunter plays a [[element|electric]] elemental attack card, draw +1 [[attack]]",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "armorValue": 0,
       "elementArmorValue": {
@@ -1648,6 +1661,7 @@
       "name": "Kadachi Mail",
       "description": "Evade Extender: When this hunter successfully dodges a monster attack, they may move 1 additional node.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1663,6 +1677,7 @@
       "name": "Kadachi Helm",
       "description": "Constitution: Once per quest when this hunter successfully dodges a monster attack, discard your attack cards instead of placing them on your stamina board.",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "armorValue": 0,
       "elementArmorValue": {
@@ -1678,6 +1693,7 @@
       "name": "Anja Greaves",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1693,6 +1709,7 @@
       "name": "Anja Mail",
       "description": "Marathon Runner: When this hunter walks, they move up to 2 nodes instead of 1.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1708,6 +1725,7 @@
       "name": "Anja Helm",
       "description": "Fire Attack: When this hunter plays a [[element|fire]] elemental attack, draw +1 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1723,6 +1741,7 @@
       "name": "Rathalos Greaves",
       "description": "Sleep Resistance: This hunter can't suffer the [[ailment|sleep]] status ailment.",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "purple",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1738,6 +1757,7 @@
       "name": "Rathalos Mail",
       "description": "Weakness Exploit: Once per quest, this player may swap their hunter token with another player. The facing of the hunter token each player now has should match the facing of their previous token.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "purple",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1753,6 +1773,7 @@
       "name": "Rathalos Helm",
       "description": "Set Bonus: Rathalos Mastery: When this hunter plays a [[element|fire]] elemental attack card, instead of placing an elemental token draw 1 elemental damage card. This doesn't effect monsters with immunity [[element|fire]].",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "purple",
       "armorValue": 2,
       "elementArmorValue": {
@@ -1768,6 +1789,7 @@
       "name": "Rath Soul Greaves",
       "description": "Focus: When this hunter uses an attack card with [[combo]], reduce the [[combo]] value by 1 to a minimum of 1.",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "purple",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1783,6 +1805,7 @@
       "name": "Rath Soul Mail",
       "description": "Set Bonus: Azure Rathalos Mastery: When this hunter would draw an elemental damage card, draw 3 cards before choosing 1 to resolve.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "purple",
       "armorValue": 1,
       "elementArmorValue": {
@@ -1798,6 +1821,7 @@
       "name": "Rath Soul Helm",
       "description": "Intimidator: This hunter can't suffer damage during the gathering phase.",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "purple",
       "armorValue": 2,
       "elementArmorValue": {
@@ -2616,6 +2640,7 @@
       "name": "Barroth Greaves",
       "description": "Stun Resistance: This hunter can't suffer the [[ailment|stun]] status ailment.",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2631,6 +2656,7 @@
       "name": "Barroth Mail",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2646,6 +2672,7 @@
       "name": "Barroth Helm",
       "description": "Guard: When this hunter plays an attack card that grants additional armour, the card gains +1 [[guard]].",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2661,6 +2688,7 @@
       "name": "Pukei Greaves",
       "description": "Poison Resistance: This hunter can't suffer the [[ailment|poison]] status ailment.",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2676,6 +2704,7 @@
       "name": "Pukei Mail",
       "description": "Botanist: During the gathering phase, when the hunters gain a potion they may all immediately recover to full health without spending a potion.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2691,6 +2720,7 @@
       "name": "Pukei Hood",
       "description": "Sporepuff Expert: When this hunter recovers health from anything that isn't a potion, recover 1 additional health.",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2706,6 +2736,7 @@
       "name": "Jyura Greaves",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "elementArmorValue": {
         "water": 2,
@@ -2721,6 +2752,7 @@
       "name": "Jyura Mail",
       "description": "Water Attack: When this hunter plays a [[element|water]] elemental attack card, draw +1 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2736,6 +2768,7 @@
       "name": "Jyura Helm",
       "description": "Aquatic Expert: When this hunter moves onto pond nodes they don't discard damage cards.",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -2751,6 +2784,7 @@
       "name": "Diablos Greaves",
       "description": "Set Bonus: Diablos Mastery: When this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -2766,6 +2800,7 @@
       "name": "Diablos Mail",
       "description": "Slugger: Once per quest, when this hunter uses a [[ailment|stun]] status ailment attack card, place +1 [[ailment|stun]] token.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -2781,6 +2816,7 @@
       "name": "Diablos Helm",
       "description": "Heroics: While this hunter has 2 health or less, when this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]]",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -2796,6 +2832,7 @@
       "name": "Diablos Nero Greaves",
       "description": "Part Breaker: When this hunter plays an attack card with 1 or more [[break]], the card gains +1 [[break]]",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -2811,6 +2848,7 @@
       "name": "Diablos Nero Mail",
       "description": "Resentment: If this hunter recovered health during your previous turn, the first attack card you play this turn gains +2 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -2826,6 +2864,7 @@
       "name": "Diablos Nero Helm",
       "description": "Set Bonus: Black Diablos Mastery: When this hunter plays an attack card without an elemental damage symbol, draw +1 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "purple",
       "elementArmorValue": {
         "water": 0,
@@ -4278,6 +4317,7 @@
       "name": "Kulu Greaves",
       "description": "",
       "equipmentType": "Armor",
+      "armorType": "legs",
       "rarity": "green",
       "elementArmorValue": {
         "water": 2,
@@ -4293,6 +4333,7 @@
       "name": "Kulu Mail",
       "description": "Critial Eye: When you draw [[attack]], draw +1 [[attack]], then choose 1 [[attack]] to place on top of your damage deck before inflicting damage to the monster.",
       "equipmentType": "Armor",
+      "armorType": "chest",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
@@ -4308,6 +4349,7 @@
       "name": "Kulu Headpiece",
       "description": "Weakness Exploit: When you play an attack card with [[combo]] of 2 or more, draw +1 [[attack]].",
       "equipmentType": "Armor",
+      "armorType": "helm",
       "rarity": "green",
       "elementArmorValue": {
         "water": 1,
