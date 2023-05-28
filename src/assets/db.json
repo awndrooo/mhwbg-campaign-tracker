@@ -507,6 +507,36 @@
       "id": "9f6a341b-1192-4839-9837-72dc72dd189f",
       "name": "Nergigante Gem",
       "description": ""
+    },
+    {
+      "id": "2f632038-1da2-4fdc-be0a-ba7c31531989",
+      "name": "Kulu-Ya-Ku Plume",
+      "description": ""
+    },
+    {
+      "id": "d79fb599-5317-4fd0-bc62-50775a133339",
+      "name": "Kulu-Ya-Ku Beak",
+      "description": ""
+    },
+    {
+      "id": "36eb9bf9-3a06-4a5e-a8a0-aef71a1acd9d",
+      "name": "Kulu-Ya-Ku Scale",
+      "description": ""
+    },
+    {
+      "id": "0df7f81c-fa9f-4e66-8140-1626f0f30fb4",
+      "name": "Kulu-Ya-Ku Hide",
+      "description": ""
+    },
+    {
+      "id": "e98f46ee-d520-49f0-b571-3fb2ea20ed63",
+      "name": "Earth Crystal",
+      "description": ""
+    },
+    {
+      "id": "e653e32a-e05f-4f9a-8729-f97faa7bebf2",
+      "name": "Bird Wyvern Gem",
+      "description": ""
     }
   ],
   "equipment": [
@@ -713,7 +743,7 @@
       "equipmentType": "Weapon",
       "rarity": "white",
       "weaponType": "HBG",
-      "note": "[[Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 9,
         "2": 3,
@@ -2584,7 +2614,7 @@
       "equipmentType": "Weapon",
       "rarity": "white",
       "weaponType": "HBG",
-      "note": "[[Ammo|green]]",
+      "note": "[[ammo|green]]",
       "damageDeck": {
         "1": 6,
         "2": 4,
@@ -2601,7 +2631,7 @@
       "equipmentType": "Weapon",
       "rarity": "yellow",
       "weaponType": "HBG",
-      "note": "[[Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 7,
         "2": 4,
@@ -2618,7 +2648,7 @@
       "equipmentType": "Weapon",
       "rarity": "yellow",
       "weaponType": "HBG",
-      "note": "[[Ammo|green]]",
+      "note": "[[ammo|green]]",
       "damageDeck": {
         "1": 4,
         "2": 5,
@@ -2635,7 +2665,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 5,
         "2": 4,
@@ -2652,7 +2682,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|green]]",
+      "note": "[[ammo|green]]",
       "damageDeck": {
         "1": 4,
         "2": 4,
@@ -2669,7 +2699,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 3,
         "2": 3,
@@ -2686,7 +2716,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|purple]]",
+      "note": "[[ammo|purple]]",
       "damageDeck": {
         "1": 3,
         "2": 4,
@@ -2703,7 +2733,7 @@
       "equipmentType": "Weapon",
       "rarity": "purple",
       "weaponType": "HBG",
-      "note": "[[Ammo|yellow]]",
+      "note": "[[ammo|yellow]]",
       "damageDeck": {
         "1": 3,
         "2": 3,
@@ -2720,7 +2750,7 @@
       "equipmentType": "Weapon",
       "rarity": "purple",
       "weaponType": "HBG",
-      "note": "[[Ammo|purple]]",
+      "note": "[[ammo|purple]]",
       "damageDeck": {
         "1": 2,
         "2": 6,
@@ -2737,7 +2767,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|green]]",
+      "note": "[[ammo|green]]",
       "damageDeck": {
         "1": 4,
         "2": 4,
@@ -2754,7 +2784,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HBG",
-      "note": "[[Ammo|white]]",
+      "note": "[[ammo|white]]",
       "damageDeck": {
         "1": 4,
         "2": 2,
@@ -2771,7 +2801,7 @@
       "equipmentType": "Weapon",
       "rarity": "purple",
       "weaponType": "HBG",
-      "note": "[[Ammo|white]]",
+      "note": "[[ammo|white]]",
       "damageDeck": {
         "1": 4,
         "2": 3,
@@ -2788,7 +2818,7 @@
       "equipmentType": "Weapon",
       "rarity": "purple",
       "weaponType": "HBG",
-      "note": "[[Ammo|green]]",
+      "note": "[[ammo|green]]",
       "damageDeck": {
         "1": 6,
         "2": 1,
