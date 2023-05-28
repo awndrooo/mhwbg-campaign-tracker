@@ -4057,6 +4057,265 @@
         "3": 6,
         "4": 0
       }
+    },
+    {
+      "id": "7d1832d0-d67e-4cf6-80d0-18363b4e985b",
+      "cardNumber": 1,
+      "name": "Rending Beaks",
+      "description": "Remove: 2 Lunging Stab. Add: 2 Evasive Stab",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 2,
+        "2": 10,
+        "3": 2,
+        "4": 0
+      }
+    },
+    {
+      "id": "34756204-c1ae-4813-82e9-02e2e8ec4b4c",
+      "cardNumber": 2,
+      "name": "Arcanaria",
+      "description": "Remove: 2 Lunging Stab, 2 Double Spin. Add: 2 Evasive Stab, 2 Dream Spin",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 2,
+        "2": 10,
+        "3": 4,
+        "4": 0
+      }
+    },
+    {
+      "id": "7c05f637-a2cc-49bf-ad7a-e0b148581dd8",
+      "cardNumber": 3,
+      "name": "Kulu Arrow",
+      "description": "Remove: 2 Power Coating. Add: 2 Sleep Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 3,
+        "2": 70,
+        "3": 4,
+        "4": 0
+      }
+    },
+    {
+      "id": "b42603c5-60e5-49b5-a99e-828d329163e1",
+      "cardNumber": 4,
+      "name": "Archer's Dance",
+      "description": "Remove: 2 Power Coating, 3 Charged Shot. Add: 2 Sleep Coating, 3 Blast Charged Shot.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 2,
+        "2": 5,
+        "3": 9,
+        "4": 0
+      }
+    },
+    {
+      "id": "e3164530-f9f8-481e-83d4-5c5f8ede5816",
+      "cardNumber": 5,
+      "name": "Kulu Blade",
+      "description": "Remove: 2 Reaping Slash. Add: 2 Reaching Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 4,
+        "2": 5,
+        "3": 5,
+        "4": 0
+      }
+    },
+    {
+      "id": "6e9c7761-87dd-4590-a5bd-92ae2689e769",
+      "cardNumber": 6,
+      "name": "Ya-Ku Wrath",
+      "description": "Remove: 2 Reaping Slash, 3 Wide Sweep. Add: 2 Reaching Slash, 3 Random Sweep.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 5,
+        "2": 3,
+        "3": 8,
+        "4": 0
+      }
+    },
+    {
+      "id": "e8aaafc2-463b-4f77-9f2a-85bfaa2951be",
+      "cardNumber": 7,
+      "name": "First Dance",
+      "description": "Remove: 2 Thrust. Add: 2 Evaisive Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 6,
+        "2": 3,
+        "3": 5,
+        "4": 0
+      }
+    },
+    {
+      "id": "aa897498-1718-4732-8f25-8961157642d9",
+      "cardNumber": 8,
+      "name": "Last Dance",
+      "description": "Remove: 2 Thrust, 2 Overhead Slash. Add: 2 Evaisive Thrust, 2 Evasive Overhead Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 5,
+        "2": 7,
+        "3": 4,
+        "4": 0
+      }
+    },
+    {
+      "id": "69034064-1549-4cb3-b3c8-9b55d2cc2a19",
+      "cardNumber": 9,
+      "name": "Kulu Beak",
+      "description": "Remove: 2 Spinning Bludgeon. Add: 2 Diving Spiral Bludgeon.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "HA",
+      "damageDeck": {
+        "1": 5,
+        "2": 2,
+        "3": 0,
+        "4": 5
+      }
+    },
+    {
+      "id": "a01e2fb3-1832-4da5-96ae-8dd0cf46e05e",
+      "cardNumber": 10,
+      "name": "Crushing Beak",
+      "description": "Remove: 2 Spinning Bludgeon, 2 Side Smash. Add: 2 Diving Spiral Bludgeon, 2 Knock Out Side Smash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HA",
+      "damageDeck": {
+        "1": 5,
+        "2": 3,
+        "3": 6,
+        "4": 0
+      }
+    },
+    {
+      "id": "a6983df5-55e8-4720-b34c-4457d17f7e52",
+      "cardNumber": 11,
+      "name": "Kulu Lance",
+      "description": "Remove: 3 High Thrust. Add: 3 Diving Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 2,
+        "4": 2
+      }
+    },
+    {
+      "id": "86a94607-7b10-44a3-b2ff-13ad9d0d94fd",
+      "cardNumber": 12,
+      "name": "Kulu Hasta",
+      "description": "Remove: 3 High Thrust, 2 Mid Thrust. Add: 3 Diving Thrust, 2 Dream Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 4,
+        "4": 2
+      }
+    },
+    {
+      "id": "6dd785a7-af6f-42b6-af8a-891f6272e899",
+      "cardNumber": 13,
+      "name": "Kulu Duda",
+      "description": "Remove: 2 Left Swing. Add: 2 Dive Swing.",
+      "equipmentType": "Weapon",
+      "rarity": "green",
+      "weaponType": "HH",
+      "note": "Kulu-Ya-Ku Song List",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 4,
+        "4": 0
+      }
+    },
+    {
+      "id": "1984c320-ae72-4ccd-b1dc-871e427688d1",
+      "cardNumber": 14,
+      "name": "Dancing Duval",
+      "description": "Remove: 2 Left Swing, 2 Upward Swing. Add: 2 Dive Swing, 2 Lullaby Smash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HH",
+      "note": "Kulu-Ya-Ku Song List",
+      "damageDeck": {
+        "1": 3,
+        "2": 4,
+        "3": 7,
+        "4": 0
+      }
+    },
+    {
+      "id": "54a3cb28-825a-4677-8c3c-99a4a9f6d8eb",
+      "cardNumber": 15,
+      "name": "Kulu Greaves",
+      "description": "",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 2,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "ef1c11ad-b618-4c8b-92ec-47f6e3ec6451",
+      "cardNumber": 16,
+      "name": "Kulu Mail",
+      "description": "Critial Eye: When you draw [[attack]], draw +1 [[attack]], then choose 1 [[attack]] to place on top of your damage deck before inflicting damage to the monster.",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "9519bc11-d728-4927-8838-5ea3368fbb48",
+      "cardNumber": 17,
+      "name": "Kulu Headpiece",
+      "description": "Weakness Exploit: When you play an attack card with [[combo]] of 2 or more, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "rarity": "green",
+      "elementArmorValue": {
+        "water": 1,
+        "fire": 0,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
     }
   ]
 }
