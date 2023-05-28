@@ -9,6 +9,7 @@
     "build-dev": "ng build --base-href=./ --configuration=development & npm run postbuild",
     "watch": "ng build --watch --base-href=./ --configuration=development",
     "test": "ng test",
+    "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "setnode": "nvm use 18.15.0",
     "json-server": "json-server --watch src/assets/db.json",
     "postbuild": "node post-build.js"
