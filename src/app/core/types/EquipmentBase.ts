@@ -8,6 +8,6 @@ export interface IEquipmentBase {
   description: string;
   equipmentType: EquipmentType;
   rarity: EquipmentRarity;
-  armorValue: number | undefined;
+  armorValue?: number | undefined;
   note: string | undefined;
 }

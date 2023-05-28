@@ -13,4 +13,12 @@ describe('EnvironmentService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have defined properties', () => {
+    expect(service.ApiHost).toBeDefined();
+    expect(service.IDBName).toBeDefined();
+    expect(service.IDBVersion).toBeDefined();
+    expect(service.assets).toBeDefined();
+    expect(service.production).toBeDefined();
+  });
 });
