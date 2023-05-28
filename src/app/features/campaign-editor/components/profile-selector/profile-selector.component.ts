@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { HunterProfile } from '@app/core/types/HunterProfile';
+import { Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
@@ -20,9 +22,20 @@ export class ProfileSelectorComponent {
     HunterProfilesSelectors.selectActiveHunterId
   );
 
-  constructor(private _store$: Store, private _dialog: MatDialog) {}
+  constructor(
+    private _store$: Store,
+    private _dialog: MatDialog,
+    private _actions$: Actions,
+    private _router: Router
+  ) {}
 
   public selectHunterProfile(hunterId: string): void {
+    this._actions$
+      .pipe(
+        ofType(HunterProfileStoreActions.selectHunterProfileSuccess),
+        take(1)
+      )
+      .subscribe(() => this._router.navigate(['edit']));
     this._store$.dispatch(
       HunterProfileStoreActions.selectHunterProfile({ hunterId })
     );
