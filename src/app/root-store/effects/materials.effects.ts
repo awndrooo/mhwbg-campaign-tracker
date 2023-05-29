@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Material } from '@app/core/types/Material';
-import { environment } from '@env/environment';
+import { ApiService } from '@app/core/services/api.service';
 import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, concatMap, map } from 'rxjs/operators';
@@ -11,23 +9,19 @@ import * as MaterialsActions from '../actions/materials.actions';
 export class MaterialsEffects implements OnInitEffects {
   ngrxOnInitEffects = () => MaterialsActions.loadMaterials();
 
-  loadMaterialss$ = createEffect(() => {
-    return this.actions$.pipe(
+  loadMaterials$ = createEffect(() => {
+    return this._actions$.pipe(
       ofType(MaterialsActions.loadMaterials),
       concatMap(() =>
-        this._http
-          .get<Material[]>(`${environment.ApiHost}/materials`, {
-            responseType: 'json',
-          })
-          .pipe(
-            map((data) => MaterialsActions.loadMaterialsSuccess({ data })),
-            catchError((error) =>
-              of(MaterialsActions.loadMaterialsFailure({ error }))
-            )
+        this._api.GetMaterials().pipe(
+          map((data) => MaterialsActions.loadMaterialsSuccess({ data })),
+          catchError((error) =>
+            of(MaterialsActions.loadMaterialsFailure({ error }))
           )
+        )
       )
     );
   });
 
-  constructor(private actions$: Actions, private _http: HttpClient) {}
+  constructor(private _actions$: Actions, private _api: ApiService) {}
 }

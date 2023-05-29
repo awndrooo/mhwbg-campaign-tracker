@@ -94,7 +94,7 @@ export class HunterProfileEffects implements OnInitEffects {
               : HunterProfileActions.deleteHunterProfileFailure({ error: res })
           ),
           catchError((error) =>
-            of(HunterProfileActions.addHunterProfileFailure({ error }))
+            of(HunterProfileActions.deleteHunterProfileFailure({ error }))
           )
         )
       )
