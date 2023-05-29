@@ -8,23 +8,21 @@ Live Application [https://awndrooo.github.io/mhwbg-campaign-tracker/](https://aw
 
 ## Goals (planned)
 These goals are currently on the TODO list and should happen.
-- Full monster carve materials and equipment from all expansions (not complicated just time consuming to add)
-  - *2023-05-19: Added GS, DB, Bow, and SnS weapons found in Ancient Forest Box. Added Ancient Forest armor sets.*
-  - *2023-05-19: Added CB, HBG, SA, and IG weapons found in Wildspire Waste Box. Added Wildspire Waste armor sets.*
-  - *2023-05-21: Added HH, HA, GL, LS and LA weapons found in Hunter's Arsenal.*
-  - TODO: Stand-alone monsters. Kulu, Kushala, Nergigante, and Teostra.
-- Proper display of item icons with rarity coloring
+- ~~Full monster carve materials and equipment from all expansions (not complicated just time consuming to add)~~ Done: 2023-05-28
+- ~~Proper display of item icons with rarity coloring~~ Done: 2023-05-28
 - ~~Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.~~ Done: 2023-04-22
+- Full hunter sheet display
+  - Armor based on currently equipped items
+  - Current attack deck and damage deck
+  - Campaign day, notes, and potions
 - Toggle off darkmode (Not sure anyone actually wants this but seems good to have)
 - Add new stuff from future Iceborne box (release late 2024)
 
 ## Goals (not promised)
 These goals push the line of pipe-dream features and may or may not happen depending upon the future of this project.
 - Completely mobile friendly. Always aiming for mobile friendly but my work mostly focuses on function over form for now.
-- Full hunter sheet display with print friendly format
-    - Armor based on currently equipped items
-    - Current attack deck and damage deck
-    - Maybe profile picture? Data is stored in IndexedDB so not sure about viability without major compression
 - Equipment crafting that utilizes hunters material inventory (versus trying to use forge reference to figure out what you can craft with your current mats)
 - Keep track of specific tasks/hunts completed on campaign days
 - Desktop native client with local save persistance (probably ElectronJS)
+- Print friendly hunter sheet
+- Hunter profile picture
