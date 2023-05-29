@@ -537,6 +537,56 @@
       "id": "e653e32a-e05f-4f9a-8729-f97faa7bebf2",
       "name": "Bird Wyvern Gem",
       "description": ""
+    },
+    {
+      "id": "f250ad2d-e35b-42bb-bc12-3e76751437a7",
+      "name": "Fire Dragon Scale",
+      "description": ""
+    },
+    {
+      "id": "407f81a3-35c8-4e4d-9118-d0b6fa87f6c5",
+      "name": "Teostra Horn",
+      "description": ""
+    },
+    {
+      "id": "6677d364-1816-4e68-81ed-727b4462e0cc",
+      "name": "Teostra Webbing",
+      "description": ""
+    },
+    {
+      "id": "33bce1d1-d932-48c4-8be7-563d8cc849cb",
+      "name": "Teostra Gem",
+      "description": ""
+    },
+    {
+      "id": "c25b3f44-2153-491a-be20-daaf89ab7ef6",
+      "name": "Teostra Powder",
+      "description": ""
+    },
+    {
+      "id": "101cbf41-e00d-45c5-b696-39578efd2da6",
+      "name": "Teostra Carapace",
+      "description": ""
+    },
+    {
+      "id": "78bbcaeb-c061-4d60-a8f0-eeb7da4292e3",
+      "name": "Firecell Stone",
+      "description": ""
+    },
+    {
+      "id": "1b5b2cea-96c7-4312-b437-0aafcf33013e",
+      "name": "Teostra Claw",
+      "description": ""
+    },
+    {
+      "id": "2f5c388a-2610-4db7-876e-0f8599e9a8ac",
+      "name": "Teostra Mane",
+      "description": ""
+    },
+    {
+      "id": "0a1764ef-05ae-4fef-b368-b240ca69c879",
+      "name": "Teostra Tail",
+      "description": ""
     }
   ],
   "equipment": [
@@ -5151,6 +5201,250 @@
       "elementArmorValue": {
         "water": 0,
         "fire": 2,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "248d2175-c2e7-4da7-8708-0126ddde922d",
+      "cardNumber": 1,
+      "name": "Twin Nails",
+      "description": "Remove: Any 2 Cards. Add: 2 Blast Wrath.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 3,
+        "2": 5,
+        "3": 5,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "05302a31-d897-44e5-a90c-b8ac4e39072d",
+      "cardNumber": 2,
+      "name": "Fire and Ice",
+      "description": "Remove: Any 2 Cards, 1 Sixfold Slash, 2 Double Slash. Add: 2 Blast Wrath, 3 Rending Slice.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "DB",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 4,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "c0173775-b532-4513-a82c-fa0ece6f7618",
+      "cardNumber": 3,
+      "name": "Teostra's Spada",
+      "description": "Remove: 2 Guard Up, Any 1 Card. Add: 3 Teostra's Guard.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 4,
+        "3": 7,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "a692d80c-0083-4f31-a03a-1f50d2f9996a",
+      "cardNumber": 4,
+      "name": "Teostra's Emblem",
+      "description": "Remove: 2 Guard Up, Any 4 Cards. Add: 3 Teostra's Guard, 3 Fearsome Slice.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "SS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 5,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "id": "f2f10831-f2fc-46f8-9023-3aaa799de85b",
+      "cardNumber": 5,
+      "name": "Teostra's Arx",
+      "description": "Remove: 4 Wild Swing. Add: 4 Concussive Swing.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 6,
+        "2": 0,
+        "3": 2,
+        "4": 5,
+        "5": 1
+      }
+    },
+    {
+      "id": "06a94720-949e-4f93-ade6-550a5fd3a539",
+      "cardNumber": 6,
+      "name": "Teostra's Castle",
+      "description": "Remove: 4 Wild Swing, 2 Heavenward Flurry. Add: 4 Concussive Swing, 2 Explosive Flurry.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "SA",
+      "damageDeck": {
+        "1": 8,
+        "2": 0,
+        "3": 0,
+        "4": 6,
+        "5": 2
+      }
+    },
+    {
+      "id": "e021c0e5-1f14-4b1b-be65-f09c8908301c",
+      "cardNumber": 7,
+      "name": "Teostra's Artillery",
+      "description": "Remove: 2 Cluster Bomb 1. Add: 2 Carpet Bomb.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HBG",
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 4,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "aaff7d32-295a-4b4a-9484-6ac848c9adc5",
+      "cardNumber": 8,
+      "name": "Teostra's Flames",
+      "description": "Remove: 2 Cluster Bomb 1, Any 1 Card, 1 Wyvernsnipe. Add: 2 Carpet Bomb, 2 Teostra's Wyvernheart.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HBG",
+      "damageDeck": {
+        "1": 0,
+        "2": 10,
+        "3": 3,
+        "4": 2,
+        "5": 1
+      }
+    },
+    {
+      "id": "9c36f791-f6f9-4333-8e3b-549a65155e39",
+      "cardNumber": 9,
+      "name": "Imperial Saber",
+      "description": "Remove: 2 Fade Slash. Add: 2 Fading Blast Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 5,
+        "4": 0,
+        "5": 0
+      }
+    },
+    {
+      "id": "a598292e-49f7-4737-af51-3ca8a63be6cd",
+      "cardNumber": 10,
+      "name": "Imperial Shimmer",
+      "description": "Remove: 2 Fade Slash, 2 Spirit Thrust. Add: 2 Fading Blast Slash, 2 Blasting Spirit Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LS",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 6,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "2db0222e-dd14-4ba0-a991-cac64629fbdc",
+      "cardNumber": 11,
+      "name": "Teostra's Tiple",
+      "description": "Remove: 3 Hilt Stab. Add: 3 Boom Box.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HH",
+      "note": "Teostra Song List",
+      "damageDeck": {
+        "1": 4,
+        "2": 4,
+        "3": 5,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "96397b23-a750-4a52-a3a7-19d3ad5f68d2",
+      "cardNumber": 12,
+      "name": "Teostra's Orphée",
+      "description": "Remove: 3 Hilt Stab, 2 Left Swing. Add: 3 Boom Box, 2 Blast Swing.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HH",
+      "note": "Teostra Song List",
+      "damageDeck": {
+        "1": 0,
+        "2": 9,
+        "3": 4,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "a15ca1e3-bdf3-4a02-909b-2d3409ac112e",
+      "cardNumber": 13,
+      "name": "Kaiser Greaves",
+      "description": "Weakness Exploit: When this hunter plays an attack card with [[combo]] of 2 or more, draw +1 [[attack]]",
+      "equipmentType": "Armor",
+      "armorType": "legs",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "3ee1cab6-fb1e-48b2-a794-571065970c04",
+      "cardNumber": 14,
+      "name": "Kaiser Mail",
+      "description": "Set Bonus: Teostra Technique: Once per quest when this hunter plays an attack card, shuffle any [[attack]] you draw into your damage deck instead of discarding them.",
+      "equipmentType": "Armor",
+      "armorType": "chest",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 2,
+        "electric": 0,
+        "ice": 0
+      },
+      "armorValue": 1
+    },
+    {
+      "id": "39731dc9-7228-410f-9bab-7401defc09e2",
+      "cardNumber": 15,
+      "name": "Kaiser Crown",
+      "description": "Latent Power: If this hunter suffered damage during the monster's last turn, draw +1 [[attack]] for the first attack card you play this turn which inflicts damage.",
+      "equipmentType": "Armor",
+      "armorType": "helm",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 1,
         "electric": 0,
         "ice": 0
       },
