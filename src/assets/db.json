@@ -587,6 +587,41 @@
       "id": "0a1764ef-05ae-4fef-b368-b240ca69c879",
       "name": "Teostra Tail",
       "description": ""
+    },
+    {
+      "id": "21584073-e875-49f6-88c5-f1e5d3804469",
+      "name": "Daora Webbing",
+      "description": ""
+    },
+    {
+      "id": "c0747186-a41b-48f2-b3b8-f8d4c5da4e37",
+      "name": "Daora Gem",
+      "description": ""
+    },
+    {
+      "id": "eb8acc5a-80d6-46fc-ae1a-2416fb08b697",
+      "name": "Daora Claw",
+      "description": ""
+    },
+    {
+      "id": "eb60c33e-19a2-4ccb-bdda-0dd5dffbcaeb",
+      "name": "Daora Dragon Scale",
+      "description": ""
+    },
+    {
+      "id": "596d0f01-4fec-472d-a462-0518354b8a9e",
+      "name": "Daora Carapace",
+      "description": ""
+    },
+    {
+      "id": "c02ce697-496f-44da-99c0-76ca92a413c2",
+      "name": "Daora Horn",
+      "description": ""
+    },
+    {
+      "id": "8a964554-68cf-4339-a7fa-b832ca2f5892",
+      "name": "Daora Tail",
+      "description": ""
     }
   ],
   "equipment": [
@@ -5449,6 +5484,322 @@
         "ice": 0
       },
       "armorValue": 2
+    },
+    {
+      "id": "b94565eb-9af1-43eb-a05f-1a4d7c0a3d46",
+      "cardNumber": 1,
+      "name": "Icesteel Edge",
+      "description": "Remove: 2 Charge Up. Add: 2 Frozen Charge Up.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 4,
+        "3": 3,
+        "4": 5,
+        "5": 1
+      }
+    },
+    {
+      "id": "83733c57-b7f7-43f9-9205-967d2a24a8c9",
+      "cardNumber": 2,
+      "name": "Daora's Decimator",
+      "description": "Remove: 2 Charge Up, 4 Overhead Slam. Add: 2 Frozen Charge Up, 4 Frostbite Slam.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "GS",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 6,
+        "4": 3,
+        "5": 2
+      }
+    },
+    {
+      "id": "c24f09ca-4d4b-4e79-a350-05419582133e",
+      "cardNumber": 3,
+      "name": "Icesteel Bow",
+      "description": "Remove: 4 Power Coating. Add: 4 Frost Coating.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 0,
+        "2": 4,
+        "3": 8,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "bd349d70-557f-4793-9c99-dee2793fdef3",
+      "cardNumber": 4,
+      "name": "Daora's Sagittarii",
+      "description": "Remove: 4 Power Coating, 1 Dragon Piercer, Any 1 Card. Add: 4 Frost Coating, 2 Ice Piercer.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "BW",
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 7,
+        "4": 4,
+        "5": 0
+      }
+    },
+    {
+      "id": "457954da-9a36-407e-8cd4-ad87f3eb1de9",
+      "cardNumber": 5,
+      "name": "Daora's Entom",
+      "description": "Remove: 1 White Kinsect: Harvest Extract. Add: 1 Kushala Daora Kinsect: Harvest Extract.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 2,
+        "2": 7,
+        "3": 3,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "f3c278df-fbac-439f-8da6-2c6796b3a2fa",
+      "cardNumber": 6,
+      "name": "Daora's Tethidine",
+      "description": "Remove: 1 White Kinsect: Harvest Extract, 2 Reaping Slash. Add: 1 Kushala Daora Kinsect: Harvest Extract, 2 Brittle Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "IG",
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 4,
+        "4": 4,
+        "5": 0
+      }
+    },
+    {
+      "id": "4383e38b-3f06-43a4-b36a-3d014d7a66f1",
+      "cardNumber": 7,
+      "name": "Daora's Casca",
+      "description": "Remove: 3 Return Stroke. Add: 3 Freezing Stroke.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 2,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "id": "5ffcf380-e395-474f-aa1d-c41bb23713bf",
+      "cardNumber": 8,
+      "name": "Daora's Thwartoise",
+      "description": "Remove: 3 Return Stroke, 2 Weak Slash. Add: 3 Freezing Stroke, 2 Gliding Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "CB",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 2,
+        "4": 4,
+        "5": 2
+      }
+    },
+    {
+      "id": "d042df85-7b53-4084-bc9b-13a47c292663",
+      "cardNumber": 9,
+      "name": "Icesteel Hammer",
+      "description": "Remove: 2 Side Smash. Add: 2 Icy Side Smash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "HA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 10,
+        "3": 0,
+        "4": 2,
+        "5": 2
+      }
+    },
+    {
+      "id": "0e19ffab-aad2-43cf-bb85-6f07d0658889",
+      "cardNumber": 10,
+      "name": "Daora's Colossus",
+      "description": "Remove: 2 Side Smash, 2 Upswing. Add: 2 Icy Side Smash, 2 Froze Upswing.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "HA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 11,
+        "3": 0,
+        "4": 2,
+        "5": 3
+      }
+    },
+    {
+      "id": "4ba7abe7-93c0-48cd-a875-2a66b3063784",
+      "cardNumber": 11,
+      "name": "Icesteel Gunlance",
+      "description": "Remove: 2 Rising Slash. Add: 2 Freezing Rising Slash.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "GL",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 7,
+        "3": 6,
+        "4": 1,
+        "5": 0
+      }
+    },
+    {
+      "id": "30f3dceb-a73e-45d2-bfda-516228fdb85e",
+      "cardNumber": 12,
+      "name": "Daora's Brigia",
+      "description": "Remove: 2 Rising Slash, 2 Charged Shell. Add: 2 Freezing Rising Slash, 2 Frozen Charged Shell.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "GL",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 8,
+        "3": 5,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "7f325635-301e-4e51-90a6-31641e7f6c76",
+      "cardNumber": 13,
+      "name": "Icesteel Wasp",
+      "description": "Remove: 2 Poison Ammo 1. Add: 2 Freeze Ammo.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 1,
+        "2": 9,
+        "3": 2,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "a2fd2593-7b0b-401b-9e66-9f4990e3d33a",
+      "cardNumber": 14,
+      "name": "Daora's Hornet",
+      "description": "Remove: 2 Poison Ammo 1, 1 Wyvernblast, Any 1 Card. Add: 2 Freeze Ammo, 2 Freezing Wyvernblast.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LBG",
+      "note": "[[ammo|yellow]]",
+      "damageDeck": {
+        "1": 2,
+        "2": 9,
+        "3": 3,
+        "4": 2,
+        "5": 0
+      }
+    },
+    {
+      "id": "29fc5b18-417c-4afc-8ca2-fac2c2eb3f4d",
+      "cardNumber": 15,
+      "name": "Icesteel Spear",
+      "description": "Remove: 3 Mid Thrust. Add: 3 Blizzard Thrust.",
+      "equipmentType": "Weapon",
+      "rarity": "purple",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 6,
+        "3": 5,
+        "4": 3,
+        "5": 0
+      }
+    },
+    {
+      "id": "8537d018-546a-4190-be52-43c30b68bbe2",
+      "cardNumber": 16,
+      "name": "Daora's Fang",
+      "description": "Remove: 3 Mid Thrust, 2 Guard Dash. Add: 3 Blizzard Thrust, 2 Frozen Dash.",
+      "equipmentType": "Weapon",
+      "rarity": "orange",
+      "weaponType": "LA",
+      "armorValue": 1,
+      "damageDeck": {
+        "1": 0,
+        "2": 5,
+        "3": 8,
+        "4": 2,
+        "5": 1
+      }
+    },
+    {
+      "id": "b7a38e5b-b9bf-4e12-b10b-d9e8e4b1f73a",
+      "cardNumber": 19,
+      "name": "Kushala Crus",
+      "description": "Handicraft: Once per quest, if your damage deck becomes empty while resolving an attack card, you may immediately sharpen and continue to resolve the attack.",
+      "equipmentType": "Armor",
+      "armorType": "legs",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 0,
+        "ice": 1
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "eb2ad288-50d5-4c1b-95be-606370aab416",
+      "cardNumber": 20,
+      "name": "Kushala Cista",
+      "description": "Set Bonus: Kushala Daora Flight: When this hunter plays 1 or more attack cards to dodge monster attacks or sprint, add +1 [[dodge]] to their agility total.",
+      "equipmentType": "Armor",
+      "armorType": "chest",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 0,
+        "ice": 1
+      },
+      "armorValue": 2
+    },
+    {
+      "id": "210b964c-ecc8-4664-9d21-24fbd9f0902f",
+      "cardNumber": 21,
+      "name": "Kushala Glare",
+      "description": "Ice Attack: When this hunter plays a [[element|ice]] elemental attack card, draw +1 [[attack]].",
+      "equipmentType": "Armor",
+      "armorType": "helm",
+      "rarity": "orange",
+      "elementArmorValue": {
+        "water": 0,
+        "fire": 0,
+        "electric": 0,
+        "ice": 2
+      },
+      "armorValue": 1
     }
   ]
 }
