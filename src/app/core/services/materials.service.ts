@@ -24,7 +24,6 @@ export class MaterialsService {
 
   public FindMaterialsById(materialIds: string[] | undefined) {
     if (materialIds == undefined) {
-      console.log('never');
       return NEVER;
     }
     return this._store$.select(MaterialsSelectors.selectByIds(materialIds));
