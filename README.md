@@ -26,3 +26,5 @@ These goals push the line of pipe-dream features and may or may not happen depen
 - Desktop native client with local save persistance (probably ElectronJS)
 - Print friendly hunter sheet
 - Hunter profile picture
+- Board recording: When you don't have time to finish a game, mark down monster health/breaks/position/time and hunter health, hand, & stamina boards.
+ - Bit of a pipe dream on this one as it may require weapon attack cards to be entered (which I just don't have time/energy to do)
