@@ -1,0 +1,61 @@
+<ng-container *ngIf="this.hunterProfile$ | async as viewModel">
+  <div class="sheet-wrapper">
+    <div class="name-box">
+      <h1>{{ viewModel.hunterProfile.hunterName }}</h1>
+      <h3>{{ viewModel.hunterProfile.playerName }}</h3>
+      <p>Campaign Day: {{ viewModel.hunterProfile.campaignDay }}</p>
+      <p>Potions: {{ viewModel.hunterProfile.potions }}</p>
+    </div>
+    <div class="flex-wrapper">
+      <div class="equipment-box">
+        <h4>{{ viewModel.Helm?.name }}</h4>
+        <app-equipment-icon [equipment]="viewModel.Helm"></app-equipment-icon>
+        <app-icon name="armor" alignment="baseline">
+          {{ viewModel.Helm?.armorValue }}
+        </app-icon>
+        <p>{{ viewModel.Helm?.description }}</p>
+      </div>
+      <div class="equipment-box">
+        <h4>{{ viewModel.Chest?.name }}</h4>
+        <app-equipment-icon [equipment]="viewModel.Chest"></app-equipment-icon>
+        <app-icon name="armor" alignment="baseline">
+          {{ viewModel.Chest?.armorValue }}
+        </app-icon>
+        <p>{{ viewModel.Chest?.description }}</p>
+      </div>
+    </div>
+    <div class="flex-wrapper">
+      <div class="equipment-box">
+        <h4>{{ viewModel.Feet?.name }}</h4>
+        <app-equipment-icon [equipment]="viewModel.Feet"></app-equipment-icon>
+        <app-icon name="armor" alignment="baseline">
+          {{ viewModel.Feet?.armorValue }}
+        </app-icon>
+        <p>{{ viewModel.Feet?.description }}</p>
+      </div>
+      <div class="equipment-box">
+        <h4>{{ viewModel.Weapon?.name }}</h4>
+        <app-equipment-icon [equipment]="viewModel.Weapon"></app-equipment-icon>
+        <app-icon name="armor" alignment="baseline">
+          {{ viewModel.Weapon?.armorValue ?? 0 }}
+        </app-icon>
+        <br />
+        <ng-container *ngFor="let value of viewModel.WeaponDamage">
+          <app-icon name="damage">{{ value.damage }}</app-icon>
+          x {{ value.count }} &nbsp;
+        </ng-container>
+        <p>{{ viewModel.Weapon?.description }}</p>
+      </div>
+    </div>
+    <div class="equipment-list-box">
+      <div style="padding-right: 2em">
+        <app-equipment-list [Columns]="['Type', 'Name']"
+          [Equipment]="viewModel.hunterProfile.equipmentCrafted"
+        ></app-equipment-list>
+      </div>
+    </div>
+    <div class="material-list-box">
+      <app-material-list [Materials]="viewModel.hunterProfile.materials" ShowControls="false"></app-material-list>
+    </div>
+  </div>
+</ng-container>

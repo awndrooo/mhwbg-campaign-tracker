@@ -8,6 +8,7 @@
         matTooltip="Remove Item"
         (click)="this.RemoveMaterial(item.id)"
         [disabled]="this.disabled"
+        *ngIf="this.ShowControls"
       >
         <mat-icon>remove</mat-icon>
       </button>
@@ -18,11 +19,21 @@
   <ng-container matColumnDef="count">
     <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button mat-icon-button (click)="this.DecrementMaterial(item.id)" [disabled]="this.disabled">
+      <button
+        mat-icon-button
+        (click)="this.DecrementMaterial(item.id)"
+        [disabled]="this.disabled"
+        *ngIf="this.ShowControls"
+      >
         <mat-icon>remove</mat-icon>
       </button>
       {{ item.count }}
-      <button mat-icon-button (click)="this.IncrementMaterial(item.id)" [disabled]="this.disabled">
+      <button
+        mat-icon-button
+        (click)="this.IncrementMaterial(item.id)"
+        [disabled]="this.disabled"
+        *ngIf="this.ShowControls"
+      >
         <mat-icon>add</mat-icon>
       </button>
     </mat-cell>

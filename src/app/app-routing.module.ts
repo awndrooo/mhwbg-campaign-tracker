@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.CampaignEditorModule
       ),
   },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./features/profile-status/profile-status.module').then(
+        (m) => m.ProfileStatusModule
+      ),
+  },
 ];
 
 @NgModule({

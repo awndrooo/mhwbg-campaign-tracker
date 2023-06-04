@@ -9,6 +9,6 @@ export interface IEquipmentWeapon extends IEquipmentBase {
     2: number;
     3: number;
     4: number;
-    element: number;
+    5: number;
   };
 }

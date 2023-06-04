@@ -17,8 +17,9 @@ import { MatTooltip } from '@angular/material/tooltip';
 })
 export class IconComponent {
   @Input('name') appIconName: keyof typeof ICONS | undefined;
+  @Input('alignment') alignment: 'baseline' | 'center' = 'center';
   @HostBinding('class') private get _class() {
-    return ['app-icon', 'icon-' + this.appIconName];
+    return ['app-icon', 'icon-' + this.appIconName, 'align-' + this.alignment];
   }
   @HostListener('mouseover') mouseover() {
     this._tooltip.message = this.appIconName?.toUpperCase() ?? '';

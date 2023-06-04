@@ -4,6 +4,9 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav (click)="sidenav.close()">
     <mat-nav-list>
+      <a mat-list-item routerLink="profile">
+        <mat-icon matListItemIcon>dashboard</mat-icon> Hunter View
+      </a>
       <a mat-list-item routerLink="">
         <mat-icon matListItemIcon>people</mat-icon> Profiles
       </a>

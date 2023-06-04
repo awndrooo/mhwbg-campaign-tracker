@@ -15,12 +15,12 @@ export const selectIsLoaded = createSelector(
   (state) => state.isLoaded
 );
 
-export const selectById = (equipmentId: string) =>
+export const selectById = (equipmentId: string | undefined | null) =>
   createSelector(selectAll, (equipment) =>
     equipment.find((x) => x.id == equipmentId)
   );
 
-export const selectByIds = (equipmentIds: string[]) =>
+export const selectByIds = (equipmentIds: (string | undefined | null)[]) =>
   createSelector(selectAll, (equipment) =>
-    equipment.filter((x) => equipmentIds.includes(x.id))
+    equipment.filter((x) => equipmentIds.filter((x) => !!x).includes(x.id))
   );

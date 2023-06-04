@@ -11,7 +11,7 @@ These goals are currently on the TODO list and should happen.
 - ~~Full monster carve materials and equipment from all expansions (not complicated just time consuming to add)~~ Done: 2023-05-28
 - ~~Proper display of item icons with rarity coloring~~ Done: 2023-05-28
 - ~~Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.~~ Done: 2023-04-22
-- Full hunter sheet display
+- Full hunter sheet display (First Draft: 2023-06-04)
   - Armor based on currently equipped items
   - Current attack deck and damage deck
   - Campaign day, notes, and potions

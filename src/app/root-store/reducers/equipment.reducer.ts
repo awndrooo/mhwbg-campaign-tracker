@@ -11,7 +11,7 @@ export const reducer = createReducer(
   initialState,
   on(EquipmentActions.loadEquipments, (state) => state),
   on(EquipmentActions.loadEquipmentsSuccess, (state, action) =>
-    featureAdapter.upsertMany(action.data, state)
+    featureAdapter.upsertMany(action.data, { ...state, isLoaded: true })
   ),
   on(EquipmentActions.loadEquipmentsFailure, (state, action) => state)
 );

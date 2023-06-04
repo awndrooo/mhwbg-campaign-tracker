@@ -59,7 +59,18 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     HunterMaterials[]
   >();
 
-  @Input() public ShowControls: boolean = false;
+  private _ShowControls: boolean = false;
+  @Input()
+  public get ShowControls(): boolean {
+    return this._ShowControls;
+  }
+  public set ShowControls(value: boolean | string) {
+    if (typeof value === 'string') {
+      this._ShowControls = JSON.parse(value);
+    } else {
+      this._ShowControls = value;
+    }
+  }
 
   constructor(private _materialService: MaterialsService) {}
 

@@ -38,12 +38,12 @@
   </ng-container>
 
   <mat-header-row
-    *matHeaderRowDef="['Type', 'Name', 'Notes', 'CardNumber', 'Description']"
+    *matHeaderRowDef="this.Columns"
   ></mat-header-row>
   <mat-row
     *matRowDef="
       let row;
-      columns: ['Type', 'Name', 'Notes', 'CardNumber', 'Description']
+      columns: this.Columns
     "
   ></mat-row>
 </mat-table>

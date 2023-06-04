@@ -12,6 +12,7 @@ import { filterNullish } from '@app/core/utility/FilterNullish';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import { ReplaySubject, Subject, switchMap } from 'rxjs';
 
+type COLUMN_NAMES = 'Type' | 'Name' | 'Notes' | 'CardNumber' | 'Description';
 @Component({
   selector: 'app-equipment-list',
   templateUrl: './equipment-list.component.html',
@@ -35,6 +36,13 @@ export class EquipmentListComponent implements ControlValueAccessor {
     this._equipment$.next(value);
   }
   @Input() public ShowControls: boolean = false;
+  @Input() public Columns: COLUMN_NAMES[] = [
+    'Type',
+    'Name',
+    'Notes',
+    'CardNumber',
+    'Description',
+  ];
   @Output('EquipmentChange') public EquipmentChange$ = new Subject<
     string[] | undefined
   >();

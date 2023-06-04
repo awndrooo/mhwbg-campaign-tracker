@@ -1,0 +1,25 @@
+.sheet-wrapper {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  .name-box {
+    flex-basis: 100%;
+  }
+  .equipment-box {
+    flex-grow: 1;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .equipment-list-box,
+  .material-list-box {
+    flex-basis: 50%;
+  }
+
+  .flex-wrapper {
+    flex-grow: 1;
+    display: flex;
+  }
+}
