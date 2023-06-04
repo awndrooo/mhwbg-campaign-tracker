@@ -5231,7 +5231,7 @@
       "name": "Nergigante Helm",
       "description": "Maximum Might: When you draw [[attack]], draw +2 [[attack]], then choose 2 [[attack]] to place back on top of your damage deck before inflicting damage to the monster.",
       "equipmentType": "Armor",
-      "armorType": "chest",
+      "armorType": "helm",
       "rarity": "orange",
       "elementArmorValue": {
         "water": 0,
