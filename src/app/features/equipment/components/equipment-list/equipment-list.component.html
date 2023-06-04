@@ -2,7 +2,10 @@
   <ng-container matColumnDef="Type">
     <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <app-equipment-icon [equipment]="item" [matTooltip]="this.getEquipmentDescription(item)"></app-equipment-icon>
+      <app-equipment-icon
+        [equipment]="item"
+        [matTooltip]="this.getEquipmentDescription(item)"
+      ></app-equipment-icon>
     </mat-cell>
   </ng-container>
   <ng-container matColumnDef="Name">
@@ -29,7 +32,9 @@
   </ng-container>
   <ng-container matColumnDef="Description">
     <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{ item.description }}</mat-cell>
+    <mat-cell *matCellDef="let item">
+      <app-rich-text>{{ item.description }}</app-rich-text>
+    </mat-cell>
   </ng-container>
 
   <mat-header-row

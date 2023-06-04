@@ -1,0 +1,16 @@
+.app-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+
+  .mat-icon {
+    margin-right: -50%;
+  }
+
+  .icon-text {
+    display: inline-block;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+}

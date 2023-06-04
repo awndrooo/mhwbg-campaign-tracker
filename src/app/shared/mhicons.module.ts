@@ -97,6 +97,22 @@ export class MHIconsModule {
         iconLabel: 'mh-' + WeaponTypeEnum.SwordAndShield,
         url: `${this._env.assets}/mh-icons/Sword_&_Shield_Rank_01.svg`,
       },
+      {
+        iconLabel: 'mhbg-armor',
+        url: `${this._env.assets}/armor.svg`,
+      },
+      {
+        iconLabel: 'mhbg-attack',
+        url: `${this._env.assets}/attack.svg`,
+      },
+      {
+        iconLabel: 'mhbg-damage',
+        url: `${this._env.assets}/damage.svg`,
+      },
+      {
+        iconLabel: 'mhbg-combo',
+        url: `${this._env.assets}/combo.svg`,
+      },
     ];
     icons.forEach((icon) =>
       this._matIconRegistry.addSvgIcon(
