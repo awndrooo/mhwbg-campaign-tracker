@@ -6,7 +6,12 @@
 
   .name-box {
     flex-basis: 100%;
+
+    .potion-count {
+      font-size: 2em;
+    }
   }
+
   .equipment-box {
     flex-grow: 1;
     text-align: center;

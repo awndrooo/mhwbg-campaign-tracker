@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IEquipmentWeapon } from '@app/core/types/EquipmentWeapon';
 import { IHunterProfile } from '@app/core/types/HunterProfile';
-import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
+import { filterNullish } from '@app/core/utility/FilterNullish';
 import { concatLatestFrom } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
+import { HunterProfileStoreActions } from '@root-store/actions';
 import {
   EquipmentSelectors,
   HunterProfilesSelectors,
@@ -18,12 +19,14 @@ import { delayWhen, filter, map } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HunterSheetComponent {
+  private _activeHunterProfileId$ = this._store$
+    .select(HunterProfilesSelectors.selectActiveHunterId)
+    .pipe(filterNullish());
+
   hunterProfile$ = this._store$
     .select(HunterProfilesSelectors.selectActiveHunter)
     .pipe(
-      filter(
-        (profile): profile is IHunterProfile => !isNullOrUndefined(profile)
-      ),
+      filterNullish(),
       delayWhen(() =>
         this._store$
           .select(EquipmentSelectors.selectIsLoaded)
@@ -40,6 +43,14 @@ export class HunterSheetComponent {
     );
 
   constructor(private _store$: Store) {}
+
+  public consumePotion(): void {
+    this._store$.dispatch(
+      HunterProfileStoreActions.useHunterPotion({
+        count: 1,
+      })
+    );
+  }
 }
 
 class HunterProfileViewModel {

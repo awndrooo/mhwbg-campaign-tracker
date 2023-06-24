@@ -4,7 +4,12 @@
       <h1>{{ viewModel.hunterProfile.hunterName }}</h1>
       <h3>{{ viewModel.hunterProfile.playerName }}</h3>
       <p>Campaign Day: {{ viewModel.hunterProfile.campaignDay }}</p>
-      <p>Potions: {{ viewModel.hunterProfile.potions }}</p>
+      <p class="potion-count">
+        <button mat-icon-button (click)="this.consumePotion()" matTooltip="Consume Potion">
+          <mat-icon svgIcon="mh-potion"></mat-icon>
+        </button>
+        {{ viewModel.hunterProfile.potions }}
+      </p>
     </div>
     <div class="flex-wrapper">
       <div class="equipment-box">
@@ -49,13 +54,17 @@
     </div>
     <div class="equipment-list-box">
       <div style="padding-right: 2em">
-        <app-equipment-list [Columns]="['Type', 'Name']"
+        <app-equipment-list
+          [Columns]="['Type', 'Name']"
           [Equipment]="viewModel.hunterProfile.equipmentCrafted"
         ></app-equipment-list>
       </div>
     </div>
     <div class="material-list-box">
-      <app-material-list [Materials]="viewModel.hunterProfile.materials" ShowControls="false"></app-material-list>
+      <app-material-list
+        [Materials]="viewModel.hunterProfile.materials"
+        ShowControls="false"
+      ></app-material-list>
     </div>
   </div>
 </ng-container>

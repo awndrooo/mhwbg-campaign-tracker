@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DbService } from '@app/core/services/db.service';
+import { filterNullish } from '@app/core/utility/FilterNullish';
+import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
 import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
 import { Action, Store } from '@ngrx/store';
 import { HunterProfilesSelectors } from '@root-store/selectors';
@@ -12,6 +14,7 @@ import {
   switchMap,
   take,
   tap,
+  withLatestFrom,
 } from 'rxjs/operators';
 import * as HunterProfileActions from '../actions/hunter-profile.actions';
 
@@ -144,6 +147,36 @@ export class HunterProfileEffects implements OnInitEffects {
             of(HunterProfileActions.updateHunterProfileFailure({ error }))
           )
         )
+      )
+    )
+  );
+
+  useHunterPotionEffect$ = createEffect(() =>
+    this._actions$.pipe(
+      ofType(HunterProfileActions.useHunterPotion),
+      withLatestFrom(
+        this._store$.select(HunterProfilesSelectors.selectActiveHunterId)
+      ),
+      filter(([x, y]) => !isNullOrUndefined(x) || !isNullOrUndefined(y)),
+      concatMap(([action, activeHunterProfileId]) =>
+        this._store$
+          .select(
+            HunterProfilesSelectors.selectById(
+              action.hunterProfileId ?? activeHunterProfileId
+            )
+          )
+          .pipe(
+            take(1),
+            filterNullish(),
+            map((hunterProfile) =>
+              HunterProfileActions.updateHunterProfile({
+                data: {
+                  ...hunterProfile,
+                  potions: hunterProfile.potions - action.count,
+                },
+              })
+            )
+          )
       )
     )
   );

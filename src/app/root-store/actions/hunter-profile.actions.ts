@@ -74,3 +74,8 @@ export const updateHunterProfileFailure = createAction(
   '[HunterProfile] Update HunterProfile Failure',
   props<{ error: any }>()
 );
+
+export const useHunterPotion = createAction(
+  '[HunterProfile] UseHunterPotion',
+  props<{ count: number; hunterProfileId?: string }>()
+);

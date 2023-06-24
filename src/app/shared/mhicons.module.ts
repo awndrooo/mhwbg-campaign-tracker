@@ -113,6 +113,10 @@ export class MHIconsModule {
         iconLabel: 'mhbg-combo',
         url: `${this._env.assets}/combo.svg`,
       },
+      {
+        iconLabel: 'mh-potion',
+        url: `${this._env.assets}/mh-icons/potion.svg`,
+      },
     ];
     icons.forEach((icon) =>
       this._matIconRegistry.addSvgIcon(
