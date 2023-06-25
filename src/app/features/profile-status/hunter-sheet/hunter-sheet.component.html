@@ -5,10 +5,17 @@
       <h3>{{ viewModel.hunterProfile.playerName }}</h3>
       <p>Campaign Day: {{ viewModel.hunterProfile.campaignDay }}</p>
       <p class="potion-count">
-        <button mat-icon-button (click)="this.consumePotion()" matTooltip="Consume Potion">
+        <button
+          mat-icon-button
+          (click)="this.consumePotion()"
+          matTooltip="Consume Potion"
+        >
           <mat-icon svgIcon="mh-potion"></mat-icon>
         </button>
         {{ viewModel.hunterProfile.potions }}
+      </p>
+      <p>
+        Armor <app-icon name="armor">{{ viewModel.TotalArmor }}</app-icon>
       </p>
     </div>
     <div class="flex-wrapper">

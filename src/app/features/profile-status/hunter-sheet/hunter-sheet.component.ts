@@ -78,6 +78,9 @@ class HunterProfileViewModel {
       }))
       .filter((x) => x.count > 0);
   }
+  get TotalArmor() {
+    return this.Equipment.reduce((total, e) => (total += e.armorValue ?? 0), 0);
+  }
 
   constructor(
     public hunterProfile: IHunterProfile,
