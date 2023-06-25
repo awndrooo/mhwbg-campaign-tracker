@@ -3,4 +3,12 @@ export type EquipmentRarity =
   | 'yellow'
   | 'green'
   | 'purple'
-  | 'orange'; // TODO: find and list rest
+  | 'orange';
+
+export const EquipmentRarityArray: EquipmentRarity[] = [
+  'white',
+  'yellow',
+  'green',
+  'purple',
+  'orange',
+];

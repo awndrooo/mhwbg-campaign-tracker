@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { IEquipmentWeapon } from '@app/core/types/EquipmentWeapon';
 import { IHunterProfile } from '@app/core/types/HunterProfile';
 import { filterNullish } from '@app/core/utility/FilterNullish';
@@ -16,7 +16,6 @@ import { delayWhen, filter, map } from 'rxjs';
   selector: 'app-hunter-sheet',
   templateUrl: './hunter-sheet.component.html',
   styleUrls: ['./hunter-sheet.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HunterSheetComponent {
   private _activeHunterProfileId$ = this._store$
