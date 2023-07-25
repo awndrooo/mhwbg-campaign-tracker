@@ -17,6 +17,7 @@ These goals are currently on the TODO list and should happen.
   - Campaign day, notes, and potions
 - Toggle off darkmode (Not sure anyone actually wants this but seems good to have)
 - Add new stuff from future Iceborne box (release late 2024)
+ - Steamforged wanted an additional +$350USD just to include the additional Overpowering Hunger and Vaal Hazak expansion on top of the existing "monstrous" pledge so these items will not be initially included in the update
 
 ## Goals (not promised)
 These goals push the line of pipe-dream features and may or may not happen depending upon the future of this project.
