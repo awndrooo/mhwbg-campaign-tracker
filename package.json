@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=127.0.0.1",
-    "build": "ng build --base-href=https://awndrooo.github.io/mhwbg-campaign-tracker/ --configuration=production",
+    "build": "ng build --base-href=https://mhwbg.awndroo.art/ --configuration=production",
     "build-dev": "ng build --base-href=./ --configuration=development & npm run postbuild",
     "watch": "ng build --watch --base-href=./ --configuration=development",
     "test": "ng test --code-coverage",
