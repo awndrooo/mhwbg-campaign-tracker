@@ -32,7 +32,7 @@ export class EquipmentListComponent implements ControlValueAccessor {
   }
   @Input()
   public set Equipment(value: string[] | undefined) {
-    this._equipment = value;
+    this._equipment = value ? [...value] : value;
     this._equipment$.next(value);
   }
   @Input() public ShowControls: boolean = false;
