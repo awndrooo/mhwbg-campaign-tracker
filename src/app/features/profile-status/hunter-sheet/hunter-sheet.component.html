@@ -20,51 +20,63 @@
     </div>
     <div class="flex-wrapper">
       <div class="equipment-box">
-        <h4>{{ viewModel.Helm?.name }}</h4>
-        <app-equipment-icon [equipment]="viewModel.Helm"></app-equipment-icon>
-        <app-icon name="armor" alignment="baseline">
-          {{ viewModel.Helm?.armorValue }}
-        </app-icon>
-        <p>
-          <app-rich-text>{{ viewModel.Helm?.description }}</app-rich-text>
-        </p>
+        <ng-container *ngIf="viewModel.Helm">
+          <h4>{{ viewModel.Helm.name }}</h4>
+          <app-equipment-icon [equipment]="viewModel.Helm"></app-equipment-icon>
+          <app-icon name="armor" alignment="baseline">
+            {{ viewModel.Helm.armorValue }}
+          </app-icon>
+          <p>
+            <app-rich-text>{{ viewModel.Helm.description }}</app-rich-text>
+          </p>
+        </ng-container>
       </div>
       <div class="equipment-box">
-        <h4>{{ viewModel.Chest?.name }}</h4>
-        <app-equipment-icon [equipment]="viewModel.Chest"></app-equipment-icon>
-        <app-icon name="armor" alignment="baseline">
-          {{ viewModel.Chest?.armorValue }}
-        </app-icon>
-        <p>
-          <app-rich-text>{{ viewModel.Chest?.description }}</app-rich-text>
-        </p>
+        <ng-container *ngIf="viewModel.Chest">
+          <h4>{{ viewModel.Chest.name }}</h4>
+          <app-equipment-icon
+            [equipment]="viewModel.Chest"
+          ></app-equipment-icon>
+          <app-icon name="armor" alignment="baseline">
+            {{ viewModel.Chest.armorValue }}
+          </app-icon>
+          <p>
+            <app-rich-text>{{ viewModel.Chest.description }}</app-rich-text>
+          </p>
+        </ng-container>
       </div>
     </div>
     <div class="flex-wrapper">
       <div class="equipment-box">
-        <h4>{{ viewModel.Feet?.name }}</h4>
-        <app-equipment-icon [equipment]="viewModel.Feet"></app-equipment-icon>
-        <app-icon name="armor" alignment="baseline">
-          {{ viewModel.Feet?.armorValue }}
-        </app-icon>
-        <p>
-          <app-rich-text>{{ viewModel.Feet?.description }}</app-rich-text>
-        </p>
+        <ng-container *ngIf="viewModel.Feet">
+          <h4>{{ viewModel.Feet.name }}</h4>
+          <app-equipment-icon [equipment]="viewModel.Feet"></app-equipment-icon>
+          <app-icon name="armor" alignment="baseline">
+            {{ viewModel.Feet.armorValue }}
+          </app-icon>
+          <p>
+            <app-rich-text>{{ viewModel.Feet.description }}</app-rich-text>
+          </p>
+        </ng-container>
       </div>
       <div class="equipment-box">
-        <h4>{{ viewModel.Weapon?.name }}</h4>
-        <app-equipment-icon [equipment]="viewModel.Weapon"></app-equipment-icon>
-        <app-icon name="armor" alignment="baseline">
-          {{ viewModel.Weapon?.armorValue ?? 0 }}
-        </app-icon>
-        <br />
-        <ng-container *ngFor="let value of viewModel.WeaponDamage">
-          <app-icon name="damage">{{ value.damage }}</app-icon>
-          x {{ value.count }} &nbsp;
+        <ng-container *ngIf="viewModel.Weapon">
+          <h4>{{ viewModel.Weapon.name }}</h4>
+          <app-equipment-icon
+            [equipment]="viewModel.Weapon"
+          ></app-equipment-icon>
+          <app-icon name="armor" alignment="baseline">
+            {{ viewModel.Weapon.armorValue ?? 0 }}
+          </app-icon>
+          <br />
+          <ng-container *ngFor="let value of viewModel.WeaponDamage">
+            <app-icon name="damage">{{ value.damage }}</app-icon>
+            x {{ value.count }} &nbsp;
+          </ng-container>
+          <p>
+            <app-rich-text>{{ viewModel.Weapon.description }}</app-rich-text>
+          </p>
         </ng-container>
-        <p>
-          <app-rich-text>{{ viewModel.Weapon?.description }}</app-rich-text>
-        </p>
       </div>
     </div>
     <div class="equipment-list-box">
