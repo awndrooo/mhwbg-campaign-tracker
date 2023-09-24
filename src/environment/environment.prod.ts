@@ -2,8 +2,8 @@ import { IEnvironment } from './IEnvironment';
 
 export const environment: IEnvironment = {
   production: true,
-  ApiHost: '/mhwbg-campaign-tracker/assets',
+  ApiHost: '/assets',
   IDBName: 'MHWBGDB',
   IDBVersion: 1,
-  assets: '/mhwbg-campaign-tracker/assets',
+  assets: '/assets',
 };
