@@ -1,6 +1,6 @@
-<mat-table [dataSource]="this.Materials$">
+<mat-table [dataSource]="this.Materials$ | async | materialSort: this.SortColumn:this.SortDirection" matSort (matSortChange)="this.ChangeSort($event)">
   <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Material </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Material </mat-header-cell>
     <mat-cell *matCellDef="let item">
       <button
         mat-icon-button
@@ -17,7 +17,7 @@
   </ng-container>
 
   <ng-container matColumnDef="count">
-    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
       <button
         mat-icon-button

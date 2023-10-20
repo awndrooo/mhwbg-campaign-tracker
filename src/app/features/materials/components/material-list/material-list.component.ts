@@ -7,6 +7,7 @@ import {
   ValidationErrors,
   Validator,
 } from '@angular/forms';
+import { Sort } from '@angular/material/sort';
 import { MaterialsService } from '@app/core/services/materials.service';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import { Material } from '@app/core/types/Material';
@@ -72,6 +73,14 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     }
   }
 
+  private _sortColumn: Sort | undefined;
+  public get SortDirection() {
+    return this._sortColumn?.direction;
+  }
+  public get SortColumn() {
+    return this._sortColumn?.active;
+  }
+
   constructor(private _materialService: MaterialsService) {}
 
   public getMaterial(materialId: string): Observable<Material | undefined> {
@@ -116,6 +125,11 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     }
   }
 
+  public ChangeSort(event: Sort) {
+    this._sortColumn = event;
+    this._materials$.next(this._materials);
+  }
+
   // #region CONTROL VALUE ACCESSOR / VALIDATOR
 
   onChange: (materials: HunterMaterials[]) => undefined = (_) => undefined;
@@ -150,4 +164,4 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
   // #endregion
 }
 
-type MaterialCount = Material & { count: number | undefined };
+export type MaterialCount = Material & { count: number | undefined };
