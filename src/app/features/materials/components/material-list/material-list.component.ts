@@ -53,7 +53,7 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
   }
   @Input()
   public set Materials(value: HunterMaterials[]) {
-    this._materials = value;
+    this._materials = value ? [...value] : value;
     this._materials$.next(value);
   }
   @Output('MaterialsChange') public MaterialsChange$ = new Subject<
@@ -100,12 +100,12 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
   }
 
   private _changeMaterialCount(materialId: string, delta: number): void {
-    const ind = this.Materials.findIndex((x) => x.materialId == materialId);
-    const newMaterials = [...this.Materials];
+    const ind = this._materials.findIndex((x) => x.materialId == materialId);
+    const newMaterials = [...this._materials];
     if (ind > -1) {
       newMaterials[ind] = {
-        ...this.Materials[ind],
-        count: Math.max(this.Materials[ind].count + delta, 0),
+        ...this._materials[ind],
+        count: Math.max(this._materials[ind].count + delta, 0),
       };
       this.Materials = newMaterials;
       this.MaterialsChange$.next(this.Materials);
@@ -113,13 +113,11 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     }
   }
 
-  public RemoveMaterial(item: HunterMaterials) {
+  public RemoveMaterial(materialId: string) {
     if (!this.disabled) {
-      const ind = this.Materials.findIndex(
-        (x) => x.materialId == item.materialId
-      );
-      this.Materials.splice(ind, 1);
-      this.Materials = [...this.Materials]; // Force change detection for regular bindings
+      const ind = this._materials.findIndex((x) => x.materialId == materialId);
+      this._materials.splice(ind, 1);
+      this.Materials = this._materials; // Force change detection for regular bindings
       this.MaterialsChange$.next(this.Materials);
       this.onChange(this.Materials);
     }

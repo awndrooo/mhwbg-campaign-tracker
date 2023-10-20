@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Pipe, PipeTransform } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
@@ -34,11 +33,3 @@ describe('MaterialListComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-@Pipe({ name: 'materialSort', standalone: true })
-class MockPipe implements PipeTransform {
-  transform(value: unknown): typeof value {
-    //Do stuff here, if you want
-    return value;
-  }
-}
