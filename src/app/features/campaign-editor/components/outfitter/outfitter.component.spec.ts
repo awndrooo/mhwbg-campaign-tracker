@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
@@ -11,6 +11,7 @@ import { EquipmentModule } from '@features/equipment/equipment.module';
 import { provideMockStore } from '@ngrx/store/testing';
 import { MHIconsModule } from '@shared/mhicons.module';
 import { OutfitterComponent } from './outfitter.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('OutfitterComponent', () => {
   let component: OutfitterComponent;
@@ -18,19 +19,16 @@ describe('OutfitterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OutfitterComponent, MatIcon],
-      providers: [provideMockStore()],
-      imports: [
-        MatFormFieldModule,
+    declarations: [OutfitterComponent, MatIcon],
+    imports: [MatFormFieldModule,
         EquipmentModule,
         MatSelectModule,
         MatInputModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        MHIconsModule,
-        HttpClientTestingModule,
-      ],
-    }).compileComponents();
+        MHIconsModule],
+    providers: [provideMockStore(), provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+}).compileComponents();
 
     fixture = TestBed.createComponent(OutfitterComponent);
     component = fixture.componentInstance;

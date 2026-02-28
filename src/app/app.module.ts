@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -10,20 +10,13 @@ import { CampaignEditorModule } from './features/campaign-editor/campaign-editor
 import { RootStoreModule } from './root-store/root-store.module';
 import { SharedModule } from './shared/shared.module';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
-    RootStoreModule,
-    HttpClientModule,
-    CoreModule,
-    SharedModule,
-    CampaignEditorModule,
-    MHIconsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [BrowserAnimationsModule,
+        AppRoutingModule,
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode(), connectInZone: true }),
+        RootStoreModule,
+        CoreModule,
+        SharedModule,
+        CampaignEditorModule,
+        MHIconsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

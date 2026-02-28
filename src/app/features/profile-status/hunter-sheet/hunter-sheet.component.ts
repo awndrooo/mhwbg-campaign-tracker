@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IEquipmentWeapon } from '@app/core/types/EquipmentWeapon';
 import { IHunterProfile } from '@app/core/types/HunterProfile';
 import { filterNullish } from '@app/core/utility/FilterNullish';
-import { concatLatestFrom } from '@ngrx/effects';
+import { concatLatestFrom } from '@ngrx/operators';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import {

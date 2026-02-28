@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,6 +13,7 @@ import { MaterialsModule } from '@features/materials/materials.module';
 import { provideMockStore } from '@ngrx/store/testing';
 import { SharedModule } from '@shared/shared.module';
 import { CampaignEditorComponent } from './campaign-editor.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('CampaignEditorComponent', () => {
   let component: CampaignEditorComponent;
@@ -20,9 +21,8 @@ describe('CampaignEditorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CampaignEditorComponent, MatIcon],
-      imports: [
-        MatDialogModule,
+    declarations: [CampaignEditorComponent, MatIcon],
+    imports: [MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
         SharedModule,
@@ -30,11 +30,9 @@ describe('CampaignEditorComponent', () => {
         EquipmentModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        HttpClientTestingModule,
-        MatIconTestingModule,
-      ],
-      providers: [provideMockStore()],
-    }).compileComponents();
+        MatIconTestingModule],
+    providers: [provideMockStore(), provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+}).compileComponents();
 
     fixture = TestBed.createComponent(CampaignEditorComponent);
     component = fixture.componentInstance;
