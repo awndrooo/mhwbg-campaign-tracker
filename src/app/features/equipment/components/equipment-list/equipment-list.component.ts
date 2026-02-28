@@ -24,6 +24,7 @@ type COLUMN_NAMES = 'Type' | 'Name' | 'Notes' | 'CardNumber' | 'Description';
       useExisting: forwardRef(() => EquipmentListComponent),
     },
   ],
+  standalone: false,
 })
 export class EquipmentListComponent implements ControlValueAccessor {
   private _equipment: string[] | undefined;

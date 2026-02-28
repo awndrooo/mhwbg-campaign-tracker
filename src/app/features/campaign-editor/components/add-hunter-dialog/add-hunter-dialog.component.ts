@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-add-hunter-dialog',
   templateUrl: './add-hunter-dialog.component.html',
-  styleUrls: ['./add-hunter-dialog.component.scss']
+  styleUrls: ['./add-hunter-dialog.component.scss'],
+  standalone: false,
 })
-export class AddHunterDialogComponent {
-
-}
+export class AddHunterDialogComponent {}

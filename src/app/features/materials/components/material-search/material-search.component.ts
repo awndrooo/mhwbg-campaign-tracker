@@ -7,6 +7,7 @@ import { Subject, filter, map, withLatestFrom } from 'rxjs';
   selector: 'app-material-search',
   templateUrl: './material-search.component.html',
   styleUrls: ['./material-search.component.scss'],
+  standalone: false,
 })
 export class MaterialSearchComponent {
   private _OnMaterialAdd = new Subject<Material>();

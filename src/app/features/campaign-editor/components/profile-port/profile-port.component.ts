@@ -19,6 +19,7 @@ import { Subject, map, take, takeUntil } from 'rxjs';
   templateUrl: './profile-port.component.html',
   styleUrls: ['./profile-port.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class ProfilePortComponent implements OnDestroy, OnInit {
   private _destroy$ = new Subject<boolean>();

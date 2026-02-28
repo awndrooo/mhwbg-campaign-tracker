@@ -29,6 +29,7 @@ import { Observable, ReplaySubject, Subject, map, switchMap } from 'rxjs';
       useExisting: MaterialListComponent,
     },
   ],
+  standalone: false,
 })
 export class MaterialListComponent implements ControlValueAccessor, Validator {
   private _materials$ = new ReplaySubject<HunterMaterials[]>();

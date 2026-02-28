@@ -18,6 +18,7 @@ import { ICONS, IconComponent } from '../icon/icon.component';
   selector: 'app-rich-text',
   templateUrl: './rich-text.component.html',
   styleUrls: ['./rich-text.component.scss'],
+  standalone: false,
 })
 export class RichTextComponent implements AfterViewInit {
   @ViewChild('text') textTemplate!: TemplateRef<{ $implicit: string }>;

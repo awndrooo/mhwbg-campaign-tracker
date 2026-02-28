@@ -18,6 +18,7 @@ import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
   templateUrl: './equipment-icon.component.html',
   styleUrls: ['./equipment-icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: false,
 })
 export class EquipmentIconComponent {
   @Input() public equipment:

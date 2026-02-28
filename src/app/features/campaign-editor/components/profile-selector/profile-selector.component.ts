@@ -13,6 +13,7 @@ import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog
   selector: 'app-profile-selector',
   templateUrl: './profile-selector.component.html',
   styleUrls: ['./profile-selector.component.scss'],
+  standalone: false,
 })
 export class ProfileSelectorComponent {
   public hunterProfiles$ = this._store$.select(

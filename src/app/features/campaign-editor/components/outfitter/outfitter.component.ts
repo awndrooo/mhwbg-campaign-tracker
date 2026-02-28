@@ -14,6 +14,7 @@ import { Subject, debounceTime, takeUntil, tap, withLatestFrom } from 'rxjs';
   selector: 'app-outfitter',
   templateUrl: './outfitter.component.html',
   styleUrls: ['./outfitter.component.scss'],
+  standalone: false,
 })
 export class OutfitterComponent implements OnDestroy {
   private _destroy$ = new Subject<boolean>();

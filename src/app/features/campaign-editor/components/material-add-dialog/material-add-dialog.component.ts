@@ -6,6 +6,7 @@ import { Material } from '@app/core/types/Material';
   selector: 'app-material-add-dialog',
   templateUrl: './material-add-dialog.component.html',
   styleUrls: ['./material-add-dialog.component.scss'],
+  standalone: false,
 })
 export class MaterialAddDialogComponent {
   public materialQueue: HunterMaterials[] = [];

@@ -14,6 +14,7 @@ import { MatTooltip } from '@angular/material/tooltip';
   // changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   providers: [MatTooltip],
+  standalone: false,
 })
 export class IconComponent {
   @Input('name') appIconName: keyof typeof ICONS | undefined;

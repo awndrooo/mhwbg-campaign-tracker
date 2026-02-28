@@ -7,6 +7,7 @@ import { Subject, filter, map, withLatestFrom } from 'rxjs';
   selector: 'app-equipment-search',
   templateUrl: './equipment-search.component.html',
   styleUrls: ['./equipment-search.component.scss'],
+  standalone: false,
 })
 export class EquipmentSearchComponent {
   private _OnEquipmentAdd = new Subject<IEquipmentStoreItem>();

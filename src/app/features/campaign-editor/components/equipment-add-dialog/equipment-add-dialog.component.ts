@@ -5,6 +5,7 @@ import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
   selector: 'app-equipment-add-dialog',
   templateUrl: './equipment-add-dialog.component.html',
   styleUrls: ['./equipment-add-dialog.component.scss'],
+  standalone: false,
 })
 export class EquipmentAddDialogComponent {
   public equipmentQueue: string[] | undefined = [];

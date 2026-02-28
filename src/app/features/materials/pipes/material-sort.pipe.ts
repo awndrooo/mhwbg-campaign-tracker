@@ -4,6 +4,7 @@ import { MaterialCount } from '../components/material-list/material-list.compone
 
 @Pipe({
   name: 'materialSort',
+  standalone: false,
 })
 export class MaterialSortPipe implements PipeTransform {
   transform(

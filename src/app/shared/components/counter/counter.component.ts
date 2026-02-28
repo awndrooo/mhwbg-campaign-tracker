@@ -25,6 +25,7 @@ import { Observable, Subject } from 'rxjs';
       useExisting: CounterComponent,
     },
   ],
+  standalone: false,
 })
 export class CounterComponent
   implements MatFormFieldControl<number>, ControlValueAccessor, OnDestroy

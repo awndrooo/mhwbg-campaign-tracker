@@ -16,6 +16,7 @@ import { delayWhen, filter, map } from 'rxjs';
   selector: 'app-hunter-sheet',
   templateUrl: './hunter-sheet.component.html',
   styleUrls: ['./hunter-sheet.component.scss'],
+  standalone: false,
 })
 export class HunterSheetComponent {
   private _activeHunterProfileId$ = this._store$

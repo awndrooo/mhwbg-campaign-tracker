@@ -18,6 +18,7 @@ import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-
   selector: 'app-campaign-editor',
   templateUrl: './campaign-editor.component.html',
   styleUrls: ['./campaign-editor.component.scss'],
+  standalone: false,
 })
 export class CampaignEditorComponent implements OnInit, OnDestroy {
   private _destroy$ = new Subject<boolean>();
