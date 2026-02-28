@@ -14,7 +14,7 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
@@ -25,12 +25,24 @@
       "dom"
     ],
     "paths": {
-      "@shared/*": ["src/app/shared/*"],
-      "@features/*": ["src/app/features/*"],
-      "@root-store/*": ["src/app/root-store/*"],
-      "@core/*": ["src/core/*"],
-      "@env/*": ["src/environment/*"],
-      "@app/*": ["src/app/*"],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@features/*": [
+        "src/app/features/*"
+      ],
+      "@root-store/*": [
+        "src/app/root-store/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@env/*": [
+        "src/environment/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ]
     }
   },
   "angularCompilerOptions": {

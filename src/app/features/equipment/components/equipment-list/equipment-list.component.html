@@ -11,14 +11,15 @@
   <ng-container matColumnDef="Name">
     <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button
-        mat-icon-button
-        (click)="this.removeEquipment(item)"
-        color="warn"
-        *ngIf="this.ShowControls"
-      >
-        <mat-icon>remove</mat-icon>
-      </button>
+      @if (this.ShowControls) {
+        <button
+          mat-icon-button
+          (click)="this.removeEquipment(item)"
+          color="warn"
+          >
+          <mat-icon>remove</mat-icon>
+        </button>
+      }
       {{ item.name }}
     </mat-cell>
   </ng-container>

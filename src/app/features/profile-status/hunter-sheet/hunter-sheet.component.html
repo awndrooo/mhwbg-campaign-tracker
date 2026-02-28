@@ -1,4 +1,4 @@
-<ng-container *ngIf="this.hunterProfile$ | async as viewModel">
+@if (this.hunterProfile$ | async; as viewModel) {
   <div class="sheet-wrapper">
     <div class="name-box">
       <h1>{{ viewModel.hunterProfile.hunterName }}</h1>
@@ -9,7 +9,7 @@
           mat-icon-button
           (click)="this.consumePotion()"
           matTooltip="Consume Potion"
-        >
+          >
           <mat-icon svgIcon="mh-potion"></mat-icon>
         </button>
         {{ viewModel.hunterProfile.potions }}
@@ -20,7 +20,7 @@
     </div>
     <div class="flex-wrapper">
       <div class="equipment-box">
-        <ng-container *ngIf="viewModel.Helm">
+        @if (viewModel.Helm) {
           <h4>{{ viewModel.Helm.name }}</h4>
           <app-equipment-icon [equipment]="viewModel.Helm"></app-equipment-icon>
           <app-icon name="armor" alignment="baseline">
@@ -29,10 +29,10 @@
           <p>
             <app-rich-text>{{ viewModel.Helm.description }}</app-rich-text>
           </p>
-        </ng-container>
+        }
       </div>
       <div class="equipment-box">
-        <ng-container *ngIf="viewModel.Chest">
+        @if (viewModel.Chest) {
           <h4>{{ viewModel.Chest.name }}</h4>
           <app-equipment-icon
             [equipment]="viewModel.Chest"
@@ -43,12 +43,12 @@
           <p>
             <app-rich-text>{{ viewModel.Chest.description }}</app-rich-text>
           </p>
-        </ng-container>
+        }
       </div>
     </div>
     <div class="flex-wrapper">
       <div class="equipment-box">
-        <ng-container *ngIf="viewModel.Feet">
+        @if (viewModel.Feet) {
           <h4>{{ viewModel.Feet.name }}</h4>
           <app-equipment-icon [equipment]="viewModel.Feet"></app-equipment-icon>
           <app-icon name="armor" alignment="baseline">
@@ -57,10 +57,10 @@
           <p>
             <app-rich-text>{{ viewModel.Feet.description }}</app-rich-text>
           </p>
-        </ng-container>
+        }
       </div>
       <div class="equipment-box">
-        <ng-container *ngIf="viewModel.Weapon">
+        @if (viewModel.Weapon) {
           <h4>{{ viewModel.Weapon.name }}</h4>
           <app-equipment-icon
             [equipment]="viewModel.Weapon"
@@ -69,14 +69,14 @@
             {{ viewModel.Weapon.armorValue ?? 0 }}
           </app-icon>
           <br />
-          <ng-container *ngFor="let value of viewModel.WeaponDamage">
+          @for (value of viewModel.WeaponDamage; track value) {
             <app-icon name="damage">{{ value.damage }}</app-icon>
             x {{ value.count }} &nbsp;
-          </ng-container>
+          }
           <p>
             <app-rich-text>{{ viewModel.Weapon.description }}</app-rich-text>
           </p>
-        </ng-container>
+        }
       </div>
     </div>
     <div class="equipment-list-box">
@@ -94,4 +94,4 @@
       ></app-material-list>
     </div>
   </div>
-</ng-container>
+}

@@ -2,16 +2,17 @@
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Material </mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button
-        mat-icon-button
-        color="warn"
-        matTooltip="Remove Item"
-        (click)="this.RemoveMaterial(item.id)"
-        [disabled]="this.disabled"
-        *ngIf="this.ShowControls"
-      >
-        <mat-icon>remove</mat-icon>
-      </button>
+      @if (this.ShowControls) {
+        <button
+          mat-icon-button
+          color="warn"
+          matTooltip="Remove Item"
+          (click)="this.RemoveMaterial(item.id)"
+          [disabled]="this.disabled"
+          >
+          <mat-icon>remove</mat-icon>
+        </button>
+      }
       {{ item.name }}
     </mat-cell>
   </ng-container>
@@ -19,23 +20,25 @@
   <ng-container matColumnDef="count">
     <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      <button
-        mat-icon-button
-        (click)="this.DecrementMaterial(item.id)"
-        [disabled]="this.disabled"
-        *ngIf="this.ShowControls"
-      >
-        <mat-icon>remove</mat-icon>
-      </button>
+      @if (this.ShowControls) {
+        <button
+          mat-icon-button
+          (click)="this.DecrementMaterial(item.id)"
+          [disabled]="this.disabled"
+          >
+          <mat-icon>remove</mat-icon>
+        </button>
+      }
       {{ item.count }}
-      <button
-        mat-icon-button
-        (click)="this.IncrementMaterial(item.id)"
-        [disabled]="this.disabled"
-        *ngIf="this.ShowControls"
-      >
-        <mat-icon>add</mat-icon>
-      </button>
+      @if (this.ShowControls) {
+        <button
+          mat-icon-button
+          (click)="this.IncrementMaterial(item.id)"
+          [disabled]="this.disabled"
+          >
+          <mat-icon>add</mat-icon>
+        </button>
+      }
     </mat-cell>
   </ng-container>
 
