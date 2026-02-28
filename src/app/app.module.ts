@@ -15,7 +15,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
     RootStoreModule,
     HttpClientModule,
     CoreModule,
