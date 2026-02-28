@@ -1,6 +1,5 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { enableProdMode, provideZoneChangeDetection } from '@angular/core';
+import { platformBrowser } from '@angular/platform-browser';
 import { AppModule } from './app/app.module';
 import { environment } from './environment/environment';
 
@@ -8,8 +7,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic()
+platformBrowser()
   .bootstrapModule(AppModule, {
-    providers: [provideAnimations()],
+    applicationProviders: [provideZoneChangeDetection()],
+    providers: [],
   })
   .catch((err) => console.error(err));
