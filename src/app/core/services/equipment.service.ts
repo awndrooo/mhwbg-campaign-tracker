@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
   EquipmentSelectors,
@@ -6,11 +6,11 @@ import {
 } from '@root-store/selectors';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import {
-  NEVER,
-  Observable,
   distinctUntilChanged,
   filter,
   map,
+  NEVER,
+  Observable,
   shareReplay,
   switchMap,
 } from 'rxjs';
@@ -24,6 +24,8 @@ import { WeaponTypeShorthand } from '../types/WeaponType';
   providedIn: 'root',
 })
 export class EquipmentService {
+  private _store$ = inject(Store);
+
   public Equipment$ = this._store$.select(EquipmentSelectors.selectAll);
   public IsLoaded$ = this._store$
     .select(EquipmentSelectors.selectIsLoaded)
@@ -50,8 +52,6 @@ export class EquipmentService {
     ),
     map((equipment) => <IEquipmentWeapon[]>equipment)
   );
-
-  constructor(private _store$: Store) {}
 
   public HunterEquipmentType<T extends EquipmentType>(
     type: T,

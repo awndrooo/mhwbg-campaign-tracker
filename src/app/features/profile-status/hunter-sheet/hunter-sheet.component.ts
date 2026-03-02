@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { IEquipmentWeapon } from '@app/core/types/EquipmentWeapon';
 import { IHunterProfile } from '@app/core/types/HunterProfile';
 import { filterNullish } from '@app/core/utility/FilterNullish';
@@ -10,15 +13,32 @@ import {
   HunterProfilesSelectors,
 } from '@root-store/selectors';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
+import { IconComponent, RichTextComponent } from '@shared/components';
+import {
+  EquipmentIconComponent,
+  EquipmentListComponent,
+} from '@shared/equipment';
+import { MaterialListComponent } from '@shared/materials/components/material-list/material-list.component';
 import { delayWhen, filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-hunter-sheet',
   templateUrl: './hunter-sheet.component.html',
   styleUrls: ['./hunter-sheet.component.scss'],
-  standalone: false,
+  imports: [
+    MatIconModule,
+    EquipmentIconComponent,
+    EquipmentListComponent,
+    MaterialListComponent,
+    AsyncPipe,
+    MatButtonModule,
+    RichTextComponent,
+    IconComponent,
+  ],
 })
 export class HunterSheetComponent {
+  private _store$ = inject(Store);
+
   private _activeHunterProfileId$ = this._store$
     .select(HunterProfilesSelectors.selectActiveHunterId)
     .pipe(filterNullish());
@@ -33,16 +53,26 @@ export class HunterSheetComponent {
           .pipe(filter((x) => !!x))
       ),
       concatLatestFrom((profile) =>
-        this._store$.select(
-          EquipmentSelectors.selectByIds(profile.equipmentCrafted)
-        )
+        this._store$
+          .select(EquipmentSelectors.selectByIds(profile.equipmentCrafted))
+          .pipe(
+            // filter down to only equiped items
+            map((x) =>
+              x.filter((e) =>
+                [
+                  profile.equipedHelmId,
+                  profile.equipedChestId,
+                  profile.equipedFeetId,
+                  profile.equipedWeaponId,
+                ].includes(e.id)
+              )
+            )
+          )
       ),
       map(
         ([profile, equipment]) => new HunterProfileViewModel(profile, equipment)
       )
     );
-
-  constructor(private _store$: Store) {}
 
   public consumePotion(): void {
     this._store$.dispatch(

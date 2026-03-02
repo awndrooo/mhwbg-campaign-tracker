@@ -1,14 +1,16 @@
 import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
-import { MatDialogModule } from '@angular/material/dialog';
 import { provideMockStore } from '@ngrx/store/testing';
 import { materialsFeatureKey } from '@root-store/reducers/materials.reducer';
 import { State, initialState } from '@root-store/state/material.state';
-import { take } from 'rxjs';
+import { firstValueFrom, take } from 'rxjs';
 import { Material } from '../types/Material';
 import { MaterialsService } from './materials.service';
 
-const entities: { [key: string]: Material } = {
+const entities: {
+  [key: string]: Material;
+} = {
   'f83bd32b-2cf7-4e36-9f3d-0392ac2d2d72': {
     description: 'Test Material 1 Description',
     id: 'f83bd32b-2cf7-4e36-9f3d-0392ac2d2d72',
@@ -32,7 +34,6 @@ describe('MaterialsService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MatDialogModule],
       providers: [
         provideMockStore({ initialState: { [materialsFeatureKey]: state } }),
       ],
@@ -44,7 +45,7 @@ describe('MaterialsService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return all materials through Materials$', (done) => {
+  it('should return all materials through Materials$', async () => {
     service.Materials$.pipe(take(1)).subscribe((result) => {
       expect(result.length).toBe(2);
       expect(result).toContain(
@@ -53,29 +54,20 @@ describe('MaterialsService', () => {
       expect(result).toContain(
         entities['00e492ff-483c-456c-9cbe-f0fd96a0a8da']
       );
-      done();
     });
   });
 
-  it('should #FindMaterialById', (done) => {
+  it('should #FindMaterialById', async () => {
     const mat = entities['f83bd32b-2cf7-4e36-9f3d-0392ac2d2d72'];
-    service
-      .FindMaterialById(mat.id)
-      .pipe(take(1))
-      .subscribe((result) => {
-        expect(result).toEqual(mat);
-        done();
-      });
+    const result = await firstValueFrom(service.FindMaterialById(mat.id));
+    expect(result).toEqual(mat);
   });
 
-  it('should #FindMaterialsById', (done) => {
-    service
-      .FindMaterialsById(state.ids as string[])
-      .pipe(take(1))
-      .subscribe((result) => {
-        expect(result.length).toBe(state.ids.length);
-        state.ids.forEach((id) => expect(result).toContain(entities[id]));
-        done();
-      });
+  it('should #FindMaterialsById', async () => {
+    const result = await firstValueFrom(
+      service.FindMaterialsById(state.ids as string[])
+    );
+    expect(result.length).toBe(state.ids.length);
+    state.ids.forEach((id) => expect(result).toContain(entities[id]));
   });
 });

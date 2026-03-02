@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import { Observable, share, take } from 'rxjs';
 import { Material } from '../types/Material';
@@ -9,7 +9,8 @@ import { EnvironmentService } from './environment.service';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private _http: HttpClient, private _env: EnvironmentService) {}
+  private _http = inject(HttpClient);
+  private _env = inject(EnvironmentService);
 
   GetEquipment(): Observable<IEquipmentStoreItem[]> {
     return this._http

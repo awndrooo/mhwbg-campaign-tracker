@@ -2,10 +2,13 @@ import {
   Component,
   HostBinding,
   HostListener,
+  inject,
   Input,
   ViewEncapsulation,
 } from '@angular/core';
-import { MatTooltip } from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { MHIconModule } from '@shared/mhicons.module';
 
 @Component({
   selector: 'app-icon',
@@ -13,10 +16,12 @@ import { MatTooltip } from '@angular/material/tooltip';
   styleUrls: ['./icon.component.scss'],
   // changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
+  imports: [MatIconModule, MHIconModule, MatTooltipModule],
   providers: [MatTooltip],
-  standalone: false,
 })
 export class IconComponent {
+  private _tooltip = inject(MatTooltip);
+
   @Input('name') appIconName: keyof typeof ICONS | undefined;
   @Input('alignment') alignment: 'baseline' | 'center' = 'center';
   @HostBinding('class') private get _class() {
@@ -29,8 +34,6 @@ export class IconComponent {
   @HostListener('mouseleave') mouseleave() {
     this._tooltip.hide();
   }
-
-  constructor(private _tooltip: MatTooltip) {}
 }
 
 export const ICONS = {

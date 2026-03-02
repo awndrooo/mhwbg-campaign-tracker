@@ -12,7 +12,10 @@ import {
   Self,
 } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { Observable, Subject } from 'rxjs';
 
 @Component({
@@ -25,7 +28,7 @@ import { Observable, Subject } from 'rxjs';
       useExisting: CounterComponent,
     },
   ],
-  standalone: false,
+  imports: [MatIconModule, MatButtonModule, MatInputModule],
 })
 export class CounterComponent
   implements MatFormFieldControl<number>, ControlValueAccessor, OnDestroy

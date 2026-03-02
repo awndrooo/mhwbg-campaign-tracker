@@ -1,18 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
-import * as fromHunterProfile from './reducers/hunter-profile.reducer';
-import { EffectsModule } from '@ngrx/effects';
+import { provideEffects } from '@ngrx/effects';
+import { provideState } from '@ngrx/store';
 import { HunterProfileEffects } from './effects/hunter-profile.effects';
+import * as fromHunterProfile from './reducers/hunter-profile.reducer';
 
-
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    StoreModule.forFeature(fromHunterProfile.hunterProfileFeatureKey, fromHunterProfile.reducer),
-    EffectsModule.forFeature([HunterProfileEffects])
-  ]
-})
-export class HunterProfilesModule { }
+export const provideHunterProfileStore = [
+  provideState(fromHunterProfile.hunterProfileFeature),
+  provideEffects(HunterProfileEffects),
+];

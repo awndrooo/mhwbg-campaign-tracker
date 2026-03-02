@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject, Subject, map, pipe, switchMap } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { map, Observable, pipe, ReplaySubject, Subject, switchMap } from 'rxjs';
 import { IHunterProfile } from '../types/HunterProfile';
 import { EnvironmentService } from './environment.service';
 
@@ -14,13 +14,13 @@ const IDB_STORE = (storeName: string) =>
 const transactionToObservable = <T>() =>
   pipe(
     switchMap(
-      (transaction: IDBRequest) =>
+      (request: IDBRequest) =>
         new Observable<T>((s) => {
-          transaction.onsuccess = (_) => {
-            s.next(transaction.result);
+          request.onsuccess = (_) => {
+            s.next(request.result);
             s.complete();
           };
-          transaction.onerror = (err) => {
+          request.onerror = (err) => {
             s.error(err);
             s.complete();
           };
@@ -74,9 +74,11 @@ const IDB_DELETE = (hunterId: string) =>
   providedIn: 'root',
 })
 export class DbService {
+  private _env = inject(EnvironmentService);
+
   private _db$: Subject<IDBDatabase> = new ReplaySubject<IDBDatabase>(1);
 
-  constructor(private _env: EnvironmentService) {
+  constructor() {
     this._connect(this._env.IDBName, this._env.IDBVersion);
   }
 
@@ -84,9 +86,10 @@ export class DbService {
     const openRequest = indexedDB.open(dbName, version);
     openRequest.onupgradeneeded = (e) => {
       const db = (<IDBOpenDBRequest>e.target).result;
+      // Add any tables (ie stores) needed here
       db.createObjectStore(HUNTER_PROFILE_STORE_NAME, { keyPath: 'hunterId' });
     };
-    openRequest.onsuccess = (e) => this._db$.next(openRequest.result);
+    openRequest.onsuccess = (_) => this._db$.next(openRequest.result);
   }
 
   public GetHunterProfiles(): Observable<IHunterProfile[]> {
@@ -127,7 +130,7 @@ export class DbService {
     return this._db$.pipe(
       IDB_STORE(HUNTER_PROFILE_STORE_NAME),
       IDB_DELETE(hunterId),
-      map((x) => (x == undefined ? true : x))
+      map((x) => (x == undefined ? true : false))
     );
   }
 }

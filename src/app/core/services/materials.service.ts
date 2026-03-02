@@ -1,20 +1,19 @@
-import { Injectable } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MaterialsSelectors } from '@root-store/selectors';
-import { NEVER, Observable, distinctUntilChanged } from 'rxjs';
+import { distinctUntilChanged, NEVER, Observable } from 'rxjs';
 import { Material } from '../types/Material';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MaterialsService {
+  private _store$ = inject(Store);
+
   public Materials$ = this._store$.select(MaterialsSelectors.selectAll);
   public IsLoaded$ = this._store$
     .select(MaterialsSelectors.selectIsLoaded)
     .pipe(distinctUntilChanged());
-
-  constructor(private _store$: Store, private _dialog: MatDialog) {}
 
   public FindMaterialById(
     materialId: string

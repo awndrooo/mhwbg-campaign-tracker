@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  inject,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
@@ -11,23 +12,23 @@ import {
   EquipmentRarity,
   EquipmentRarityArray,
 } from '@app/core/types/EquipmentRarity';
-import { EquipmentIconComponent } from '@features/equipment/components/equipment-icon/equipment-icon.component';
-import { ICONS, IconComponent } from '../icon/icon.component';
+import { EquipmentIconComponent } from '@shared/equipment/components/equipment-icon/equipment-icon.component';
+import { IconComponent, ICONS } from '../icon/icon.component';
 
 @Component({
   selector: 'app-rich-text',
   templateUrl: './rich-text.component.html',
   styleUrls: ['./rich-text.component.scss'],
-  standalone: false,
+  imports: [],
 })
 export class RichTextComponent implements AfterViewInit {
+  private _eleRef = inject(ElementRef);
+
   @ViewChild('text') textTemplate!: TemplateRef<{ $implicit: string }>;
   @ViewChild('output', { read: ViewContainerRef, static: true })
   content!: ViewContainerRef;
   private _templateString: string = '';
   public done: boolean = false;
-
-  constructor(private _eleRef: ElementRef) {}
 
   ngAfterViewInit(): void {
     this._templateString = (
@@ -39,6 +40,7 @@ export class RichTextComponent implements AfterViewInit {
   }
 
   private _renderRichText(): void {
+    if (this._templateString === undefined) this._templateString = '';
     // Note: We are rendering to a container instead of the host because rendering to the host creates it as a sibling of the host element
     this._templateString.split(/(\[\[.*?\]\])/g).forEach((template) => {
       if (template.startsWith('[[')) {

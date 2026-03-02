@@ -27,9 +27,7 @@
             "assets": ["src/favicon.ico", "src/assets", "src/404.html"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "allowedCommonJsDependencies": [
-              "moment"
-            ],
+            "allowedCommonJsDependencies": ["moment"],
             "browser": "src/main.ts"
           },
           "configurations": {
@@ -82,14 +80,10 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
-            "scripts": []
+            "runnerConfig": "vitest.config.ts"
           }
         }
       }

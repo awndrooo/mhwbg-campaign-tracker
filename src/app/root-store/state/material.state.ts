@@ -10,6 +10,6 @@ export const featureAdapter = createEntityAdapter<Material>({
   sortComparer: (x: Material, y: Material): number => x.id.localeCompare(y.id),
 });
 
-export const initialState = featureAdapter.getInitialState({
+export const initialState: State = featureAdapter.getInitialState({
   isLoaded: false,
 });

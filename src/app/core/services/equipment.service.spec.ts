@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { provideMockStore } from '@ngrx/store/testing';
 import { equipmentFeatureKey } from '@root-store/reducers/equipment.reducer';
@@ -6,17 +7,21 @@ import { hunterProfileFeatureKey } from '@root-store/reducers/hunter-profile.red
 import {
   IEquipmentStoreItem,
   initialState,
+  State,
 } from '@root-store/state/equipment.state';
 import {
-  State as ProfileState,
   initialState as initialProfileState,
+  State as ProfileState,
 } from '@root-store/state/hunter-profiles.state';
+import { firstValueFrom } from 'rxjs';
 import { ArmorTypeEnum } from '../types/ArmorType';
 import { IEquipmentArmor } from '../types/EquipmentArmor';
 import { EquipmentTypeEnum } from '../types/EquipmentType';
 import { EquipmentService } from './equipment.service';
 
-const entities: { [key: string]: IEquipmentStoreItem } = {
+const entities: {
+  [key: string]: IEquipmentStoreItem;
+} = {
   '41aafd99-543b-4e95-b3df-00b5784e601c': {
     armorType: 'helm',
     armorValue: 1,
@@ -74,9 +79,12 @@ const entities: { [key: string]: IEquipmentStoreItem } = {
     weaponType: 'IG',
   },
 };
-const state = initialState;
-state.entities = entities;
-state.ids = Object.getOwnPropertyNames(entities);
+const state: State = {
+  ...initialState,
+  entities,
+  ids: Object.getOwnPropertyNames(entities),
+  isLoaded: true,
+};
 
 const profileState: ProfileState = {
   ...initialProfileState,
@@ -87,7 +95,7 @@ const profileState: ProfileState = {
       equipedFeetId: null,
       equipedHelmId: null,
       equipedWeaponId: null,
-      equipmentCrafted: state.ids,
+      equipmentCrafted: state.ids.map((x) => x.toString()),
       hunterId: 'b43f9d4f-ef82-4eba-bfb1-db2a5ae850bd',
       hunterName: 'Test Hunter',
       materials: [],
@@ -122,33 +130,31 @@ describe('EquipmentService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return an entity from #FindEquipmentById', (done) => {
-    service.FindEquipmentById(state.ids[0] as string).subscribe((result) => {
-      expect(result).toEqual(entities[state.ids[0]]);
-      done();
-    });
+  it('should return an entity from #FindEquipmentById', async () => {
+    const result = await firstValueFrom(
+      service.FindEquipmentById(state.ids[0] as string)
+    );
+    expect(result).toEqual(entities[state.ids[0]]);
   });
 
-  it('should return entities from #FindEquipmentByIds', (done) => {
-    service.FindEquipmentByIds(state.ids as string[]).subscribe((result) => {
-      expect(result.length).toBe(4);
-      expect(result).toContain(entities[state.ids[0]]);
-      expect(result).toContain(entities[state.ids[1]]);
-      expect(result).toContain(entities[state.ids[2]]);
-      expect(result).toContain(entities[state.ids[3]]);
-      done();
-    });
+  it('should return entities from #FindEquipmentByIds', async () => {
+    const result = await firstValueFrom(
+      service.FindEquipmentByIds(state.ids as string[])
+    );
+    expect(result.length).toBe(4);
+    expect(result).toContain(entities[state.ids[0]]);
+    expect(result).toContain(entities[state.ids[1]]);
+    expect(result).toContain(entities[state.ids[2]]);
+    expect(result).toContain(entities[state.ids[3]]);
   });
 
-  it('should return the helm armor item from #HunterEquipmentType', (done) => {
-    service
-      .HunterEquipmentType(EquipmentTypeEnum.Armor, ArmorTypeEnum.Helm)
-      .subscribe((result) => {
-        expect(result.length).toBe(1);
-        expect(result[0]).toEqual(
-          entities['41aafd99-543b-4e95-b3df-00b5784e601c'] as IEquipmentArmor
-        );
-        done();
-      });
+  it('should return the helm armor item from #HunterEquipmentType', async () => {
+    const result = await firstValueFrom(
+      service.HunterEquipmentType(EquipmentTypeEnum.Armor, ArmorTypeEnum.Helm)
+    );
+    expect(result.length).toBe(1);
+    expect(result[0]).toEqual(
+      entities['41aafd99-543b-4e95-b3df-00b5784e601c'] as IEquipmentArmor
+    );
   });
 });

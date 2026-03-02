@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
-import { provideMockStore } from '@ngrx/store/testing';
+import { provideMockRootStore } from '@root-store/provideMockRootStore';
 import { HunterSheetComponent } from './hunter-sheet.component';
 
 describe('HunterSheetComponent', () => {
@@ -9,8 +10,8 @@ describe('HunterSheetComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HunterSheetComponent],
-      providers: [provideMockStore()],
+      imports: [HunterSheetComponent],
+      providers: [provideMockRootStore()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(HunterSheetComponent);

@@ -1,9 +1,17 @@
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  inject,
   OnDestroy,
   OnInit,
 } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IHunterProfile } from '@app/core/types/HunterProfile';
 import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
@@ -11,17 +19,29 @@ import { Actions, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
-import * as moment from 'moment';
-import { Subject, map, take, takeUntil } from 'rxjs';
+import { DateTime } from 'luxon';
+import { map, Subject, take, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-profile-port',
   templateUrl: './profile-port.component.html',
   styleUrls: ['./profile-port.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: false,
+  imports: [
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatDividerModule,
+    AsyncPipe,
+    MatInputModule,
+    MatButtonModule,
+  ],
 })
 export class ProfilePortComponent implements OnDestroy, OnInit {
+  private _store = inject(Store);
+  private _actions$ = inject(Actions);
+  private _snackbar = inject(MatSnackBar);
+
   private _destroy$ = new Subject<boolean>();
 
   public activeHunterProfile$ = this._store.select(
@@ -30,12 +50,6 @@ export class ProfilePortComponent implements OnDestroy, OnInit {
   public activeHunterProfileJson$ = this.activeHunterProfile$.pipe(
     map((profile) => JSON.stringify(profile))
   );
-
-  constructor(
-    private _store: Store,
-    private _actions$: Actions,
-    private _snackbar: MatSnackBar
-  ) {}
 
   ngOnInit(): void {
     this._actions$
@@ -78,7 +92,7 @@ export class ProfilePortComponent implements OnDestroy, OnInit {
       const data = new Blob([json], { type: 'application/json' });
       const anchor = document.createElement('a');
       const url = URL.createObjectURL(data);
-      const today = moment().format('YYYY-MM-DD');
+      const today = DateTime.now().toFormat('yyyy-LL-dd');
       anchor.href = url;
       anchor.download = `${profile?.hunterName}_${today}.json`;
       document.body.appendChild(anchor);

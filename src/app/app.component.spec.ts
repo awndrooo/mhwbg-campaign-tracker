@@ -1,25 +1,14 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { TestBed } from '@angular/core/testing';
-import { MatIcon } from '@angular/material/icon';
-import { MatIconTestingModule } from '@angular/material/icon/testing';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
-import { MHIconsModule } from '@shared/mhicons.module';
+import { provideRouter } from '@angular/router';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        MatIconTestingModule,
-        MatSidenavModule,
-        BrowserAnimationsModule,
-        MatListModule,
-        MHIconsModule,
-      ],
-      declarations: [AppComponent, MatIcon],
+      imports: [AppComponent, OverlayModule],
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 

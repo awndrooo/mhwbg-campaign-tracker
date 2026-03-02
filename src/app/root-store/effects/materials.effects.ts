@@ -1,12 +1,15 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { ApiService } from '@app/core/services/api.service';
-import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType, OnInitEffects } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, concatMap, map } from 'rxjs/operators';
 import * as MaterialsActions from '../actions/materials.actions';
 
 @Injectable()
 export class MaterialsEffects implements OnInitEffects {
+  private _actions$ = inject(Actions);
+  private _api = inject(ApiService);
+
   ngrxOnInitEffects = () => MaterialsActions.loadMaterials();
 
   loadMaterials$ = createEffect(() => {
@@ -22,6 +25,4 @@ export class MaterialsEffects implements OnInitEffects {
       )
     );
   });
-
-  constructor(private _actions$: Actions, private _api: ApiService) {}
 }

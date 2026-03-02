@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { initialState } from '@root-store/state/hunter-profiles.state';
 import { reducer } from './hunter-profile.reducer';
 

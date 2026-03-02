@@ -1,36 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIcon } from '@angular/material/icon';
-import { MatIconTestingModule } from '@angular/material/icon/testing';
-import { MatInputModule } from '@angular/material/input';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockActions } from '@ngrx/effects/testing';
-import { provideMockStore } from '@ngrx/store/testing';
-import { Observable } from 'rxjs';
+import { provideMockRootStore } from '@root-store/provideMockRootStore';
+import { EMPTY, Observable } from 'rxjs';
 import { ProfilePortComponent } from './profile-port.component';
 
 describe('ProfilePortComponent', () => {
   let component: ProfilePortComponent;
   let fixture: ComponentFixture<ProfilePortComponent>;
-  let actions$: Observable<unknown>;
+  const actions$: Observable<unknown> = EMPTY;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProfilePortComponent, MatIcon],
-      providers: [provideMockStore(), provideMockActions(() => actions$)],
-      imports: [
-        MatSnackBarModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconTestingModule,
-        MatDividerModule,
-        BrowserAnimationsModule,
-      ],
+      imports: [ProfilePortComponent],
+      providers: [provideMockRootStore(), provideMockActions(() => actions$)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProfilePortComponent);

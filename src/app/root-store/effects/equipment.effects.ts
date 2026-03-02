@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { ApiService } from '@app/core/services/api.service';
-import { Actions, OnInitEffects, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType, OnInitEffects } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { of } from 'rxjs';
 import { catchError, concatMap, map } from 'rxjs/operators';
@@ -8,7 +8,8 @@ import * as EquipmentActions from '../actions/equipment.actions';
 
 @Injectable()
 export class EquipmentEffects implements OnInitEffects {
-  constructor(private _actions$: Actions, private _api: ApiService) {}
+  private _actions$ = inject(Actions);
+  private _api = inject(ApiService);
 
   ngrxOnInitEffects(): Action {
     return EquipmentActions.loadEquipments();

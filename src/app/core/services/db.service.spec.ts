@@ -1,8 +1,11 @@
 import { TestBed } from '@angular/core/testing';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { switchMap, tap } from 'rxjs';
+import { environment } from '@env/environment';
+import { filter, firstValueFrom, switchMap, tap } from 'rxjs';
 import { IHunterProfile } from '../types/HunterProfile';
-import { DbService } from './db.service';
+import { DbService, HUNTER_PROFILE_STORE_NAME } from './db.service';
+import { EnvironmentService } from './environment.service';
 
 describe('DbServiceService', () => {
   let service: DbService;
@@ -22,49 +25,64 @@ describe('DbServiceService', () => {
   };
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        DbService,
+        {
+          provide: EnvironmentService,
+          useValue: environment,
+        },
+      ],
+    });
+
     service = TestBed.inject(DbService);
   });
 
-  afterEach((done) => {
-    service
-      .DeleteHunterProfile(hunterProfile.hunterId)
-      .subscribe((_) => done());
+  afterEach(async () => {
+    await firstValueFrom(service.DeleteHunterProfile(hunterProfile.hunterId));
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should #AddHunterProfile', (done) => {
-    service.AddHunterProfile(hunterProfile).subscribe((hunterId) => {
-      expect(hunterId).toEqual(hunterProfile.hunterId);
-      done();
+  it('should create object store on first connect', async () => {
+    const db = await new Promise<IDBDatabase>((resolve) => {
+      const req = indexedDB.open(environment.IDBName);
+      req.onsuccess = () => resolve(req.result);
     });
+
+    expect(db.objectStoreNames.contains(HUNTER_PROFILE_STORE_NAME)).toBe(true);
   });
 
-  it('should #GetHunterProfiles', (done) => {
-    service
-      .AddHunterProfile(hunterProfile)
-      .pipe(switchMap(() => service.GetHunterProfiles()))
-      .subscribe((profiles) => {
-        expect(profiles.length).toEqual(1);
-        expect(profiles[0]).toEqual(hunterProfile);
-        done();
-      });
+  it('should #AddHunterProfile', async () => {
+    const hunterId = await firstValueFrom(
+      service.AddHunterProfile(hunterProfile)
+    );
+    expect(hunterId).toEqual(hunterProfile.hunterId);
   });
 
-  it('should #GetHunterProfile', (done) => {
-    service
-      .AddHunterProfile(hunterProfile)
-      .pipe(switchMap(() => service.GetHunterProfile(hunterProfile.hunterId)))
-      .subscribe((profile) => {
-        expect(profile).toEqual(hunterProfile);
-        done();
-      });
+  it('should #GetHunterProfiles', async () => {
+    const profiles = await firstValueFrom(
+      service.AddHunterProfile(hunterProfile).pipe(
+        filter((x) => x != undefined),
+        switchMap(() => service.GetHunterProfiles())
+      )
+    );
+    expect(profiles.length).toEqual(1);
+    expect(profiles[0]).toEqual(hunterProfile);
   });
 
-  it('should #UpdateHunterProfile', (done) => {
+  it('should #GetHunterProfile', async () => {
+    const profile = await firstValueFrom(
+      service
+        .AddHunterProfile(hunterProfile)
+        .pipe(switchMap(() => service.GetHunterProfile(hunterProfile.hunterId)))
+    );
+    expect(profile).toEqual(hunterProfile);
+  });
+
+  it('should #UpdateHunterProfile', async () => {
     const updatedHunter: IHunterProfile = {
       ...hunterProfile,
       campaignDay: 5,
@@ -73,18 +91,15 @@ describe('DbServiceService', () => {
       potions: 2,
       playerName: 'Updated Player Name',
     };
-    service
-      .AddHunterProfile(hunterProfile)
-      .pipe(
+    const hunterId = await firstValueFrom(
+      service.AddHunterProfile(hunterProfile).pipe(
         switchMap(() => service.UpdateHunterProfile(updatedHunter)),
-        tap((hunterId) => expect(hunterId).toEqual(updatedHunter.hunterId)),
-        switchMap((hunterId) => service.GetHunterProfile(hunterId))
+        tap((hunterId) => expect(hunterId).toEqual(updatedHunter.hunterId))
       )
-      .subscribe((hunterProfile) => {
-        expect(hunterProfile).toEqual(updatedHunter);
-        done();
-      });
+    );
+    const dbHunterProfile = await firstValueFrom(
+      service.GetHunterProfile(hunterId)
+    );
+    expect(dbHunterProfile).toEqual(updatedHunter);
   });
-
-  // it('#UpdateHunterProfile should update and')
 });

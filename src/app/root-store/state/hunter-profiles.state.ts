@@ -11,7 +11,7 @@ export const featureAdapter = createEntityAdapter<IHunterProfile>({
   sortComparer: (x, y) => x.hunterId.localeCompare(y.hunterId),
 });
 
-export const initialState = featureAdapter.getInitialState({
+export const initialState: State = featureAdapter.getInitialState({
   isLoaded: false,
   activeHunterId: null as string | null,
 });

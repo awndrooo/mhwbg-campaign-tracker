@@ -5,8 +5,10 @@ import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { EquipmentStoreActions } from '@root-store/actions';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
-import { cold, hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
+import { TestScheduler } from 'rxjs/testing';
+import type { MockedObject } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { EquipmentEffects } from './equipment.effects';
 
 const mockEquipment: IEquipmentStoreItem[] = [
@@ -26,21 +28,21 @@ const mockEquipment: IEquipmentStoreItem[] = [
 describe('EquipmentEffects', () => {
   let actions$: Observable<Action>;
   let effects: EquipmentEffects;
-  let apiSpy: jasmine.SpyObj<ApiService>;
+  let apiMock: MockedObject<ApiService>;
 
   beforeEach(() => {
-    apiSpy = jasmine.createSpyObj(
-      ApiService.name,
+    apiMock = Object.fromEntries(
       Object.getOwnPropertyNames(ApiService.prototype)
-    );
+        .filter((prop) => prop !== 'constructor')
+        .map((prop) => [prop, vi.fn()])
+    ) as unknown as MockedObject<ApiService>;
 
     TestBed.configureTestingModule({
       providers: [
         EquipmentEffects,
         provideMockActions(() => actions$),
-        { provide: ApiService, useValue: apiSpy },
+        { provide: ApiService, useValue: apiMock },
       ],
-      imports: [],
     });
 
     effects = TestBed.inject(EquipmentEffects);
@@ -52,35 +54,45 @@ describe('EquipmentEffects', () => {
 
   describe('loadEquipments$', () => {
     it('should successfully load equipment', () => {
-      actions$ = hot('-a', {
-        a: { type: EquipmentStoreActions.loadEquipments.type },
-      });
-      const expected = hot('---a', {
-        a: EquipmentStoreActions.loadEquipmentsSuccess({
-          data: mockEquipment,
-        }),
+      const ts = new TestScheduler((actual, expected) => {
+        expect(actual).toEqual(expected);
       });
 
-      apiSpy.GetEquipment.and.returnValue(cold('--a', { a: mockEquipment }));
+      ts.run(({ hot, cold, expectObservable }) => {
+        actions$ = hot('-a', {
+          a: { type: EquipmentStoreActions.loadEquipments.type },
+        });
 
-      expect(effects.loadEquipments$).toBeObservable(expected);
+        apiMock.GetEquipment.mockReturnValue(cold('--a', { a: mockEquipment }));
+
+        expectObservable(effects.loadEquipments$).toBe('---a', {
+          a: EquipmentStoreActions.loadEquipmentsSuccess({
+            data: mockEquipment,
+          }),
+        });
+      });
     });
 
     it('should return failure', () => {
-      actions$ = hot('-a', {
-        a: { type: EquipmentStoreActions.loadEquipments.type },
+      const ts = new TestScheduler((actual, expected) => {
+        expect(actual).toEqual(expected);
       });
 
-      const err = new HttpErrorResponse({});
-      const expected = hot('---a', {
-        a: EquipmentStoreActions.loadEquipmentsFailure({
-          error: err,
-        }),
+      ts.run(({ hot, cold, expectObservable }) => {
+        actions$ = hot('-a', {
+          a: { type: EquipmentStoreActions.loadEquipments.type },
+        });
+
+        const err = new HttpErrorResponse({});
+
+        apiMock.GetEquipment.mockReturnValue(cold('--#', {}, err));
+
+        expectObservable(effects.loadEquipments$).toBe('---a', {
+          a: EquipmentStoreActions.loadEquipmentsFailure({
+            error: err,
+          }),
+        });
       });
-
-      apiSpy.GetEquipment.and.returnValue(cold('--#', {}, err));
-
-      expect(effects.loadEquipments$).toBeObservable(expected);
     });
   });
 });

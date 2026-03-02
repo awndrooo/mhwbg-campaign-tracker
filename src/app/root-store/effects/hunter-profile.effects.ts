@@ -18,7 +18,7 @@ import {
 } from 'rxjs/operators';
 import * as HunterProfileActions from '../actions/hunter-profile.actions';
 
-const SESSION_ACTIVE_HUNTER_ID_KEY = 'ActiveHunterId';
+export const SESSION_ACTIVE_HUNTER_ID_KEY = 'ActiveHunterId';
 
 @Injectable()
 export class HunterProfileEffects implements OnInitEffects {
@@ -172,7 +172,10 @@ export class HunterProfileEffects implements OnInitEffects {
               HunterProfileActions.updateHunterProfile({
                 data: {
                   ...hunterProfile,
-                  potions: hunterProfile.potions - action.count,
+                  potions:
+                    hunterProfile.potions > 0
+                      ? hunterProfile.potions - action.count
+                      : 0,
                 },
               })
             )

@@ -1,6 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import {
   IHunterProfile,
@@ -10,7 +14,13 @@ import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
-import { Subject, debounceTime, take, takeUntil } from 'rxjs';
+import { CounterComponent } from '@shared/components';
+import {
+  EquipmentIconComponent,
+  EquipmentListComponent,
+} from '@shared/equipment';
+import { MaterialListComponent } from '@shared/materials/components/material-list/material-list.component';
+import { debounceTime, Subject, take, takeUntil } from 'rxjs';
 import { EquipmentAddDialogComponent } from '../equipment-add-dialog/equipment-add-dialog.component';
 import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-dialog.component';
 
@@ -18,9 +28,23 @@ import { MaterialAddDialogComponent } from '../material-add-dialog/material-add-
   selector: 'app-campaign-editor',
   templateUrl: './campaign-editor.component.html',
   styleUrls: ['./campaign-editor.component.scss'],
-  standalone: false,
+  imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MaterialListComponent,
+    EquipmentIconComponent,
+    EquipmentListComponent,
+    MatInputModule,
+    MatButtonModule,
+    CounterComponent,
+  ],
 })
 export class CampaignEditorComponent implements OnInit, OnDestroy {
+  private _dialog = inject(MatDialog);
+  private _fb = inject(FormBuilder);
+  private _store$ = inject(Store);
+
   private _destroy$ = new Subject<boolean>();
 
   public activeHunterProfile$ = this._store$.select(
@@ -41,12 +65,6 @@ export class CampaignEditorComponent implements OnInit, OnDestroy {
     equipedHelmId: this._fb.control<string | null>(null),
     equipedWeaponId: this._fb.control<string | null>(null),
   });
-
-  constructor(
-    private _dialog: MatDialog,
-    private _fb: FormBuilder,
-    private _store$: Store
-  ) {}
 
   ngOnDestroy(): void {
     this._destroy$.next(true);

@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { HunterProfile } from '@app/core/types/HunterProfile';
 import { Actions, ofType } from '@ngrx/effects';
@@ -13,22 +18,26 @@ import { AddHunterDialogComponent } from '../add-hunter-dialog/add-hunter-dialog
   selector: 'app-profile-selector',
   templateUrl: './profile-selector.component.html',
   styleUrls: ['./profile-selector.component.scss'],
-  standalone: false,
+  imports: [
+    MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule,
+    AsyncPipe,
+    MatButtonModule,
+  ],
 })
 export class ProfileSelectorComponent {
+  private _store$ = inject(Store);
+  private _dialog = inject(MatDialog);
+  private _actions$ = inject(Actions);
+  private _router = inject(Router);
+
   public hunterProfiles$ = this._store$.select(
     HunterProfilesSelectors.selectAll
   );
   public activeHunterProfileId$ = this._store$.select(
     HunterProfilesSelectors.selectActiveHunterId
   );
-
-  constructor(
-    private _store$: Store,
-    private _dialog: MatDialog,
-    private _actions$: Actions,
-    private _router: Router
-  ) {}
 
   public selectHunterProfile(hunterId: string): void {
     this._actions$

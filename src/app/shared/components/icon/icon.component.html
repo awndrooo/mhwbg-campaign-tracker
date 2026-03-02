@@ -1,2 +1,4 @@
-<mat-icon [svgIcon]="'mhbg-' + this.appIconName"></mat-icon>
+@if(this.appIconName) {
+    <mat-icon [svgIcon]="'mhbg-' + this.appIconName"></mat-icon>
+}
 <span class="icon-text"><ng-content #content></ng-content></span>

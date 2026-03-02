@@ -1,21 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
-import { EquipmentModule } from './equipment.module';
-import { MaterialsModule } from './materials.module';
+import { provideEffects } from '@ngrx/effects';
+import { provideStore } from '@ngrx/store';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideEquipmentStore } from './equipment.module';
+import { provideHunterProfileStore } from './hunter-profiles.module';
+import { provideMaterialsStore } from './materials.module';
 import { metaReducers, reducers } from './reducers';
-import { HunterProfilesModule } from './hunter-profiles.module';
 
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
-    EffectsModule.forRoot(),
-    EquipmentModule,
-    MaterialsModule,
-    HunterProfilesModule,
-  ],
-})
-export class RootStoreModule {}
+export const provideRootStore = [
+  provideStore(reducers, { metaReducers }),
+  provideEffects(),
+  provideStoreDevtools(),
+  ...provideEquipmentStore,
+  ...provideHunterProfileStore,
+  ...provideMaterialsStore,
+];

@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import { Material } from '@app/core/types/Material';
+import { MaterialListComponent } from '@shared/materials/components/material-list/material-list.component';
+import { MaterialSearchComponent } from '@shared/materials/components/material-search/material-search.component';
 
 @Component({
   selector: 'app-material-add-dialog',
   templateUrl: './material-add-dialog.component.html',
   styleUrls: ['./material-add-dialog.component.scss'],
-  standalone: false,
+  imports: [
+    MatDialogModule,
+    MaterialListComponent,
+    MaterialSearchComponent,
+    MatDividerModule,
+    MatButtonModule,
+  ],
 })
 export class MaterialAddDialogComponent {
   public materialQueue: HunterMaterials[] = [];
