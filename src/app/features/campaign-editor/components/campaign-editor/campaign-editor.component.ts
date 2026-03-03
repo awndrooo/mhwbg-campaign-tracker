@@ -1,10 +1,12 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { ArmorTypeEnum } from '@app/core/types/ArmorType';
+import { EquipmentTypeEnum } from '@app/core/types/EquipmentType';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import {
   IHunterProfile,
@@ -14,6 +16,7 @@ import { isNullOrUndefined } from '@app/core/utility/IsNullOrUndefined';
 import { Store } from '@ngrx/store';
 import { HunterProfileStoreActions } from '@root-store/actions';
 import { HunterProfilesSelectors } from '@root-store/selectors';
+import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import { CounterComponent } from '@shared/components';
 import {
   EquipmentIconComponent,
@@ -65,6 +68,7 @@ export class CampaignEditorComponent implements OnInit, OnDestroy {
     equipedHelmId: this._fb.control<string | null>(null),
     equipedWeaponId: this._fb.control<string | null>(null),
   });
+  protected __attachedEquipment = signal<string[]>([]);
 
   ngOnDestroy(): void {
     this._destroy$.next(true);
@@ -78,6 +82,7 @@ export class CampaignEditorComponent implements OnInit, OnDestroy {
         if (profile != undefined) {
           this.hunterForm.enable({ emitEvent: false });
           this.hunterForm.patchValue(profile, { emitEvent: false });
+          this._setAttachedEquipment(profile);
         } else {
           this.hunterForm.disable({ emitEvent: false });
         }
@@ -93,11 +98,79 @@ export class CampaignEditorComponent implements OnInit, OnDestroy {
           profile.hunterId != null &&
           profile.hunterId != ''
         ) {
+          if (this._validateAttachedEquipment(profile)) {
+            this._setAttachedEquipment(profile);
+            this.hunterForm.setValue(profile);
+          }
           this._store$.dispatch(
             HunterProfileStoreActions.updateHunterProfile({ data: profile })
           );
         }
       });
+  }
+
+  private _validateAttachedEquipment(profile: IHunterProfile): boolean {
+    // If a piece of crafted equipment is removed while equiped, unequip it
+    let changed = false;
+    if (
+      profile.equipedChestId &&
+      !profile.equipmentCrafted.includes(profile.equipedChestId)
+    )
+      (profile.equipedChestId = null), (changed = true);
+    if (
+      profile.equipedFeetId &&
+      !profile.equipmentCrafted.includes(profile.equipedFeetId)
+    )
+      (profile.equipedFeetId = null), (changed = true);
+    if (
+      profile.equipedHelmId &&
+      !profile.equipmentCrafted.includes(profile.equipedHelmId)
+    )
+      (profile.equipedHelmId = null), (changed = true);
+    if (
+      profile.equipedWeaponId &&
+      !profile.equipmentCrafted.includes(profile.equipedWeaponId)
+    )
+      (profile.equipedWeaponId = null), (changed = true);
+
+    return changed;
+  }
+
+  private _setAttachedEquipment(profile: IHunterProfile): void {
+    const items = [
+      profile.equipedChestId,
+      profile.equipedFeetId,
+      profile.equipedHelmId,
+      profile.equipedWeaponId,
+    ].filter((x) => x !== null);
+    this.__attachedEquipment.set(items);
+  }
+
+  protected __equipmentAttachedHandler(item: IEquipmentStoreItem): void {
+    if (item.equipmentType == EquipmentTypeEnum.Armor) {
+      switch (item.armorType) {
+        case ArmorTypeEnum.Helm:
+          this.hunterForm.patchValue({
+            equipedHelmId: item.id,
+          });
+          break;
+        case ArmorTypeEnum.Chest:
+          this.hunterForm.patchValue({
+            equipedChestId: item.id,
+          });
+          break;
+          break;
+        case ArmorTypeEnum.Legs:
+          this.hunterForm.patchValue({
+            equipedFeetId: item.id,
+          });
+          break;
+      }
+    } else {
+      this.hunterForm.patchValue({
+        equipedWeaponId: item.id,
+      });
+    }
   }
 
   public openMaterialAddDialog(): void {

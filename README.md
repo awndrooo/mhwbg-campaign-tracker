@@ -12,19 +12,20 @@ These goals are currently on the TODO list and should happen.
 - ~~Proper display of item icons with rarity coloring~~ Done: 2023-05-28
 - ~~Import/Export profiles. Data stored in IndexedDB so currently susceptible to browsers clearing data.~~ Done: 2023-04-22
 - Full hunter sheet display (First Draft: 2023-06-04)
-  - Armor based on currently equipped items
+  - ~~Armor based on currently equipped items~~ Done
   - Current attack deck and damage deck
-  - Campaign day, notes, and potions
+  - ~~Campaign day, notes, and potions~~ Done
 - Toggle off darkmode (Not sure anyone actually wants this but seems good to have)
-- Add new stuff from future Iceborne box (release late 2024)
+- Add new stuff from future Iceborne box (release late ~~2024~~ (lol US tarrifs...🙃)) 
   - Steamforged wanted an additional +$350USD just to include the additional Overpowering Hunger and Vaal Hazak expansion on top of the existing "monstrous" pledge so these items will not be initially included in the update
+- ~~Better inventory management ui. Can now equip from list.~~
 
 ## Goals (not promised)
 These goals push the line of pipe-dream features and may or may not happen depending upon the future of this project.
 - Completely mobile friendly. Always aiming for mobile friendly but my work mostly focuses on function over form for now.
 - Equipment crafting that utilizes hunters material inventory (versus trying to use forge reference to figure out what you can craft with your current mats)
 - Keep track of specific tasks/hunts completed on campaign days
-- Desktop native client with local save persistance (probably ElectronJS)
+- Desktop native client with local save persistance
 - Print friendly hunter sheet
 - Hunter profile picture
 - Board recording: When you don't have time to finish a game, mark down monster health/breaks/position/time and hunter health, hand, & stamina boards.

@@ -1,11 +1,22 @@
-import { Component, Input, Output, forwardRef } from '@angular/core';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  computed,
+  forwardRef,
+  signal,
+} from '@angular/core';
 import {
   AbstractControl,
   ControlValueAccessor,
   NG_VALUE_ACCESSOR,
   ValidationErrors,
 } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -37,6 +48,8 @@ type COLUMN_NAMES = 'Type' | 'Name' | 'Notes' | 'CardNumber' | 'Description';
     MatTooltipModule,
     MatIconModule,
     RichTextComponent,
+    MatMenuModule,
+    MatButtonModule,
   ],
 })
 export class EquipmentListComponent implements ControlValueAccessor {
@@ -49,17 +62,48 @@ export class EquipmentListComponent implements ControlValueAccessor {
     this._equipment = value ? [...value] : value;
     this._equipment$.next(value);
   }
-  @Input() public ShowControls: boolean = false;
-  @Input() public Columns: COLUMN_NAMES[] = [
+
+  private _AttachedEquipment = signal<string[]>([]);
+  @Input()
+  public get AttachedEquipment(): string[] {
+    return this._AttachedEquipment();
+  }
+  public set AttachedEquipment(value: string[]) {
+    this._AttachedEquipment.set(value);
+  }
+
+  private _ShowControls = signal(false);
+  @Input()
+  public get ShowControls(): boolean {
+    return this._ShowControls();
+  }
+  public set ShowControls(value: boolean | string | null) {
+    this._ShowControls.set(coerceBooleanProperty(value));
+  }
+
+  private _Columns = signal<COLUMN_NAMES[]>([
     'Type',
     'Name',
     'Notes',
     'CardNumber',
     'Description',
-  ];
+  ]);
+  @Input()
+  public get Columns(): COLUMN_NAMES[] {
+    return this._Columns();
+  }
+  public set Columns(value: COLUMN_NAMES[]) {
+    this._Columns.set(value);
+  }
+  protected __computedColumns = computed(() =>
+    (this._ShowControls() ? ['control'] : []).concat(this._Columns())
+  );
+
   @Output('EquipmentChange') public EquipmentChange$ = new Subject<
     string[] | undefined
   >();
+
+  @Output() public EquipmentAttached = new EventEmitter<IEquipmentStoreItem>();
 
   private _equipment$ = new ReplaySubject<string[] | undefined>();
   public Equipment$ = this._equipment$.pipe(
@@ -68,6 +112,9 @@ export class EquipmentListComponent implements ControlValueAccessor {
   );
 
   constructor(private _equipmentService: EquipmentService) {}
+
+  protected __itemIsEquiped = (item: IEquipmentStoreItem) =>
+    computed(() => this._AttachedEquipment().includes(item.id));
 
   public removeEquipment(item: IEquipmentStoreItem) {
     if (!this.disabled && this.Equipment !== undefined) {

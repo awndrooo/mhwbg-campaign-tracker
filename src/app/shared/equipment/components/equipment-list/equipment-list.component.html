@@ -11,16 +11,10 @@
   <ng-container matColumnDef="Name">
     <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      @if (this.ShowControls) {
-        <button
-          mat-icon-button
-          (click)="this.removeEquipment(item)"
-          color="warn"
-          >
-          <mat-icon>remove</mat-icon>
-        </button>
-      }
       {{ item.name }}
+      @if(__itemIsEquiped(item)()) {
+        <mat-icon matTooltip="Equipped">verified_user</mat-icon>
+      }
     </mat-cell>
   </ng-container>
   <ng-container matColumnDef="Notes">
@@ -38,13 +32,17 @@
     </mat-cell>
   </ng-container>
 
-  <mat-header-row
-    *matHeaderRowDef="this.Columns"
-  ></mat-header-row>
-  <mat-row
-    *matRowDef="
-      let row;
-      columns: this.Columns
-    "
-  ></mat-row>
+  <ng-container matColumnDef="control">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="EquipmentAttached.next(item)">Equip <mat-icon>person</mat-icon></button>
+        <button mat-menu-item (click)="removeEquipment(item)">Delete <mat-icon>delete</mat-icon></button>
+      </mat-menu>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="__computedColumns()"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: __computedColumns()"></mat-row>
 </mat-table>

@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, Input, Output } from '@angular/core';
+import { Component, computed, Input, Output, signal } from '@angular/core';
 import {
   AbstractControl,
   ControlValueAccessor,
@@ -10,13 +10,14 @@ import {
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialsService } from '@app/core/services/materials.service';
 import { HunterMaterials } from '@app/core/types/HunterMaterials';
 import { Material } from '@app/core/types/Material';
 import { MaterialSortPipe } from '@shared/materials/pipes/material-sort.pipe';
-import { Observable, ReplaySubject, Subject, map, switchMap } from 'rxjs';
+import { map, Observable, ReplaySubject, Subject, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-material-list',
@@ -41,6 +42,7 @@ import { Observable, ReplaySubject, Subject, map, switchMap } from 'rxjs';
     AsyncPipe,
     MaterialSortPipe,
     MatSortModule,
+    MatMenuModule,
   ],
 })
 export class MaterialListComponent implements ControlValueAccessor, Validator {
@@ -73,16 +75,16 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
     HunterMaterials[]
   >();
 
-  private _ShowControls: boolean = false;
+  private _ShowControls = signal(false);
   @Input()
   public get ShowControls(): boolean {
-    return this._ShowControls;
+    return this._ShowControls();
   }
   public set ShowControls(value: boolean | string) {
     if (typeof value === 'string') {
-      this._ShowControls = JSON.parse(value);
+      this._ShowControls.set(JSON.parse(value));
     } else {
-      this._ShowControls = value;
+      this._ShowControls.set(value);
     }
   }
 
@@ -93,6 +95,9 @@ export class MaterialListComponent implements ControlValueAccessor, Validator {
   public get SortColumn() {
     return this._sortColumn?.active;
   }
+  public columns = computed(() =>
+    (this._ShowControls() ? ['control'] : []).concat(['name', 'count'])
+  );
 
   constructor(private _materialService: MaterialsService) {}
 

@@ -1,18 +1,7 @@
-<mat-table [dataSource]="this.Materials$ | async | materialSort: this.SortColumn:this.SortDirection" matSort (matSortChange)="this.ChangeSort($event)">
+<mat-table [dataSource]="Materials$ | async | materialSort: SortColumn:SortDirection" matSort (matSortChange)="ChangeSort($event)">
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Material </mat-header-cell>
     <mat-cell *matCellDef="let item">
-      @if (this.ShowControls) {
-        <button
-          mat-icon-button
-          color="warn"
-          matTooltip="Remove Item"
-          (click)="this.RemoveMaterial(item.id)"
-          [disabled]="this.disabled"
-          >
-          <mat-icon>remove</mat-icon>
-        </button>
-      }
       {{ item.name }}
     </mat-cell>
   </ng-container>
@@ -20,28 +9,22 @@
   <ng-container matColumnDef="count">
     <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
     <mat-cell *matCellDef="let item">
-      @if (this.ShowControls) {
-        <button
-          mat-icon-button
-          (click)="this.DecrementMaterial(item.id)"
-          [disabled]="this.disabled"
-          >
-          <mat-icon>remove</mat-icon>
-        </button>
-      }
       {{ item.count }}
-      @if (this.ShowControls) {
-        <button
-          mat-icon-button
-          (click)="this.IncrementMaterial(item.id)"
-          [disabled]="this.disabled"
-          >
-          <mat-icon>add</mat-icon>
-        </button>
-      }
     </mat-cell>
   </ng-container>
 
-  <mat-header-row *matHeaderRowDef="['name', 'count']"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: ['name', 'count']"></mat-row>
+  <ng-container matColumnDef="control">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="disabled"><mat-icon>more_vert</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="IncrementMaterial(item.id)">Increment <mat-icon>add</mat-icon></button>
+        <button mat-menu-item (click)="DecrementMaterial(item.id)">Decrement <mat-icon>remove</mat-icon></button>
+        <button mat-menu-item (click)="RemoveMaterial(item.id)">Delete <mat-icon>delete</mat-icon></button>
+      </mat-menu>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="columns()"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columns()"></mat-row>
 </mat-table>

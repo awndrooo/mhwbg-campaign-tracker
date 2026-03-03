@@ -1,27 +1,29 @@
 <div [formGroup]="this.hunterForm">
-  <mat-form-field>
-    <mat-label>Hunter Name</mat-label>
-    <input matInput formControlName="hunterName" />
-  </mat-form-field>
-  <br />
-
-  <mat-form-field>
-    <mat-label>Player Name</mat-label>
-    <input matInput formControlName="playerName" />
-  </mat-form-field>
-  <br />
-
-  <mat-form-field>
-    <mat-label>Potion Count</mat-label>
-    <app-counter formControlName="potions"></app-counter>
-  </mat-form-field>
-  <br />
-
-  <mat-form-field>
-    <mat-label>Campaign Day</mat-label>
-    <app-counter formControlName="campaignDay"></app-counter>
-  </mat-form-field>
-  <br />
+  <div class="basic-details">
+    <mat-form-field>
+      <mat-label>Hunter Name</mat-label>
+      <input matInput formControlName="hunterName" />
+    </mat-form-field>
+    <br />
+  
+    <mat-form-field>
+      <mat-label>Player Name</mat-label>
+      <input matInput formControlName="playerName" />
+    </mat-form-field>
+    <br />
+  
+    <mat-form-field>
+      <mat-label>Potion Count</mat-label>
+      <app-counter formControlName="potions"></app-counter>
+    </mat-form-field>
+    <br />
+  
+    <mat-form-field>
+      <mat-label>Campaign Day</mat-label>
+      <app-counter formControlName="campaignDay"></app-counter>
+    </mat-form-field>
+    <br />
+  </div>
 
   <button
     mat-icon-button
@@ -52,12 +54,12 @@
   <app-equipment-icon equipment="chest"></app-equipment-icon>
   <app-equipment-icon equipment="legs"></app-equipment-icon>
 
-  <app-equipment-list formControlName="equipmentCrafted" [ShowControls]="true"></app-equipment-list>
+  <app-equipment-list formControlName="equipmentCrafted" [ShowControls]="true" [AttachedEquipment]="this.__attachedEquipment()" (EquipmentAttached)="this.__equipmentAttachedHandler($event)"></app-equipment-list>
 
   <br /><br />
 
-  <mat-form-field>
+  <mat-form-field style="display: flex;">
     <mat-label>Notes</mat-label>
-    <textarea matInput formControlName="notes"></textarea>
+    <textarea matInput formControlName="notes" rows="10"></textarea>
   </mat-form-field>
 </div>
