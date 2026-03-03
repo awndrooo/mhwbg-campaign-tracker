@@ -24,7 +24,8 @@
       "@root-store/*": ["src/app/root-store/*"],
       "@core/*": ["src/core/*"],
       "@env/*": ["src/environment/*"],
-      "@app/*": ["src/app/*"]
+      "@app/*": ["src/app/*"],
+      "@test/*": ["src/test/*"]
     },
     "lib": ["es2020", "DOM", "ESNext"]
   },
