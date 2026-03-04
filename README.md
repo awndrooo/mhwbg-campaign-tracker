@@ -4,7 +4,7 @@ This is a small project I've been casually working on during the weekends. The
 goal is to create a means to fully track the progress of your hunter throughout
 the course of a campaign.
 
-Live Application [https://awndrooo.github.io/mhwbg-campaign-tracker/](https://awndrooo.github.io/mhwbg-campaign-tracker/)
+Live Application [https://mhwbg.awndroo.art/](https://mhwbg.awndroo.art/)
 
 ## Goals (planned)
 These goals are currently on the TODO list and should happen.

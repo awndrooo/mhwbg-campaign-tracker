@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { IEquipmentStoreItem } from '@root-store/state/equipment.state';
 import { Observable, share, take } from 'rxjs';
 import { Material } from '../types/Material';
+import { Monster } from '../types/Monster';
 import { EnvironmentService } from './environment.service';
 
 @Injectable({
@@ -23,6 +24,14 @@ export class ApiService {
   GetMaterials(): Observable<Material[]> {
     return this._http
       .get<Material[]>(`${this._env.ApiHost}/materials`, {
+        responseType: 'json',
+      })
+      .pipe(take(1), share());
+  }
+
+  GetMonsters(): Observable<Monster[]> {
+    return this._http
+      .get<Monster[]>(`${this._env.ApiHost}/monsters`, {
         responseType: 'json',
       })
       .pipe(take(1), share());

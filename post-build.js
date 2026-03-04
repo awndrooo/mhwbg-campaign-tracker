@@ -21,3 +21,8 @@ await fs.writeFile(
   JSON.stringify(equipment),
   'utf-8'
 );
+await fs.writeFile(
+  './dist/mhwbgcampaign-tracker/browser/assets/monsters',
+  JSON.stringify(monsters),
+  'utf-8'
+);

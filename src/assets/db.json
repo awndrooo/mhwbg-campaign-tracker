@@ -1,54 +1,267 @@
 {
-  "monster": [
+  "monsters": [
     {
       "id": "584b360e-279c-4499-b946-da3a58a8bcc4",
       "name": "Great Jagras",
-      "boxset": "AncientForest"
+      "boxset": "AncientForest",
+      "carveParts": [
+        "dd8f3361-f8a8-4be8-b5ab-64cc7e93bd20",
+        "33de1a7d-faf5-461e-8167-730e55f6753b",
+        "2e79eff2-27b0-4ffd-bd3b-a447cdd57c62",
+        "91e7031e-89e5-4e63-924c-f4fb72401d8c",
+        "5f9075f3-951d-475e-8c0b-41295723b979",
+        "60ad9ef7-8e6b-4266-96b3-7f2c5bb69674",
+        "1cbc462e-87b4-4a21-afe1-f2546e1b57ae"
+      ]
     },
     {
       "id": "93f420f8-9d01-43b3-a656-5a3a5a27a7a8",
       "name": "Tobi-Kadachi",
-      "boxset": "AncientForest"
+      "boxset": "AncientForest",
+      "carveParts": [
+        "7781c100-6e4d-47cc-a7b2-d1bf5da6d0e8",
+        "4b454c4e-3ba6-4bae-a6c9-62636b45d46e",
+        "24adacf1-b9bf-43eb-bd9b-1446987e6b56",
+        "71513562-7336-4a76-8a70-65ec82f0b9c9",
+        "ab7166a2-f13c-4f33-b62c-9cff204a4e4b",
+        "00ddb307-2bef-4cec-910b-9abf3c874e7a",
+        "1229e266-4def-4014-bf4a-0e7854a5eaad",
+        "7b43065a-997a-4024-9e9b-335d53ba133d",
+        "1aca9345-cb86-4a62-91a6-4e3adbb54a91"
+      ]
     },
     {
       "id": "3a6b95ef-d357-4d26-9066-237adc2fac7b",
       "name": "Anjanath",
-      "boxset": "AncientForest"
+      "boxset": "AncientForest",
+      "carveParts": [
+        "f5f004d1-f093-4426-91fd-87897d3dae3d",
+        "7f338bc7-4460-4335-8bc5-f825c4c40c6f",
+        "4504d290-2712-45b0-8a83-a3b086f7cd19",
+        "fb7cccc3-a2c2-4919-bbdf-0a1bee341924",
+        "9603428e-74ba-480a-9840-35b4f048939d",
+        "7b43065a-997a-4024-9e9b-335d53ba133d",
+        "742c9ee9-36d1-417d-9e77-a32259e3f27c",
+        "05217d57-a905-4249-bb8a-e3142a678d3b",
+        "b9f305ed-f2e9-4612-a287-22f81a0c0cdf"
+      ]
     },
     {
       "id": "63e3c5a9-eea4-4a5f-83cc-a7fe4e0cfb8f",
       "name": "Rathalos",
-      "boxset": "AncientForest"
+      "boxset": "AncientForest",
+      "carveParts": [
+        "f0815368-8515-42cd-9b6b-1a804f6d7cb2",
+        "cd7312e6-31c1-4af9-92ee-745ac34b4b9f",
+        "3daa28fe-0413-45f0-93cf-972762f8a28c",
+        "c25892fd-bc42-4d7c-ad92-038dd4efa281",
+        "c1712916-8e03-435b-a4bf-83d311d29742",
+        "5aa72d9c-021f-4f81-a07b-c35d05f64b4b",
+        "c0652f9c-3876-4eb4-9586-b6b6d98db846",
+        "394b1a44-6fea-4868-b033-88ebc464f156",
+        "44b8f572-46ec-4242-86fc-428fba1c1e55",
+        "06dc5593-0371-43d2-9220-a2ee7eb0bf06",
+        "05217d57-a905-4249-bb8a-e3142a678d3b",
+        "b9f305ed-f2e9-4612-a287-22f81a0c0cdf"
+      ]
     },
     {
       "id": "2f25bd25-0961-4086-a59c-0c8fababa416",
       "name": "Azure Rathalos",
-      "boxset": "AncientForest"
+      "boxset": "AncientForest",
+      "carveParts": [
+        "e9348d4e-120a-4317-baa9-22d9ad2ccd96",
+        "2462d544-1e35-4d2f-92d8-aa11dba098c3",
+        "e165d1e2-baa4-442d-a8d6-2ca7d06cbd17",
+        "63a7e145-4bd8-4260-841f-a2525dd84adb",
+        "04c97dd1-e56a-4c9f-a3a0-426a1a2c444f",
+        "3d6983ac-4fe8-4c21-a516-72caef7ee17e",
+        "6e581da0-b5fc-4fb0-92ff-3215ee827a10",
+        "05217d57-a905-4249-bb8a-e3142a678d3b",
+        "b9f305ed-f2e9-4612-a287-22f81a0c0cdf"
+      ]
     },
     {
       "id": "51ab9f4a-41c7-46b9-a5d9-7c2493b29fe3",
       "name": "Barroth",
-      "boxset": "WildspireWaste"
+      "boxset": "WildspireWaste",
+      "carveParts": [
+        "34893539-2149-47b0-8590-6ff800e95552",
+        "8574ed52-82c2-4c89-af6e-97aea6c6cd60",
+        "3460f9bd-5dda-4dd2-bb1a-2d6b548bd3f2",
+        "27bb99f5-037e-40b2-87ee-68f0921516ad",
+        "1cbc462e-87b4-4a21-afe1-f2546e1b57ae"
+      ]
     },
     {
       "id": "596a699f-2d85-42b0-9f17-8ffc3ff2b1e7",
       "name": "Pukei-Pukei",
-      "boxset": "WildspireWaste"
+      "boxset": "WildspireWaste",
+      "carveParts": [
+        "a898cb58-caf0-4c35-8405-706fb07f5b68",
+        "57b45a3d-c502-4c73-bf78-3856af47f316",
+        "4b4adbcf-9649-4006-8c32-85d7bf4a560c",
+        "2638af30-f7f5-4e60-b479-d3d02a8c30fb",
+        "a2a8ce68-5858-4d7e-aea6-92ed31f70b88",
+        "7781c100-6e4d-47cc-a7b2-d1bf5da6d0e8",
+        "e75489b6-2a38-4061-bfd5-1a98527eabd1",
+        "54c6ac70-6f91-4c12-904a-10516ddee067"
+      ]
     },
     {
       "id": "d1a9b751-1cc8-4540-933f-a8113d6fa3cf",
       "name": "Jyuratodus",
-      "boxset": "WildspireWaste"
+      "boxset": "WildspireWaste",
+      "carveParts": [
+        "f6046e5c-f48e-48d9-a776-840171af2fbb",
+        "d27990ba-0d36-4912-8fd0-e232c5096fba",
+        "dbd26619-bf02-4e76-91d5-34bf17723a4d",
+        "132b94be-bdc4-4212-9911-ff25924432c9",
+        "d838078d-42ae-4c7f-aa90-a929ae35c625",
+        "a310a8ac-c234-4ab3-b564-b52bad4972b6",
+        "3a944d26-9f8d-4c22-b863-08b314350172",
+        "05217d57-a905-4249-bb8a-e3142a678d3b",
+        "035395b9-dedf-4c2f-9c0c-2b345574c4cc"
+      ]
     },
     {
       "id": "0de18c57-35ff-437b-8cf3-43ed52e289b3",
       "name": "Diablos",
-      "boxset": "WildspireWaste"
+      "boxset": "WildspireWaste",
+      "carveParts": [
+        "22f7a78b-f08e-42c2-8778-1c2160256e8e",
+        "e2352ff0-f7c9-4323-a8b1-0e12649666ae",
+        "f21b4399-2e5e-45f5-8af3-7f30892c6063",
+        "dd7540c9-3c9b-496b-ad68-96303078e6c0",
+        "9c59f73a-c82e-4202-9aac-479ace0c30ca",
+        "8385f636-a764-4a4c-9bec-01e34e0dbba9",
+        "c23d7886-c9be-4179-934d-a2e17d6a9617"
+      ]
     },
     {
       "id": "b0779c05-d381-4f6a-80cd-6dd79d3c110d",
       "name": "Black Diablos",
-      "boxset": "WildspireWaste"
+      "boxset": "WildspireWaste",
+      "carveParts": [
+        "16bdf6b0-eac2-47af-88fd-0d55d130c75b",
+        "829596ba-5e0f-41d5-8336-0c1d189a32c4",
+        "d70816b1-317e-4554-b5be-dd6cb5a6a3da",
+        "fb0d4929-cae0-4b4f-8c6f-a500c67e36e2",
+        "03449758-3e9c-40d3-aa25-c0d92ac0b438",
+        "c23d7886-c9be-4179-934d-a2e17d6a9617",
+        "8385f636-a764-4a4c-9bec-01e34e0dbba9"
+      ]
+    },
+    {
+      "id": "d4b0d909-8b02-4315-95e3-57ce879ab581",
+      "name": "Kulu-Ya-Ku",
+      "boxset": "Standalone",
+      "carveParts": [
+        "2f632038-1da2-4fdc-be0a-ba7c31531989",
+        "d79fb599-5317-4fd0-bc62-50775a133339",
+        "36eb9bf9-3a06-4a5e-a8a0-aef71a1acd9d",
+        "0df7f81c-fa9f-4e66-8140-1626f0f30fb4",
+        "e98f46ee-d520-49f0-b571-3fb2ea20ed63",
+        "e653e32a-e05f-4f9a-8729-f97faa7bebf2",
+        "2ef7c3b5-38f3-41c4-b012-3a6b8c056182"
+      ]
+    },
+    {
+      "id": "bdb3e90a-9bb1-4eb9-a7b5-f7cfc3ff6c48",
+      "name": "Tzitzi-Ya-Ku",
+      "boxset": "PickingBones",
+      "carveParts": [
+        "b77a7850-6e47-41f1-9583-4c607236bd76",
+        "867cf125-90bf-4c32-80f9-09a9277be61e",
+        "3d775dd1-e935-41c9-9e78-b9e959ed9099",
+        "c985341b-75bd-448e-b1b1-8db97a771375"
+      ]
+    },
+    {
+      "id": "05d05bdf-8c66-4b8e-81ba-bb7c1f418f39",
+      "name": "Radobaan",
+      "boxset": "PickingBones",
+      "carveParts": [
+        "bfa75edf-9764-4c0d-8c4c-0ba940c2ba02",
+        "04086e2f-cefb-40dd-b2ea-770dbcd8eded",
+        "6d737d04-bdbe-4e4a-97d6-0055f625af3f",
+        "5044a100-63dd-43a2-9864-120a119792dc",
+        "f4c5024d-8ea4-4f61-9bbf-6d9c3e0e0139",
+        "6f894f4e-b92d-4efd-83f0-0a2b6bd64ba4"
+      ]
+    },
+    {
+      "id": "f2157692-576e-4e89-9026-9c4ac95d9b3e",
+      "name": "Great Girros",
+      "boxset": "PickingBones",
+      "carveParts": [
+        "f344be92-5cd2-479d-8f74-67154684f477",
+        "9b195ab9-9456-4a0b-8632-f443b608bc46",
+        "b4d0ac28-ec91-44d2-a2f5-1e5b71a84914",
+        "a2ff0b3d-6ce7-406b-be3b-4fb7573a0fe2"
+      ]
+    },
+    {
+      "id": "bfa5d6af-2c15-4034-b4f3-5bd95deb1efa",
+      "name": "Kirin",
+      "boxset": "Standalone",
+      "carveParts": [
+        "7c6d6e96-4b44-4564-a4c0-a93eb6614383",
+        "7561204b-2c70-4a85-bd3f-34bcbe874fd5",
+        "31a622e4-f9ba-439e-ac1e-84e114fae721",
+        "f381846d-c8f8-4528-8aa6-34176445c567",
+        "55768a5d-163f-4887-ba60-13777b169927"
+      ]
+    },
+    {
+      "id": "fc91bdeb-eadd-4559-9b07-e5bc0930d4c3",
+      "name": "Teostra",
+      "boxset": "Standalone",
+      "carveParts": [
+        "407f81a3-35c8-4e4d-9118-d0b6fa87f6c5",
+        "6677d364-1816-4e68-81ed-727b4462e0cc",
+        "33bce1d1-d932-48c4-8be7-563d8cc849cb",
+        "c25b3f44-2153-491a-be20-daaf89ab7ef6",
+        "101cbf41-e00d-45c5-b696-39578efd2da6",
+        "f250ad2d-e35b-42bb-bc12-3e76751437a7",
+        "78bbcaeb-c061-4d60-a8f0-eeb7da4292e3",
+        "1b5b2cea-96c7-4312-b437-0aafcf33013e",
+        "2f5c388a-2610-4db7-876e-0f8599e9a8ac",
+        "0a1764ef-05ae-4fef-b368-b240ca69c879",
+        "d70816b1-317e-4554-b5be-dd6cb5a6a3da"
+      ]
+    },
+    {
+      "id": "39900982-68a6-4112-8060-c2a44806f292",
+      "name": "Kushala Daora",
+      "boxset": "Standalone",
+      "carveParts": [
+        "21584073-e875-49f6-88c5-f1e5d3804469",
+        "c0747186-a41b-48f2-b3b8-f8d4c5da4e37",
+        "eb8acc5a-80d6-46fc-ae1a-2416fb08b697",
+        "eb60c33e-19a2-4ccb-bdda-0dd5dffbcaeb",
+        "596d0f01-4fec-472d-a462-0518354b8a9e",
+        "c02ce697-496f-44da-99c0-76ca92a413c2",
+        "8a964554-68cf-4339-a7fa-b832ca2f5892",
+        "1ad9522c-271f-42d5-a888-db27e9a9bf7b",
+        "b17e82be-9236-4761-a30e-53d5106fa5c7"
+      ]
+    },
+    {
+      "id": "22553db4-5c15-4a64-a76e-b9d621014ebb",
+      "name": "Nergigante",
+      "boxset": "Standalone",
+      "carveParts": [
+        "daa51cfd-18d5-4c86-a477-2bdb36515ae8",
+        "953db060-0bda-4669-8e5d-c792fce8ee0c",
+        "f357050f-81ac-4531-af78-80f4f17728b6",
+        "ebdf6be3-81ac-471f-be21-f7b7c0046419",
+        "68258897-64eb-4fac-b0e0-61b76e90e169",
+        "581c4991-6525-43ea-bb34-27fbc3171996",
+        "1ad9522c-271f-42d5-a888-db27e9a9bf7b",
+        "b17e82be-9236-4761-a30e-53d5106fa5c7",
+        "9f6a341b-1192-4839-9837-72dc72dd189f"
+      ]
     }
   ],
   "monsterpart": [],
@@ -631,6 +844,101 @@
     {
       "id": "8e34e4c8-62c2-4bee-8185-2bc6420e2409",
       "name": "Warm Pelt",
+      "description": ""
+    },
+    {
+      "id": "b77a7850-6e47-41f1-9583-4c607236bd76",
+      "name": "Tzitzi-Ya-Ku Photophore",
+      "description": ""
+    },
+    {
+      "id": "867cf125-90bf-4c32-80f9-09a9277be61e",
+      "name": "Tzitzi-Ya-Ku Claw",
+      "description": ""
+    },
+    {
+      "id": "3d775dd1-e935-41c9-9e78-b9e959ed9099",
+      "name": "Tzitzi-Ya-Ku Scale",
+      "description": ""
+    },
+    {
+      "id": "c985341b-75bd-448e-b1b1-8db97a771375",
+      "name": "Tzitzi-Ya-Ku Hide",
+      "description": ""
+    },
+    {
+      "id": "bfa75edf-9764-4c0d-8c4c-0ba940c2ba02",
+      "name": "Radobaan Carapace",
+      "description": ""
+    },
+    {
+      "id": "04086e2f-cefb-40dd-b2ea-770dbcd8eded",
+      "name": "Radobaan Scale",
+      "description": ""
+    },
+    {
+      "id": "6d737d04-bdbe-4e4a-97d6-0055f625af3f",
+      "name": "Radobaan Oilshell",
+      "description": ""
+    },
+    {
+      "id": "5044a100-63dd-43a2-9864-120a119792dc",
+      "name": "Coma Sac",
+      "description": ""
+    },
+    {
+      "id": "f4c5024d-8ea4-4f61-9bbf-6d9c3e0e0139",
+      "name": "Sleep Sac",
+      "description": ""
+    },
+    {
+      "id": "6f894f4e-b92d-4efd-83f0-0a2b6bd64ba4",
+      "name": "Wyvern Bone Mass",
+      "description": ""
+    },
+    {
+      "id": "f344be92-5cd2-479d-8f74-67154684f477",
+      "name": "Great Girros Tail",
+      "description": ""
+    },
+    {
+      "id": "9b195ab9-9456-4a0b-8632-f443b608bc46",
+      "name": "Great Girros Fang",
+      "description": ""
+    },
+    {
+      "id": "b4d0ac28-ec91-44d2-a2f5-1e5b71a84914",
+      "name": "Great Girros Scale",
+      "description": ""
+    },
+    {
+      "id": "a2ff0b3d-6ce7-406b-be3b-4fb7573a0fe2",
+      "name": "Great Girros Hide",
+      "description": ""
+    },
+    {
+      "id": "7c6d6e96-4b44-4564-a4c0-a93eb6614383",
+      "name": "Kirin Azure Horn",
+      "description": ""
+    },
+    {
+      "id": "7561204b-2c70-4a85-bd3f-34bcbe874fd5",
+      "name": "Kirin Thunderhorn",
+      "description": ""
+    },
+    {
+      "id": "31a622e4-f9ba-439e-ac1e-84e114fae721",
+      "name": "Kirin Mane",
+      "description": ""
+    },
+    {
+      "id": "f381846d-c8f8-4528-8aa6-34176445c567",
+      "name": "Kirin Hide",
+      "description": ""
+    },
+    {
+      "id": "55768a5d-163f-4887-ba60-13777b169927",
+      "name": "Kirin Tail",
       "description": ""
     }
   ],
@@ -3272,7 +3580,7 @@
       "equipmentType": "Weapon",
       "rarity": "green",
       "weaponType": "HH",
-      "note": "Anajanath Song List",
+      "note": "Anjanath Song List",
       "damageDeck": {
         "1": 2,
         "2": 6,
@@ -3340,7 +3648,7 @@
       "equipmentType": "Weapon",
       "rarity": "purple",
       "weaponType": "HH",
-      "note": "Anajanath Song List",
+      "note": "Anjanath Song List",
       "damageDeck": {
         "1": 3,
         "2": 5,

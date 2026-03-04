@@ -3,6 +3,7 @@
   <mat-label>Find Material...</mat-label>
   <input matInput type="text" #searchInput (keyup)="this.Search$.next(searchInput.value)" />
 </mat-form-field>
+<p>Use "monster:<em>name</em>" to find parts by monster</p>
 <mat-list>
   @for (item of this.SearchResult$ | async; track item) {
     <mat-list-item>
