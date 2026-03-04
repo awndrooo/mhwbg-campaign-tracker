@@ -273,7 +273,7 @@
     },
     {
       "id": "e47b6d9b-4999-4a91-8902-914e6df11469",
-      "name": "Malachite Ore",
+      "name": "Machalite Ore",
       "description": ""
     },
     {
@@ -1415,7 +1415,7 @@
       "name": "Leather Trousers",
       "description": "",
       "equipmentType": "Armor",
-      "armorType": "helm",
+      "armorType": "legs",
       "rarity": "white",
       "armorValue": 0
     },
@@ -1425,7 +1425,7 @@
       "name": "Leather Mail",
       "description": "",
       "equipmentType": "Armor",
-      "armorType": "helm",
+      "armorType": "chest",
       "rarity": "white",
       "armorValue": 1
     },
